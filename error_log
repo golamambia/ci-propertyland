@@ -1,0 +1,919 @@
+[10-Jan-2020 07:24:47 Etc/GMT] PHP Fatal error:  Cannot redeclare getNotification() (previously declared in /home/webtequb/public_html/project/localbrowse/application/helpers/frontuser_helper.php:8) in /home/webtequb/public_html/project/localbrowse/application/helpers/frontuser_helper.php on line 33
+[24-Jan-2020 11:29:27 Asia/Kolkata] PHP Fatal error:  Cannot redeclare Quote::favourite_list() in /home/webtequb/public_html/project/localbrowse/application/controllers/Quote.php on line 112
+[08-Feb-2020 07:25:43 Etc/GMT] PHP Warning:  file_get_contents(https://maps.googleapis.com/maps/api/geocode/json? 
+   address=Kathmandu%2C+Nepal&amp;sensor=true&amp;key=AIzaSyDvEFtcY6tsbTnqB7xe8enKEXUVaB_qHV4): failed to open stream: HTTP request failed! HTTP/1.0 400 Bad Request
+ in /home/webtequb/public_html/project/localbrowse/test.php on line 10
+[08-Feb-2020 07:25:43 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 15
+[08-Feb-2020 07:25:43 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 15
+[08-Feb-2020 07:25:43 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 15
+[08-Feb-2020 07:25:43 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 15
+[08-Feb-2020 07:25:43 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[08-Feb-2020 07:25:43 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[08-Feb-2020 07:25:43 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[08-Feb-2020 07:25:43 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[08-Feb-2020 07:30:53 Etc/GMT] PHP Warning:  file_get_contents(https://maps.googleapis.com/maps/api/geocode/json? 
+   address=Kathmandu%2C+Nepal&amp;sensor=true&amp;key=AIzaSyDvEFtcY6tsbTnqB7xe8enKEXUVaB_qHV4): failed to open stream: HTTP request failed! HTTP/1.0 400 Bad Request
+ in /home/webtequb/public_html/project/localbrowse/test.php on line 10
+[08-Feb-2020 07:30:53 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 15
+[08-Feb-2020 07:30:53 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 15
+[08-Feb-2020 07:30:53 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 15
+[08-Feb-2020 07:30:53 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 15
+[08-Feb-2020 07:30:53 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[08-Feb-2020 07:30:53 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[08-Feb-2020 07:30:53 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[08-Feb-2020 07:30:53 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[08-Feb-2020 07:30:53 Etc/GMT] PHP Warning:  file_get_contents(https://maps.googleapis.com/maps/api/geocode/json?address=Kathmandu, Nepal&amp;key=AIzaSyCnSyhQbTMy6NNHAVl3lsFJ6IRqu1tt_zU): failed to open stream: HTTP request failed! HTTP/1.0 400 Bad Request
+ in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[08-Feb-2020 07:30:53 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 21
+[08-Feb-2020 07:30:53 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 21
+[08-Feb-2020 07:30:53 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 21
+[08-Feb-2020 07:30:53 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 21
+[08-Feb-2020 07:30:53 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 22
+[08-Feb-2020 07:30:53 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 22
+[08-Feb-2020 07:30:53 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 22
+[08-Feb-2020 07:30:53 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 22
+[08-Feb-2020 07:31:04 Etc/GMT] PHP Warning:  file_get_contents(https://maps.googleapis.com/maps/api/geocode/json? 
+   address=Kathmandu%2C+Nepal&amp;sensor=true&amp;key=AIzaSyDvEFtcY6tsbTnqB7xe8enKEXUVaB_qHV4): failed to open stream: HTTP request failed! HTTP/1.0 400 Bad Request
+ in /home/webtequb/public_html/project/localbrowse/test.php on line 10
+[08-Feb-2020 07:31:04 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 15
+[08-Feb-2020 07:31:04 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 15
+[08-Feb-2020 07:31:04 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 15
+[08-Feb-2020 07:31:04 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 15
+[08-Feb-2020 07:31:04 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[08-Feb-2020 07:31:04 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[08-Feb-2020 07:31:04 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[08-Feb-2020 07:31:04 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[08-Feb-2020 07:31:04 Etc/GMT] PHP Warning:  file_get_contents(https://maps.googleapis.com/maps/api/geocode/json?address=Kathmandu, Nepal&amp;key=AIzaSyCnSyhQbTMy6NNHAVl3lsFJ6IRqu1tt_zU): failed to open stream: HTTP request failed! HTTP/1.0 400 Bad Request
+ in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[08-Feb-2020 07:31:04 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 21
+[08-Feb-2020 07:31:04 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 21
+[08-Feb-2020 07:31:04 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 21
+[08-Feb-2020 07:31:04 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 21
+[08-Feb-2020 07:31:04 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 22
+[08-Feb-2020 07:31:04 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 22
+[08-Feb-2020 07:31:04 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 22
+[08-Feb-2020 07:31:04 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 22
+[08-Feb-2020 07:31:27 Etc/GMT] PHP Warning:  file_get_contents(https://maps.googleapis.com/maps/api/geocode/json? 
+   address=Kathmandu%2C+Nepal&amp;sensor=true&amp;key=AIzaSyDvEFtcY6tsbTnqB7xe8enKEXUVaB_qHV4): failed to open stream: HTTP request failed! HTTP/1.0 400 Bad Request
+ in /home/webtequb/public_html/project/localbrowse/test.php on line 10
+[08-Feb-2020 07:31:27 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 15
+[08-Feb-2020 07:31:27 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 15
+[08-Feb-2020 07:31:27 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 15
+[08-Feb-2020 07:31:27 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 15
+[08-Feb-2020 07:31:27 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[08-Feb-2020 07:31:27 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[08-Feb-2020 07:31:27 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[08-Feb-2020 07:31:27 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[08-Feb-2020 07:31:27 Etc/GMT] PHP Warning:  file_get_contents(https://maps.googleapis.com/maps/api/geocode/json?address=Kathmandu, Nepal&amp;key=AIzaSyCnSyhQbTMy6NNHAVl3lsFJ6IRqu1tt_zU): failed to open stream: HTTP request failed! HTTP/1.0 400 Bad Request
+ in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[08-Feb-2020 07:31:27 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 21
+[08-Feb-2020 07:31:27 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 21
+[08-Feb-2020 07:31:27 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 21
+[08-Feb-2020 07:31:27 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 21
+[08-Feb-2020 07:31:27 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 22
+[08-Feb-2020 07:31:27 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 22
+[08-Feb-2020 07:31:27 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 22
+[08-Feb-2020 07:31:27 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 22
+[08-Feb-2020 07:31:54 Etc/GMT] PHP Warning:  file_get_contents(https://maps.googleapis.com/maps/api/geocode/json? 
+   address=Kathmandu%2C+Nepal&amp;sensor=true&amp;key=AIzaSyDvEFtcY6tsbTnqB7xe8enKEXUVaB_qHV4): failed to open stream: HTTP request failed! HTTP/1.0 400 Bad Request
+ in /home/webtequb/public_html/project/localbrowse/test.php on line 10
+[08-Feb-2020 07:31:54 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 15
+[08-Feb-2020 07:31:54 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 15
+[08-Feb-2020 07:31:54 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 15
+[08-Feb-2020 07:31:54 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 15
+[08-Feb-2020 07:31:54 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[08-Feb-2020 07:31:54 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[08-Feb-2020 07:31:54 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[08-Feb-2020 07:31:54 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[08-Feb-2020 07:31:54 Etc/GMT] PHP Warning:  file_get_contents(https://maps.googleapis.com/maps/api/geocode/json?address=Kathmandu, Nepal&amp;key=AIzaSyDvEFtcY6tsbTnqB7xe8enKEXUVaB_qHV4): failed to open stream: HTTP request failed! HTTP/1.0 400 Bad Request
+ in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[08-Feb-2020 07:31:54 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 21
+[08-Feb-2020 07:31:54 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 21
+[08-Feb-2020 07:31:54 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 21
+[08-Feb-2020 07:31:54 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 21
+[08-Feb-2020 07:31:54 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 22
+[08-Feb-2020 07:31:54 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 22
+[08-Feb-2020 07:31:54 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 22
+[08-Feb-2020 07:31:54 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 22
+[08-Feb-2020 07:31:58 Etc/GMT] PHP Warning:  file_get_contents(https://maps.googleapis.com/maps/api/geocode/json? 
+   address=Kathmandu%2C+Nepal&amp;sensor=true&amp;key=AIzaSyDvEFtcY6tsbTnqB7xe8enKEXUVaB_qHV4): failed to open stream: HTTP request failed! HTTP/1.0 400 Bad Request
+ in /home/webtequb/public_html/project/localbrowse/test.php on line 10
+[08-Feb-2020 07:31:58 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 15
+[08-Feb-2020 07:31:58 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 15
+[08-Feb-2020 07:31:58 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 15
+[08-Feb-2020 07:31:58 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 15
+[08-Feb-2020 07:31:58 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[08-Feb-2020 07:31:58 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[08-Feb-2020 07:31:58 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[08-Feb-2020 07:31:58 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[08-Feb-2020 07:31:58 Etc/GMT] PHP Warning:  file_get_contents(https://maps.googleapis.com/maps/api/geocode/json?address=Kathmandu, Nepal&amp;key=AIzaSyDvEFtcY6tsbTnqB7xe8enKEXUVaB_qHV4): failed to open stream: HTTP request failed! HTTP/1.0 400 Bad Request
+ in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[08-Feb-2020 07:31:58 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 21
+[08-Feb-2020 07:31:58 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 21
+[08-Feb-2020 07:31:58 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 21
+[08-Feb-2020 07:31:58 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 21
+[08-Feb-2020 07:31:58 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 22
+[08-Feb-2020 07:31:58 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 22
+[08-Feb-2020 07:31:58 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 22
+[08-Feb-2020 07:31:58 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 22
+[10-Feb-2020 07:16:33 Etc/GMT] PHP Warning:  file_get_contents(https://maps.googleapis.com/maps/api/geocode/json? 
+   address=Kathmandu%2C+Nepal&amp;sensor=true&amp;key=AIzaSyDvEFtcY6tsbTnqB7xe8enKEXUVaB_qHV4): failed to open stream: HTTP request failed! HTTP/1.0 400 Bad Request
+ in /home/webtequb/public_html/project/localbrowse/test.php on line 10
+[10-Feb-2020 07:16:33 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 15
+[10-Feb-2020 07:16:33 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 15
+[10-Feb-2020 07:16:33 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 15
+[10-Feb-2020 07:16:33 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 15
+[10-Feb-2020 07:16:33 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[10-Feb-2020 07:16:33 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[10-Feb-2020 07:16:33 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[10-Feb-2020 07:16:33 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[10-Feb-2020 07:16:33 Etc/GMT] PHP Warning:  file_get_contents(https://maps.googleapis.com/maps/api/geocode/json?address=Kathmandu, Nepal&amp;key=AIzaSyDvEFtcY6tsbTnqB7xe8enKEXUVaB_qHV4): failed to open stream: HTTP request failed! HTTP/1.0 400 Bad Request
+ in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 07:16:33 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 21
+[10-Feb-2020 07:16:33 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 21
+[10-Feb-2020 07:16:33 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 21
+[10-Feb-2020 07:16:33 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 21
+[10-Feb-2020 07:16:33 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 22
+[10-Feb-2020 07:16:33 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 22
+[10-Feb-2020 07:16:33 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 22
+[10-Feb-2020 07:16:33 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 22
+[10-Feb-2020 09:47:35 Etc/GMT] PHP Warning:  file_get_contents(https://maps.googleapis.com/maps/api/geocode/json? 
+   address=Kathmandu%2C+Nepal&amp;sensor=true&amp;key=AIzaSyDvEFtcY6tsbTnqB7xe8enKEXUVaB_qHV4): failed to open stream: HTTP request failed! HTTP/1.0 400 Bad Request
+ in /home/webtequb/public_html/project/localbrowse/test.php on line 10
+[10-Feb-2020 09:47:35 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 15
+[10-Feb-2020 09:47:35 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 15
+[10-Feb-2020 09:47:35 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 15
+[10-Feb-2020 09:47:35 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 15
+[10-Feb-2020 09:47:35 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[10-Feb-2020 09:47:35 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[10-Feb-2020 09:47:35 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[10-Feb-2020 09:47:35 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[10-Feb-2020 09:47:35 Etc/GMT] PHP Warning:  file_get_contents(https://maps.googleapis.com/maps/api/geocode/json?address=Kathmandu, Nepal&amp;key=AIzaSyDvEFtcY6tsbTnqB7xe8enKEXUVaB_qHV4): failed to open stream: HTTP request failed! HTTP/1.0 400 Bad Request
+ in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 09:47:35 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 21
+[10-Feb-2020 09:47:35 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 21
+[10-Feb-2020 09:47:35 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 21
+[10-Feb-2020 09:47:35 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 21
+[10-Feb-2020 09:47:35 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 22
+[10-Feb-2020 09:47:35 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 22
+[10-Feb-2020 09:47:35 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 22
+[10-Feb-2020 09:47:35 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 22
+[10-Feb-2020 09:47:57 Etc/GMT] PHP Warning:  file_get_contents(https://maps.googleapis.com/maps/api/geocode/json? 
+   address=Kathmandu%2C+Nepal&amp;sensor=true&amp;key=AIzaSyDvEFtcY6tsbTnqB7xe8enKEXUVaB_qHV4): failed to open stream: HTTP request failed! HTTP/1.0 400 Bad Request
+ in /home/webtequb/public_html/project/localbrowse/test.php on line 10
+[10-Feb-2020 09:47:57 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 15
+[10-Feb-2020 09:47:57 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 15
+[10-Feb-2020 09:47:57 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 15
+[10-Feb-2020 09:47:57 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 15
+[10-Feb-2020 09:47:57 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[10-Feb-2020 09:47:57 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[10-Feb-2020 09:47:57 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[10-Feb-2020 09:47:57 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[10-Feb-2020 09:47:57 Etc/GMT] PHP Warning:  file_get_contents(https://maps.googleapis.com/maps/api/geocode/json?address=Kathmandu, Nepal&amp;key=AIzaSyDvEFtcY6tsbTnqB7xe8enKEXUVaB_qHV4): failed to open stream: HTTP request failed! HTTP/1.0 400 Bad Request
+ in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 09:47:57 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 21
+[10-Feb-2020 09:47:57 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 21
+[10-Feb-2020 09:47:57 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 21
+[10-Feb-2020 09:47:57 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 21
+[10-Feb-2020 09:47:57 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 22
+[10-Feb-2020 09:47:57 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 22
+[10-Feb-2020 09:47:57 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 22
+[10-Feb-2020 09:47:57 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 22
+[10-Feb-2020 09:52:37 Etc/GMT] PHP Warning:  file_get_contents(https://maps.googleapis.com/maps/api/geocode/json?address=Kathmandu, Nepal&amp;key=AIzaSyDvEFtcY6tsbTnqB7xe8enKEXUVaB_qHV4): failed to open stream: HTTP request failed! HTTP/1.0 400 Bad Request
+ in /home/webtequb/public_html/project/localbrowse/test.php on line 21
+[10-Feb-2020 09:52:37 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 24
+[10-Feb-2020 09:52:37 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 24
+[10-Feb-2020 09:52:37 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 24
+[10-Feb-2020 09:52:37 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 24
+[10-Feb-2020 09:52:37 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 25
+[10-Feb-2020 09:52:37 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 25
+[10-Feb-2020 09:52:37 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 25
+[10-Feb-2020 09:52:37 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 25
+[10-Feb-2020 09:53:39 Etc/GMT] PHP Warning:  file_get_contents(https://maps.googleapis.com/maps/api/geocode/json? 
+  address=Kathmandu%2C%2BNepal&amp;sensor=true&amp;key=AIzaSyDvEFtcY6tsbTnqB7xe8enKEXUVaB_qHV4): failed to open stream: HTTP request failed! HTTP/1.0 400 Bad Request
+ in /home/webtequb/public_html/project/localbrowse/test.php on line 10
+[10-Feb-2020 09:53:39 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 09:53:39 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 09:53:39 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 09:53:39 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 09:53:39 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 09:53:39 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 09:53:39 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 09:53:39 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 09:53:39 Etc/GMT] PHP Warning:  file_get_contents(https://maps.googleapis.com/maps/api/geocode/json?address=Kathmandu, Nepal&amp;key=AIzaSyDvEFtcY6tsbTnqB7xe8enKEXUVaB_qHV4): failed to open stream: HTTP request failed! HTTP/1.0 400 Bad Request
+ in /home/webtequb/public_html/project/localbrowse/test.php on line 21
+[10-Feb-2020 09:53:39 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 24
+[10-Feb-2020 09:53:39 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 24
+[10-Feb-2020 09:53:39 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 24
+[10-Feb-2020 09:53:39 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 24
+[10-Feb-2020 09:53:39 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 25
+[10-Feb-2020 09:53:39 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 25
+[10-Feb-2020 09:53:39 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 25
+[10-Feb-2020 09:53:39 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 25
+[10-Feb-2020 09:54:13 Etc/GMT] PHP Warning:  file_get_contents(https://maps.googleapis.com/maps/api/geocode/json? 
+  address=Kathmandu%2C%2BNepal&amp;key=AIzaSyDvEFtcY6tsbTnqB7xe8enKEXUVaB_qHV4): failed to open stream: HTTP request failed! HTTP/1.0 400 Bad Request
+ in /home/webtequb/public_html/project/localbrowse/test.php on line 10
+[10-Feb-2020 09:54:13 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 09:54:13 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 09:54:13 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 09:54:13 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 09:54:13 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 09:54:13 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 09:54:13 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 09:54:13 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 09:54:13 Etc/GMT] PHP Warning:  file_get_contents(https://maps.googleapis.com/maps/api/geocode/json?address=Kathmandu, Nepal&amp;key=AIzaSyDvEFtcY6tsbTnqB7xe8enKEXUVaB_qHV4): failed to open stream: HTTP request failed! HTTP/1.0 400 Bad Request
+ in /home/webtequb/public_html/project/localbrowse/test.php on line 21
+[10-Feb-2020 09:54:13 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 24
+[10-Feb-2020 09:54:13 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 24
+[10-Feb-2020 09:54:13 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 24
+[10-Feb-2020 09:54:13 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 24
+[10-Feb-2020 09:54:13 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 25
+[10-Feb-2020 09:54:13 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 25
+[10-Feb-2020 09:54:13 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 25
+[10-Feb-2020 09:54:13 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 25
+[10-Feb-2020 09:54:29 Etc/GMT] PHP Warning:  file_get_contents(https://maps.googleapis.com/maps/api/geocode/json? 
+  address=Kathmandu,+Nepal&amp;key=AIzaSyDvEFtcY6tsbTnqB7xe8enKEXUVaB_qHV4): failed to open stream: HTTP request failed! HTTP/1.0 400 Bad Request
+ in /home/webtequb/public_html/project/localbrowse/test.php on line 10
+[10-Feb-2020 09:54:29 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 09:54:29 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 09:54:29 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 09:54:29 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 09:54:29 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 09:54:29 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 09:54:29 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 09:54:29 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 09:54:30 Etc/GMT] PHP Warning:  file_get_contents(https://maps.googleapis.com/maps/api/geocode/json?address=Kathmandu, Nepal&amp;key=AIzaSyDvEFtcY6tsbTnqB7xe8enKEXUVaB_qHV4): failed to open stream: HTTP request failed! HTTP/1.0 400 Bad Request
+ in /home/webtequb/public_html/project/localbrowse/test.php on line 21
+[10-Feb-2020 09:54:30 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 24
+[10-Feb-2020 09:54:30 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 24
+[10-Feb-2020 09:54:30 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 24
+[10-Feb-2020 09:54:30 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 24
+[10-Feb-2020 09:54:30 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 25
+[10-Feb-2020 09:54:30 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 25
+[10-Feb-2020 09:54:30 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 25
+[10-Feb-2020 09:54:30 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 25
+[10-Feb-2020 09:54:52 Etc/GMT] PHP Warning:  file_get_contents(https://maps.googleapis.com/maps/api/geocode/json? 
+  address=Kathmandu%2C%2BNepal&amp;key=AIzaSyDvEFtcY6tsbTnqB7xe8enKEXUVaB_qHV4): failed to open stream: HTTP request failed! HTTP/1.0 400 Bad Request
+ in /home/webtequb/public_html/project/localbrowse/test.php on line 10
+[10-Feb-2020 09:54:52 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 09:54:52 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 09:54:52 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 09:54:52 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 09:54:52 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 09:54:52 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 09:54:52 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 09:54:52 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 09:54:52 Etc/GMT] PHP Warning:  file_get_contents(https://maps.googleapis.com/maps/api/geocode/json?address=Kathmandu, Nepal&amp;key=AIzaSyDvEFtcY6tsbTnqB7xe8enKEXUVaB_qHV4): failed to open stream: HTTP request failed! HTTP/1.0 400 Bad Request
+ in /home/webtequb/public_html/project/localbrowse/test.php on line 21
+[10-Feb-2020 09:54:52 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 24
+[10-Feb-2020 09:54:52 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 24
+[10-Feb-2020 09:54:52 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 24
+[10-Feb-2020 09:54:52 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 24
+[10-Feb-2020 09:54:52 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 25
+[10-Feb-2020 09:54:52 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 25
+[10-Feb-2020 09:54:52 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 25
+[10-Feb-2020 09:54:52 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 25
+[10-Feb-2020 09:55:50 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 09:55:50 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 09:55:50 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 09:55:50 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 09:55:50 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 09:55:50 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 09:55:50 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 09:55:50 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 09:55:50 Etc/GMT] PHP Warning:  file_get_contents(https://maps.googleapis.com/maps/api/geocode/json?address=Kathmandu, Nepal&amp;key=AIzaSyDvEFtcY6tsbTnqB7xe8enKEXUVaB_qHV4): failed to open stream: HTTP request failed! HTTP/1.0 400 Bad Request
+ in /home/webtequb/public_html/project/localbrowse/test.php on line 20
+[10-Feb-2020 09:55:50 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 23
+[10-Feb-2020 09:55:50 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 23
+[10-Feb-2020 09:55:50 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 23
+[10-Feb-2020 09:55:50 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 23
+[10-Feb-2020 09:55:50 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 24
+[10-Feb-2020 09:55:50 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 24
+[10-Feb-2020 09:55:50 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 24
+[10-Feb-2020 09:55:50 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 24
+[10-Feb-2020 09:57:20 Etc/GMT] PHP Warning:  file_get_contents(https://maps.googleapis.com/maps/api/geocode/json? 
+  address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&amp;key=AIzaSyDvEFtcY6tsbTnqB7xe8enKEXUVaB_qHV4): failed to open stream: HTTP request failed! HTTP/1.0 400 Bad Request
+ in /home/webtequb/public_html/project/localbrowse/test.php on line 10
+[10-Feb-2020 09:57:20 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 09:57:20 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 09:57:20 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 09:57:20 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 09:57:20 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 09:57:20 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 09:57:20 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 09:57:20 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 09:59:52 Etc/GMT] PHP Warning:  file_get_contents(https://maps.googleapis.com/maps/api/geocode/json? 
+  address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&amp;key=AIzaSyDvEFtcY6tsbTnqB7xe8enKEXUVaB_qHV4): failed to open stream: HTTP request failed! HTTP/1.0 400 Bad Request
+ in /home/webtequb/public_html/project/localbrowse/test.php on line 10
+[10-Feb-2020 09:59:52 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 09:59:52 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 09:59:52 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 09:59:52 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 09:59:52 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 09:59:52 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 09:59:52 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 09:59:52 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 09:59:52 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 23
+[10-Feb-2020 09:59:52 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 23
+[10-Feb-2020 09:59:52 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 23
+[10-Feb-2020 09:59:52 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 23
+[10-Feb-2020 09:59:52 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 24
+[10-Feb-2020 09:59:52 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 24
+[10-Feb-2020 09:59:52 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 24
+[10-Feb-2020 09:59:52 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 24
+[10-Feb-2020 10:00:55 Etc/GMT] PHP Warning:  file_get_contents(https://maps.googleapis.com/maps/api/geocode/json? 
+  address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&amp;key=AIzaSyDvEFtcY6tsbTnqB7xe8enKEXUVaB_qHV4): failed to open stream: HTTP request failed! HTTP/1.0 400 Bad Request
+ in /home/webtequb/public_html/project/localbrowse/test.php on line 10
+[10-Feb-2020 10:00:55 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 10:00:55 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 10:00:55 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 10:00:55 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 10:00:55 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 10:00:55 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 10:00:55 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 10:00:55 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 10:02:20 Etc/GMT] PHP Warning:  file_get_contents(https://maps.googleapis.com/maps/api/geocode/json? 
+  address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&amp;key=AIzaSyDvEFtcY6tsbTnqB7xe8enKEXUVaB_qHV4): failed to open stream: HTTP request failed! HTTP/1.0 400 Bad Request
+ in /home/webtequb/public_html/project/localbrowse/test.php on line 10
+[10-Feb-2020 10:02:20 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[10-Feb-2020 10:02:20 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[10-Feb-2020 10:02:20 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[10-Feb-2020 10:02:20 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[10-Feb-2020 10:02:20 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 10:02:20 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 10:02:20 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 10:02:20 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 10:02:23 Etc/GMT] PHP Warning:  file_get_contents(https://maps.googleapis.com/maps/api/geocode/json? 
+  address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&amp;key=AIzaSyDvEFtcY6tsbTnqB7xe8enKEXUVaB_qHV4): failed to open stream: HTTP request failed! HTTP/1.0 400 Bad Request
+ in /home/webtequb/public_html/project/localbrowse/test.php on line 10
+[10-Feb-2020 10:02:23 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[10-Feb-2020 10:02:23 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[10-Feb-2020 10:02:23 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[10-Feb-2020 10:02:23 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[10-Feb-2020 10:02:23 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 10:02:23 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 10:02:23 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 10:02:23 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 10:02:41 Etc/GMT] PHP Warning:  file_get_contents(https://maps.googleapis.com/maps/api/geocode/json? 
+  address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&amp;key=AIzaSyDvEFtcY6tsbTnqB7xe8enKEXUVaB_qHV4): failed to open stream: HTTP request failed! HTTP/1.0 400 Bad Request
+ in /home/webtequb/public_html/project/localbrowse/test.php on line 10
+[10-Feb-2020 10:02:41 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[10-Feb-2020 10:02:41 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[10-Feb-2020 10:02:41 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[10-Feb-2020 10:02:41 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[10-Feb-2020 10:02:41 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 10:02:41 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 10:02:41 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 10:02:41 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 10:02:57 Etc/GMT] PHP Warning:  file_get_contents(https://maps.googleapis.com/maps/api/geocode/json? 
+  address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&amp;key=AIzaSyDvEFtcY6tsbTnqB7xe8enKEXUVaB_qHV4): failed to open stream: HTTP request failed! HTTP/1.0 400 Bad Request
+ in /home/webtequb/public_html/project/localbrowse/test.php on line 10
+[10-Feb-2020 10:02:57 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[10-Feb-2020 10:02:57 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[10-Feb-2020 10:02:57 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[10-Feb-2020 10:02:57 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[10-Feb-2020 10:02:57 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 10:02:57 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 10:02:57 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 10:02:57 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 10:02:59 Etc/GMT] PHP Warning:  file_get_contents(https://maps.googleapis.com/maps/api/geocode/json? 
+  address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&amp;key=AIzaSyDvEFtcY6tsbTnqB7xe8enKEXUVaB_qHV4): failed to open stream: HTTP request failed! HTTP/1.0 400 Bad Request
+ in /home/webtequb/public_html/project/localbrowse/test.php on line 10
+[10-Feb-2020 10:02:59 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[10-Feb-2020 10:02:59 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[10-Feb-2020 10:02:59 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[10-Feb-2020 10:02:59 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[10-Feb-2020 10:02:59 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 10:02:59 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 10:02:59 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 10:02:59 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 10:03:35 Etc/GMT] PHP Warning:  file_get_contents(https://maps.googleapis.com/maps/api/geocode/json? 
+  address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&amp;key=AIzaSyDvEFtcY6tsbTnqB7xe8enKEXUVaB_qHV4): failed to open stream: HTTP request failed! HTTP/1.0 400 Bad Request
+ in /home/webtequb/public_html/project/localbrowse/test.php on line 10
+[10-Feb-2020 10:03:35 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[10-Feb-2020 10:03:35 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[10-Feb-2020 10:03:35 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[10-Feb-2020 10:03:35 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[10-Feb-2020 10:03:35 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 10:03:35 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 10:03:35 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 10:03:35 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 10:03:35 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 22
+[10-Feb-2020 10:03:35 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 22
+[10-Feb-2020 10:03:35 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 22
+[10-Feb-2020 10:03:35 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 22
+[10-Feb-2020 10:03:35 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 23
+[10-Feb-2020 10:03:35 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 23
+[10-Feb-2020 10:03:35 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 23
+[10-Feb-2020 10:03:35 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 23
+[10-Feb-2020 10:03:38 Etc/GMT] PHP Warning:  file_get_contents(https://maps.googleapis.com/maps/api/geocode/json? 
+  address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&amp;key=AIzaSyDvEFtcY6tsbTnqB7xe8enKEXUVaB_qHV4): failed to open stream: HTTP request failed! HTTP/1.0 400 Bad Request
+ in /home/webtequb/public_html/project/localbrowse/test.php on line 10
+[10-Feb-2020 10:03:38 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[10-Feb-2020 10:03:38 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[10-Feb-2020 10:03:38 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[10-Feb-2020 10:03:38 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[10-Feb-2020 10:03:38 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 10:03:38 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 10:03:38 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 10:03:38 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 10:03:41 Etc/GMT] PHP Warning:  file_get_contents(https://maps.googleapis.com/maps/api/geocode/json? 
+  address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&amp;key=AIzaSyDvEFtcY6tsbTnqB7xe8enKEXUVaB_qHV4): failed to open stream: HTTP request failed! HTTP/1.0 400 Bad Request
+ in /home/webtequb/public_html/project/localbrowse/test.php on line 10
+[10-Feb-2020 10:03:41 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[10-Feb-2020 10:03:41 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[10-Feb-2020 10:03:41 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[10-Feb-2020 10:03:41 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[10-Feb-2020 10:03:41 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 10:03:41 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 10:03:41 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 10:03:41 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 10:03:41 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 22
+[10-Feb-2020 10:03:41 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 22
+[10-Feb-2020 10:03:41 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 22
+[10-Feb-2020 10:03:41 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 22
+[10-Feb-2020 10:03:41 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 23
+[10-Feb-2020 10:03:41 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 23
+[10-Feb-2020 10:03:41 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 23
+[10-Feb-2020 10:03:41 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 23
+[10-Feb-2020 10:03:49 Etc/GMT] PHP Warning:  file_get_contents(https://maps.googleapis.com/maps/api/geocode/json? 
+  address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&amp;key=AIzaSyDvEFtcY6tsbTnqB7xe8enKEXUVaB_qHV4): failed to open stream: HTTP request failed! HTTP/1.0 400 Bad Request
+ in /home/webtequb/public_html/project/localbrowse/test.php on line 10
+[10-Feb-2020 10:03:49 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[10-Feb-2020 10:03:49 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[10-Feb-2020 10:03:49 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[10-Feb-2020 10:03:49 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[10-Feb-2020 10:03:49 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 10:03:49 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 10:03:49 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 10:03:49 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 10:04:51 Etc/GMT] PHP Warning:  file_get_contents(https://maps.googleapis.com/maps/api/geocode/json? 
+  address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&amp;key=AIzaSyDvEFtcY6tsbTnqB7xe8enKEXUVaB_qHV4): failed to open stream: HTTP request failed! HTTP/1.0 400 Bad Request
+ in /home/webtequb/public_html/project/localbrowse/test.php on line 10
+[10-Feb-2020 10:04:51 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[10-Feb-2020 10:04:51 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[10-Feb-2020 10:04:51 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[10-Feb-2020 10:04:51 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[10-Feb-2020 10:04:51 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 10:04:51 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 10:04:51 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 10:04:51 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 10:04:54 Etc/GMT] PHP Warning:  file_get_contents(https://maps.googleapis.com/maps/api/geocode/json? 
+  address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&amp;key=AIzaSyDvEFtcY6tsbTnqB7xe8enKEXUVaB_qHV4): failed to open stream: HTTP request failed! HTTP/1.0 400 Bad Request
+ in /home/webtequb/public_html/project/localbrowse/test.php on line 10
+[10-Feb-2020 10:04:54 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[10-Feb-2020 10:04:54 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[10-Feb-2020 10:04:54 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[10-Feb-2020 10:04:54 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[10-Feb-2020 10:04:54 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 10:04:54 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 10:04:54 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 10:04:54 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 10:04:57 Etc/GMT] PHP Warning:  file_get_contents(https://maps.googleapis.com/maps/api/geocode/json? 
+  address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&amp;key=AIzaSyDvEFtcY6tsbTnqB7xe8enKEXUVaB_qHV4): failed to open stream: HTTP request failed! HTTP/1.0 400 Bad Request
+ in /home/webtequb/public_html/project/localbrowse/test.php on line 10
+[10-Feb-2020 10:04:57 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[10-Feb-2020 10:04:57 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[10-Feb-2020 10:04:57 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[10-Feb-2020 10:04:57 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[10-Feb-2020 10:04:57 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 10:04:57 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 10:04:57 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 10:04:57 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 10:05:21 Etc/GMT] PHP Warning:  file_get_contents(https://maps.googleapis.com/maps/api/geocode/json? 
+  address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&amp;key=AIzaSyDvEFtcY6tsbTnqB7xe8enKEXUVaB_qHV4): failed to open stream: HTTP request failed! HTTP/1.0 400 Bad Request
+ in /home/webtequb/public_html/project/localbrowse/test.php on line 10
+[10-Feb-2020 10:05:21 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[10-Feb-2020 10:05:21 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[10-Feb-2020 10:05:21 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[10-Feb-2020 10:05:21 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[10-Feb-2020 10:05:21 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 10:05:21 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 10:05:21 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 10:05:21 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 10:05:21 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 22
+[10-Feb-2020 10:05:21 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 22
+[10-Feb-2020 10:05:21 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 22
+[10-Feb-2020 10:05:21 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 22
+[10-Feb-2020 10:05:21 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 23
+[10-Feb-2020 10:05:21 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 23
+[10-Feb-2020 10:05:21 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 23
+[10-Feb-2020 10:05:21 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 23
+[10-Feb-2020 10:05:24 Etc/GMT] PHP Warning:  file_get_contents(https://maps.googleapis.com/maps/api/geocode/json? 
+  address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&amp;key=AIzaSyDvEFtcY6tsbTnqB7xe8enKEXUVaB_qHV4): failed to open stream: HTTP request failed! HTTP/1.0 400 Bad Request
+ in /home/webtequb/public_html/project/localbrowse/test.php on line 10
+[10-Feb-2020 10:05:24 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[10-Feb-2020 10:05:24 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[10-Feb-2020 10:05:24 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[10-Feb-2020 10:05:24 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[10-Feb-2020 10:05:24 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 10:05:24 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 10:05:24 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 10:05:24 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 10:05:24 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 22
+[10-Feb-2020 10:05:24 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 22
+[10-Feb-2020 10:05:24 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 22
+[10-Feb-2020 10:05:24 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 22
+[10-Feb-2020 10:05:24 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 23
+[10-Feb-2020 10:05:24 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 23
+[10-Feb-2020 10:05:24 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 23
+[10-Feb-2020 10:05:24 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 23
+[10-Feb-2020 10:05:26 Etc/GMT] PHP Warning:  file_get_contents(https://maps.googleapis.com/maps/api/geocode/json? 
+  address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&amp;key=AIzaSyDvEFtcY6tsbTnqB7xe8enKEXUVaB_qHV4): failed to open stream: HTTP request failed! HTTP/1.0 400 Bad Request
+ in /home/webtequb/public_html/project/localbrowse/test.php on line 10
+[10-Feb-2020 10:05:26 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[10-Feb-2020 10:05:26 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[10-Feb-2020 10:05:26 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[10-Feb-2020 10:05:26 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[10-Feb-2020 10:05:26 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 10:05:26 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 10:05:26 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 10:05:26 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 10:05:26 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 22
+[10-Feb-2020 10:05:26 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 22
+[10-Feb-2020 10:05:26 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 22
+[10-Feb-2020 10:05:26 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 22
+[10-Feb-2020 10:05:26 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 23
+[10-Feb-2020 10:05:26 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 23
+[10-Feb-2020 10:05:26 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 23
+[10-Feb-2020 10:05:26 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 23
+[10-Feb-2020 10:05:28 Etc/GMT] PHP Warning:  file_get_contents(https://maps.googleapis.com/maps/api/geocode/json? 
+  address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&amp;key=AIzaSyDvEFtcY6tsbTnqB7xe8enKEXUVaB_qHV4): failed to open stream: HTTP request failed! HTTP/1.0 400 Bad Request
+ in /home/webtequb/public_html/project/localbrowse/test.php on line 10
+[10-Feb-2020 10:05:28 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[10-Feb-2020 10:05:28 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[10-Feb-2020 10:05:28 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[10-Feb-2020 10:05:28 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 16
+[10-Feb-2020 10:05:28 Etc/GMT] PHP Notice:  Trying to get property 'results' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 10:05:28 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 10:05:28 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 10:05:28 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 17
+[10-Feb-2020 10:05:55 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 11
+[10-Feb-2020 10:05:55 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 11
+[10-Feb-2020 10:05:55 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 11
+[10-Feb-2020 10:05:55 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 11
+[10-Feb-2020 10:05:55 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 12
+[10-Feb-2020 10:05:55 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 12
+[10-Feb-2020 10:05:55 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 12
+[10-Feb-2020 10:05:55 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 12
+[10-Feb-2020 10:05:58 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 11
+[10-Feb-2020 10:05:58 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 11
+[10-Feb-2020 10:05:58 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 11
+[10-Feb-2020 10:05:58 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 11
+[10-Feb-2020 10:05:58 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 12
+[10-Feb-2020 10:05:58 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 12
+[10-Feb-2020 10:05:58 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 12
+[10-Feb-2020 10:05:58 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 12
+[10-Feb-2020 10:06:01 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 11
+[10-Feb-2020 10:06:01 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 11
+[10-Feb-2020 10:06:01 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 11
+[10-Feb-2020 10:06:01 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 11
+[10-Feb-2020 10:06:01 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 12
+[10-Feb-2020 10:06:01 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 12
+[10-Feb-2020 10:06:01 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 12
+[10-Feb-2020 10:06:01 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 12
+[10-Feb-2020 10:06:03 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 11
+[10-Feb-2020 10:06:03 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 11
+[10-Feb-2020 10:06:03 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 11
+[10-Feb-2020 10:06:03 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 11
+[10-Feb-2020 10:06:03 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 12
+[10-Feb-2020 10:06:03 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 12
+[10-Feb-2020 10:06:03 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 12
+[10-Feb-2020 10:06:03 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 12
+[10-Feb-2020 10:06:05 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 11
+[10-Feb-2020 10:06:05 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 11
+[10-Feb-2020 10:06:05 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 11
+[10-Feb-2020 10:06:05 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 11
+[10-Feb-2020 10:06:05 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 12
+[10-Feb-2020 10:06:05 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 12
+[10-Feb-2020 10:06:05 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 12
+[10-Feb-2020 10:06:05 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 12
+[10-Feb-2020 10:06:34 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 11
+[10-Feb-2020 10:06:34 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 11
+[10-Feb-2020 10:06:34 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 11
+[10-Feb-2020 10:06:34 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 11
+[10-Feb-2020 10:06:34 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 12
+[10-Feb-2020 10:06:34 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 12
+[10-Feb-2020 10:06:34 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 12
+[10-Feb-2020 10:06:34 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 12
+[10-Feb-2020 10:06:36 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 11
+[10-Feb-2020 10:06:36 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 11
+[10-Feb-2020 10:06:36 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 11
+[10-Feb-2020 10:06:36 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 11
+[10-Feb-2020 10:06:36 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 12
+[10-Feb-2020 10:06:36 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 12
+[10-Feb-2020 10:06:36 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 12
+[10-Feb-2020 10:06:36 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 12
+[10-Feb-2020 10:06:38 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 11
+[10-Feb-2020 10:06:38 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 11
+[10-Feb-2020 10:06:38 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 11
+[10-Feb-2020 10:06:38 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 11
+[10-Feb-2020 10:06:38 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 12
+[10-Feb-2020 10:06:38 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 12
+[10-Feb-2020 10:06:38 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 12
+[10-Feb-2020 10:06:38 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 12
+[10-Feb-2020 10:21:17 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:21:17 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:21:17 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:21:17 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:21:17 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 20
+[10-Feb-2020 10:21:17 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 20
+[10-Feb-2020 10:21:17 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 20
+[10-Feb-2020 10:21:17 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 20
+[10-Feb-2020 10:22:30 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:22:30 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:22:30 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:22:30 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:22:30 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 20
+[10-Feb-2020 10:22:30 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 20
+[10-Feb-2020 10:22:30 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 20
+[10-Feb-2020 10:22:30 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 20
+[10-Feb-2020 10:23:38 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:23:38 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:23:38 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:23:38 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:23:38 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 20
+[10-Feb-2020 10:23:38 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 20
+[10-Feb-2020 10:23:38 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 20
+[10-Feb-2020 10:23:38 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 20
+[10-Feb-2020 10:23:44 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:23:44 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:23:44 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:23:44 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:23:44 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 20
+[10-Feb-2020 10:23:44 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 20
+[10-Feb-2020 10:23:44 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 20
+[10-Feb-2020 10:23:44 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 20
+[10-Feb-2020 10:24:37 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:24:37 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:24:37 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:24:37 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:24:37 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 20
+[10-Feb-2020 10:24:37 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 20
+[10-Feb-2020 10:24:37 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 20
+[10-Feb-2020 10:24:37 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 20
+[10-Feb-2020 10:25:37 Etc/GMT] PHP Notice:  Undefined index: address in /home/webtequb/public_html/project/localbrowse/test.php on line 14
+[10-Feb-2020 10:25:37 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 10:25:37 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 10:25:37 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 10:25:37 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 10:25:37 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:25:37 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:25:37 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:25:37 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:25:42 Etc/GMT] PHP Notice:  Undefined index: address in /home/webtequb/public_html/project/localbrowse/test.php on line 14
+[10-Feb-2020 10:25:42 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 10:25:42 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 10:25:42 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 10:25:42 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 10:25:42 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:25:42 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:25:42 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:25:42 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:25:51 Etc/GMT] PHP Notice:  Undefined index: address in /home/webtequb/public_html/project/localbrowse/test.php on line 14
+[10-Feb-2020 10:25:51 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 10:25:51 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 10:25:51 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 10:25:51 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 10:25:51 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:25:51 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:25:51 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:25:51 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:25:54 Etc/GMT] PHP Notice:  Undefined index: address in /home/webtequb/public_html/project/localbrowse/test.php on line 14
+[10-Feb-2020 10:25:54 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 10:25:54 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 10:25:54 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 10:25:54 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 10:25:54 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:25:54 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:25:54 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:25:54 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:25:56 Etc/GMT] PHP Notice:  Undefined index: address in /home/webtequb/public_html/project/localbrowse/test.php on line 14
+[10-Feb-2020 10:25:56 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 10:25:56 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 10:25:56 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 10:25:56 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 10:25:56 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:25:56 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:25:56 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:25:56 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:26:48 Etc/GMT] PHP Notice:  Undefined index: address in /home/webtequb/public_html/project/localbrowse/test.php on line 14
+[10-Feb-2020 10:26:48 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 10:26:48 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 10:26:48 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 10:26:48 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 10:26:48 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:26:48 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:26:48 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:26:48 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:34:17 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 11
+[10-Feb-2020 10:34:17 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 11
+[10-Feb-2020 10:34:17 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 11
+[10-Feb-2020 10:34:17 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 11
+[10-Feb-2020 10:34:17 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 12
+[10-Feb-2020 10:34:17 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 12
+[10-Feb-2020 10:34:17 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 12
+[10-Feb-2020 10:34:17 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 12
+[10-Feb-2020 10:34:17 Etc/GMT] PHP Notice:  Undefined index: address in /home/webtequb/public_html/project/localbrowse/test.php on line 14
+[10-Feb-2020 10:34:17 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 10:34:17 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 10:34:17 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 10:34:17 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 10:34:17 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:34:17 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:34:17 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:34:17 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:34:27 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 11
+[10-Feb-2020 10:34:27 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 11
+[10-Feb-2020 10:34:27 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 11
+[10-Feb-2020 10:34:27 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 11
+[10-Feb-2020 10:34:27 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 12
+[10-Feb-2020 10:34:27 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 12
+[10-Feb-2020 10:34:27 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 12
+[10-Feb-2020 10:34:27 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 12
+[10-Feb-2020 10:34:27 Etc/GMT] PHP Notice:  Undefined index: address in /home/webtequb/public_html/project/localbrowse/test.php on line 14
+[10-Feb-2020 10:34:27 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 10:34:27 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 10:34:27 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 10:34:27 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 10:34:27 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:34:27 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:34:27 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:34:27 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:34:32 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 11
+[10-Feb-2020 10:34:32 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 11
+[10-Feb-2020 10:34:32 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 11
+[10-Feb-2020 10:34:32 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 11
+[10-Feb-2020 10:34:32 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 12
+[10-Feb-2020 10:34:32 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 12
+[10-Feb-2020 10:34:32 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 12
+[10-Feb-2020 10:34:32 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 12
+[10-Feb-2020 10:34:32 Etc/GMT] PHP Notice:  Undefined index: address in /home/webtequb/public_html/project/localbrowse/test.php on line 14
+[10-Feb-2020 10:34:32 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 10:34:32 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 10:34:32 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 10:34:32 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 10:34:32 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:34:32 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:34:32 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:34:32 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:34:35 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 11
+[10-Feb-2020 10:34:35 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 11
+[10-Feb-2020 10:34:35 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 11
+[10-Feb-2020 10:34:35 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 11
+[10-Feb-2020 10:34:35 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 12
+[10-Feb-2020 10:34:35 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 12
+[10-Feb-2020 10:34:35 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 12
+[10-Feb-2020 10:34:35 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 12
+[10-Feb-2020 10:34:35 Etc/GMT] PHP Notice:  Undefined index: address in /home/webtequb/public_html/project/localbrowse/test.php on line 14
+[10-Feb-2020 10:34:35 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 10:34:35 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 10:34:35 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 10:34:35 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 10:34:35 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:34:35 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:34:35 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:34:35 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:34:38 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 11
+[10-Feb-2020 10:34:38 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 11
+[10-Feb-2020 10:34:38 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 11
+[10-Feb-2020 10:34:38 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 11
+[10-Feb-2020 10:34:38 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 12
+[10-Feb-2020 10:34:38 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 12
+[10-Feb-2020 10:34:38 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 12
+[10-Feb-2020 10:34:38 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 12
+[10-Feb-2020 10:34:38 Etc/GMT] PHP Notice:  Undefined index: address in /home/webtequb/public_html/project/localbrowse/test.php on line 14
+[10-Feb-2020 10:34:38 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 10:34:38 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 10:34:38 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 10:34:38 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 10:34:38 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:34:38 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:34:38 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:34:38 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:34:40 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 11
+[10-Feb-2020 10:34:40 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 11
+[10-Feb-2020 10:34:40 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 11
+[10-Feb-2020 10:34:40 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 11
+[10-Feb-2020 10:34:40 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 12
+[10-Feb-2020 10:34:40 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 12
+[10-Feb-2020 10:34:40 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 12
+[10-Feb-2020 10:34:40 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 12
+[10-Feb-2020 10:34:40 Etc/GMT] PHP Notice:  Undefined index: address in /home/webtequb/public_html/project/localbrowse/test.php on line 14
+[10-Feb-2020 10:34:40 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 10:34:40 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 10:34:40 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 10:34:40 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 10:34:40 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:34:40 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:34:40 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:34:40 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:34:43 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 11
+[10-Feb-2020 10:34:43 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 11
+[10-Feb-2020 10:34:43 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 11
+[10-Feb-2020 10:34:43 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 11
+[10-Feb-2020 10:34:43 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 12
+[10-Feb-2020 10:34:43 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 12
+[10-Feb-2020 10:34:43 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 12
+[10-Feb-2020 10:34:43 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 12
+[10-Feb-2020 10:34:43 Etc/GMT] PHP Notice:  Undefined index: address in /home/webtequb/public_html/project/localbrowse/test.php on line 14
+[10-Feb-2020 10:34:43 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 10:34:43 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 10:34:43 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 10:34:43 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 10:34:43 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:34:43 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:34:43 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:34:43 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:34:47 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 11
+[10-Feb-2020 10:34:47 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 11
+[10-Feb-2020 10:34:47 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 11
+[10-Feb-2020 10:34:47 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 11
+[10-Feb-2020 10:34:47 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 12
+[10-Feb-2020 10:34:47 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 12
+[10-Feb-2020 10:34:47 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 12
+[10-Feb-2020 10:34:47 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 12
+[10-Feb-2020 10:34:47 Etc/GMT] PHP Notice:  Undefined index: address in /home/webtequb/public_html/project/localbrowse/test.php on line 14
+[10-Feb-2020 10:34:47 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 10:34:47 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 10:34:47 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 10:34:47 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 10:34:47 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:34:47 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:34:47 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:34:47 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:36:31 Etc/GMT] PHP Notice:  Undefined index: address in /home/webtequb/public_html/project/localbrowse/test.php on line 14
+[10-Feb-2020 10:36:31 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 10:36:31 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 10:36:31 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 10:36:31 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 18
+[10-Feb-2020 10:36:31 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:36:31 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:36:31 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:36:31 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 19
+[10-Feb-2020 10:36:43 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 11
+[10-Feb-2020 10:36:43 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 11
+[10-Feb-2020 10:36:43 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 11
+[10-Feb-2020 10:36:43 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 11
+[10-Feb-2020 10:36:43 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 12
+[10-Feb-2020 10:36:43 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 12
+[10-Feb-2020 10:36:43 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 12
+[10-Feb-2020 10:36:43 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 12
+[10-Feb-2020 10:36:43 Etc/GMT] PHP Notice:  Undefined index: address in /home/webtequb/public_html/project/localbrowse/test.php on line 14
+[10-Feb-2020 10:56:32 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 21
+[10-Feb-2020 10:56:32 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 21
+[10-Feb-2020 10:56:32 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 21
+[10-Feb-2020 10:56:32 Etc/GMT] PHP Notice:  Trying to get property 'lat' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 21
+[10-Feb-2020 10:56:32 Etc/GMT] PHP Notice:  Undefined offset: 0 in /home/webtequb/public_html/project/localbrowse/test.php on line 22
+[10-Feb-2020 10:56:32 Etc/GMT] PHP Notice:  Trying to get property 'geometry' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 22
+[10-Feb-2020 10:56:32 Etc/GMT] PHP Notice:  Trying to get property 'location' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 22
+[10-Feb-2020 10:56:32 Etc/GMT] PHP Notice:  Trying to get property 'lng' of non-object in /home/webtequb/public_html/project/localbrowse/test.php on line 22
+[10-Feb-2020 18:29:13 Asia/Kolkata] PHP Fatal error:  Redefinition of parameter $module in /home/webtequb/public_html/project/localbrowse/application/models/Search_model.php on line 9
+[10-Feb-2020 18:29:52 Asia/Kolkata] PHP Fatal error:  Redefinition of parameter $module in /home/webtequb/public_html/project/localbrowse/application/models/Search_model.php on line 9
+[17-Feb-2020 11:21:37 Asia/Kolkata] PHP Parse error:  syntax error, unexpected '' m'' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ';' in /home/webtemgl/public_html/project/localbrowse/application/views/result.php on line 342
+[17-Feb-2020 11:22:47 Asia/Kolkata] PHP Parse error:  syntax error, unexpected '" m"' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ';' in /home/webtemgl/public_html/project/localbrowse/application/views/result.php on line 342
+[17-Feb-2020 11:35:16 Asia/Kolkata] PHP Fatal error:  Call to undefined method CI_DB_mysqli_result::last_query() in /home/webtemgl/public_html/project/localbrowse/application/models/Search_model.php on line 58
+[17-Feb-2020 11:36:56 Asia/Kolkata] PHP Fatal error:  Call to undefined method CI_DB_mysqli_result::last_query() in /home/webtemgl/public_html/project/localbrowse/application/models/Search_model.php on line 58
+[17-Feb-2020 17:21:25 Asia/Kolkata] PHP Parse error:  syntax error, unexpected end of file in /home/webtemgl/public_html/project/localbrowse/application/views/result.php on line 355
+[19-Feb-2020 15:04:16 Asia/Kolkata] PHP Fatal error:  Call to undefined function file_exist() in /home/webtemgl/public_html/project/localbrowse/application/views/adsview_page.php on line 75
+[26-Feb-2020 15:15:41 Asia/Kolkata] PHP Fatal error:  Call to undefined function now() in /home/webtemgl/public_html/project/localbrowse/application/controllers/staff_panel/Adsdata.php on line 143
+[26-Feb-2020 15:20:47 Asia/Kolkata] PHP Fatal error:  Call to undefined function now() in /home/webtemgl/public_html/project/localbrowse/application/controllers/staff_panel/Adsdata.php on line 143
+[26-Feb-2020 16:21:28 Asia/Kolkata] PHP Fatal error:  Cannot redeclare Notice_model::notice_data_list() in /home/webtemgl/public_html/project/localbrowse/application/models/Notice_model.php on line 41
+[26-Feb-2020 16:28:53 Asia/Kolkata] PHP Fatal error:  Cannot use object of type stdClass as array in /home/webtemgl/public_html/project/localbrowse/application/views/staff_panel/ads_list_view.php on line 348
+[26-Feb-2020 16:28:57 Asia/Kolkata] PHP Fatal error:  Cannot use object of type stdClass as array in /home/webtemgl/public_html/project/localbrowse/application/views/staff_panel/ads_list_view.php on line 348
+[26-Feb-2020 16:28:59 Asia/Kolkata] PHP Fatal error:  Cannot use object of type stdClass as array in /home/webtemgl/public_html/project/localbrowse/application/views/staff_panel/ads_list_view.php on line 348
+[26-Feb-2020 16:29:32 Asia/Kolkata] PHP Fatal error:  Cannot use object of type stdClass as array in /home/webtemgl/public_html/project/localbrowse/application/views/staff_panel/ads_list_view.php on line 348
+[05-Mar-2020 14:59:56 Asia/Kolkata] PHP Parse error:  syntax error, unexpected '}' in /home/webtemgl/public_html/project/localbrowse/application/controllers/apanel/Category.php on line 243
+[05-Mar-2020 15:48:32 Asia/Kolkata] PHP Fatal error:  Call to undefined method Custom_model::idwise_count() in /home/webtemgl/public_html/project/localbrowse/application/controllers/apanel/Category.php on line 240
+[05-Mar-2020 15:50:24 Asia/Kolkata] PHP Fatal error:  Call to undefined method Custom_model::idwise_count() in /home/webtemgl/public_html/project/localbrowse/application/controllers/apanel/Category.php on line 240
+[05-Mar-2020 15:53:55 Asia/Kolkata] PHP Fatal error:  Call to undefined method Custom_model::idwise_count() in /home/webtemgl/public_html/project/localbrowse/application/controllers/apanel/Category.php on line 240
+[05-Mar-2020 15:54:50 Asia/Kolkata] PHP Fatal error:  Call to undefined method Custom_model::idwise_count() in /home/webtemgl/public_html/project/localbrowse/application/controllers/apanel/Category.php on line 240
+[05-Mar-2020 16:02:21 Asia/Kolkata] PHP Fatal error:  Call to a member function query() on null in /home/webtemgl/public_html/project/localbrowse/application/models/apanel/Custom_model.php on line 12
+[05-Mar-2020 16:02:29 Asia/Kolkata] PHP Fatal error:  Call to a member function query() on null in /home/webtemgl/public_html/project/localbrowse/application/models/apanel/Custom_model.php on line 12
+[05-Mar-2020 16:19:03 Asia/Kolkata] PHP Fatal error:  Call to a member function query() on null in /home/webtemgl/public_html/project/localbrowse/application/models/apanel/Custom_model.php on line 12
+[05-Mar-2020 16:20:31 Asia/Kolkata] PHP Fatal error:  Call to a member function query() on null in /home/webtemgl/public_html/project/localbrowse/application/models/apanel/Custom_model.php on line 12
+[05-Mar-2020 16:20:38 Asia/Kolkata] PHP Fatal error:  Call to a member function query() on null in /home/webtemgl/public_html/project/localbrowse/application/models/apanel/Custom_model.php on line 12
+[05-Mar-2020 16:21:41 Asia/Kolkata] PHP Fatal error:  Call to a member function query() on null in /home/webtemgl/public_html/project/localbrowse/application/models/apanel/Custom_model.php on line 12
+[05-Mar-2020 16:25:01 Asia/Kolkata] PHP Fatal error:  Call to a member function query() on null in /home/webtemgl/public_html/project/localbrowse/application/models/apanel/Custom_model.php on line 13
+[05-Mar-2020 20:25:59 Asia/Kolkata] PHP Fatal error:  Call to undefined function getSubcaHome() in /home/webtemgl/public_html/project/localbrowse/application/views/index.php on line 76
+[26-Mar-2020 19:43:50 Asia/Kolkata] PHP Parse error:  syntax error, unexpected '}' in /home/webtemgl/public_html/project/localbrowse/application/controllers/Quote.php on line 237
+[02-Apr-2020 18:39:07 Asia/Kolkata] PHP Fatal error:  Call to a member function last_query() on null in /home/webtemgl/public_html/project/localbrowse/application/models/Quote_model.php on line 76
+[09-Apr-2020 18:34:00 Asia/Kolkata] PHP Fatal error:  Cannot access empty property in /home/webtemgl/public_html/project/localbrowse/application/views/user_ads_list.php on line 111
+[14-Apr-2020 19:11:00 Asia/Kolkata] PHP Parse error:  syntax error, unexpected ')' in /home/webtemgl/public_html/project/localbrowse/application/views/review_list.php on line 154
+[14-Apr-2020 20:04:55 Asia/Kolkata] PHP Fatal error:  Call to a member function RowCount() on null in /home/webtemgl/public_html/project/localbrowse/application/controllers/Review.php on line 126
+[14-Apr-2020 20:05:45 Asia/Kolkata] PHP Fatal error:  Call to a member function RowCount() on null in /home/webtemgl/public_html/project/localbrowse/application/controllers/Review.php on line 126
+[14-Apr-2020 20:08:27 Asia/Kolkata] PHP Fatal error:  Call to a member function RowCount() on null in /home/webtemgl/public_html/project/localbrowse/application/controllers/Review.php on line 127
+[20-Apr-2020 14:46:40 Asia/Kolkata] PHP Fatal error:  Call to a member function quote_user_list() on null in /home/webtemgl/public_html/project/localbrowse/application/controllers/Report.php on line 126
+[20-Apr-2020 15:26:36 Asia/Kolkata] PHP Fatal error:  Call to undefined method Report_model::message_unread_toread() in /home/webtemgl/public_html/project/localbrowse/application/controllers/Report.php on line 127
+[21-Apr-2020 19:50:23 Asia/Kolkata] PHP Fatal error:  Cannot redeclare class Report_model in /home/webtemgl/public_html/project/localbrowse/application/models/staff_panel/Complaint_model.php on line 0
+[21-Apr-2020 19:52:43 Asia/Kolkata] PHP Fatal error:  Cannot redeclare class Report_model in /home/webtemgl/public_html/project/localbrowse/application/models/staff_panel/Complaint_model.php on line 0
+[21-Apr-2020 19:53:28 Asia/Kolkata] PHP Fatal error:  Cannot redeclare class Report_model in /home/webtemgl/public_html/project/localbrowse/application/models/staff_panel/Complaint_model.php on line 0
+[04-May-2020 23:49:28 Asia/Kolkata] PHP Parse error:  syntax error, unexpected 'Object' (T_STRING), expecting ')' in /home/webtemgl/public_html/project/localbrowse/application/controllers/Search.php on line 97
+[13-May-2020 14:47:50 Asia/Kolkata] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home/webtemgl/public_html/project/localbrowse/application/controllers/apanel/Adsdata.php on line 37
+[19-May-2020 17:41:02 Asia/Kolkata] PHP Parse error:  syntax error, unexpected 'cat' (T_STRING) in /home/webtemgl/public_html/project/localbrowse/application/controllers/Category.php on line 58
+[03-Feb-2021 13:59:59 UTC] PHP Warning:  file_get_contents(http://ip-api.com/json/79.136.53.164): failed to open stream: HTTP request failed! HTTP/1.1 429 Too Many Requests
+&lt;br /&gt;
+HTTP request failed! HTTP/1.1 429 Too Many Requests
+ in /home/thelocalbrowse/public_html/application/config/config.php on line 6
+[03-Feb-2021 13:59:59 UTC] PHP Notice:  Trying to get property 'timezone' of non-object in /home/thelocalbrowse/public_html/application/config/config.php on line 8
+[03-Feb-2021 13:59:59 UTC] PHP Notice:  date_default_timezone_set(): Timezone ID '' is invalid in /home/thelocalbrowse/public_html/application/config/config.php on line 9

@@ -1,0 +1,1 @@
+<div class="banner_area <?php if($this->router->fetch_class()=='adsview' && $this->router->fetch_method()=='dataview'){echo"inner_banner";}?> text-center" style="background-image:url(<?=base_url();?>assets_front/images/bannerimg.jpg);">
