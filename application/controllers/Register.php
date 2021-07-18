@@ -28,6 +28,21 @@ class Register extends CI_Controller {
 
 	public function index()
 	{ 
+//     $username="KRISHNA_SFB";
+// $password ="get!N2BSMS";
+// $number='7003832809';
+// //$sender="TESTIP";
+// $sender="BLKSMS";
+// $message='Hi ambia ';
+// $template_id='123';
+
+// $url="http://api.bulksmsgateway.in/sendmessage.php?user=".urlencode($username)."&password=".urlencode($password)."&mobile=".urlencode($number)."&sender=".urlencode($sender)."&message=".urlencode($message)."&type=".urlencode('3');
+// $ch = curl_init($url);
+// curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+// echo $result = curl_exec($ch);
+// curl_close($ch); 
+// exit();
+ 
     $data['gmail_url']= 'https://accounts.google.com/o/oauth2/v2/auth?scope=' . urlencode('https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email') . '&redirect_uri=' . urlencode(CLIENT_REDIRECT_URL) . '&response_type=code&client_id=' . CLIENT_ID . '&access_type=online';
 
 	    $user_ip =getenv('REMOTE_ADDR');
@@ -105,6 +120,12 @@ $data['country_get']=trim($geo["geoplugin_countryCode"]);
                 $this->session->set_flashdata('error','Please check username and password');
                 redirect('register/login');
             }else{
+              $datalist = array( 
+                'logon_date'   => date('Y-m-d')
+                //'status'        => $this->input->post('status'),
+            );
+ $userid=$this->session->userdata('front_sess')['userid'];
+    $this->General_model->show_data_id('user_table',$userid,'id','update',$datalist);
                 if($log!=''){
                     redirect('adsview/dataview?ads='.$log);
                 }else{
@@ -118,7 +139,7 @@ $data['country_get']=trim($geo["geoplugin_countryCode"]);
      }
 
     public function register_post()
-    {
+    {   
         //$data['country_list']=$this->General_model->show_data_id('country','','','get','');
         $this->form_validation->set_rules('name', 'Name', 'required');
         if($this->session->userdata('logged_in_stf')['staff_id']){
@@ -320,6 +341,7 @@ $this->session->set_flashdata('error', 'Please give proper address!');
         if(!$this->session->userdata('logged_in_stf')['staff_id']){
         $_POST['mail_verification']='Inactive';
         }else{
+          $_POST['registration_type']='offline';
           $_POST['mail_verification']='Active';
         }
         $_POST['country']=$country;

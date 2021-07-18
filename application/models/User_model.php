@@ -14,7 +14,8 @@ class User_model extends CI_Model{
 		$this->db->select('*');
 		$this->db->from('user_table');
 		$this->db->where($condition);
-		//$this -> db -> where('status',1);
+		$this->db-> where('status','Active');
+        $this->db-> where('isDelete',0);
 		$this->db->limit(1);
 		$query =$this->db->get();
         if($query->num_rows()==1){
@@ -31,7 +32,8 @@ class User_model extends CI_Model{
 					'email'=>$result->email,
 					'phone'=>$result->phone,
                     'user_type'=>$result->user_type,
-					'userid'=>$result->id
+					'userid'=>$result->id,
+                    'tagged_staff_id'=>$result->tagged_staff_id,
 					
 				);
         	 	$this->session->set_userdata('log_check','1');

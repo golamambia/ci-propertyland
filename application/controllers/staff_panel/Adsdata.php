@@ -8,7 +8,7 @@ class Adsdata extends CI_Controller {
     {
         parent::__construct();
         $this->load->database();
-        $this->load->model('staff_panel/Model_users');
+        $this->load->model('apanel/Model_users');
         $this->load->model('User_model');
         //****************************backtrace prevent*** START HERE*************************
         $this->output->set_header('Last-Modified:'.gmdate('D, d M Y H:i:s').'GMT');
@@ -25,10 +25,11 @@ class Adsdata extends CI_Controller {
         //$this->load->helper('string');
         $this->load->helper("file");
         //error_reporting(0);
-        if(!$this->session->userdata('is_logged_in_stf')==1)
+if(!$this->session->userdata('is_logged_in_stf')==1)
         {
             redirect('staff_panel', 'refresh');
         }
+      
         
     }
   
@@ -37,25 +38,25 @@ class Adsdata extends CI_Controller {
       $adstype=$this->input->get('ads',true);
          $start_date=$this->input->get('start_date',true);
          $end_date=$this->input->get('end_date',true);
-         $where="is_delete=0 ";
-   		if($adstype =='pending'){
-   			$where.=' and post_status=0';
-   		}
-   		if($adstype =='approved'){
-   			$where.=' and post_status=1';
-   		}
-   		if($start_date !='' && $end_date !=''){
-   			$where.=' and module_lbcontacts.entry_date between "'.$start_date.'" and "'.$end_date.'"';
-   		}
+         $where="ppt_isDelete=0 ";
+      if($adstype =='pending'){
+        $where.=' and ppt_verification_status=0';
+      }
+      if($adstype =='approved'){
+        $where.=' and ppt_verification_status=1';
+      }
+      if($start_date !='' && $end_date !=''){
+        $where.=' and propertypost_table.ppt_createdAt between "'.$start_date.'" and "'.$end_date.'"';
+      }
 
 
     
-     $data['ads_list']=$this->Adslist_model->show_data_id('module_lbcontacts',$where);
+    $data['ads_list']=$this->Adslist_model->show_data_id('propertypost_table',$where);
       // $data['subcatlist']=$this->General_model->show_data_id('subcategory',$sub_catid,'sid','get','');
        //$data['countrylist']=$this->General_model->show_data_id('country','','','get','');
 
        
-    $data['title']='The Local Business';
+    $data['title']='Ads List';
     
     $this->load->view('staff_panel/header',$data);
     $this->load->view('staff_panel/adslist');
@@ -66,13 +67,13 @@ class Adsdata extends CI_Controller {
   public function pending()
   {
 
-    $where="is_delete=0 and post_status=0";
-      $data['ads_list']=$this->Adslist_model->show_data_id('module_lbcontacts',$where);
+    $where="ppt_isDelete=0 and ppt_verification_status=0";
+    $data['ads_list']=$this->Adslist_model->show_data_id('propertypost_table',$where);
       // $data['subcatlist']=$this->General_model->show_data_id('subcategory',$sub_catid,'sid','get','');
        //$data['countrylist']=$this->General_model->show_data_id('country','','','get','');
 
        
-    $data['title']='The Local Business';
+     $data['title']='Property Handshake';
     
     $this->load->view('staff_panel/header',$data);
     $this->load->view('staff_panel/pending_list');
@@ -84,13 +85,13 @@ class Adsdata extends CI_Controller {
    public function approved()
   {
 
-    $where="is_delete=0 and post_status=1";
-    $data['ads_list']=$this->Adslist_model->show_data_id('module_lbcontacts',$where);
+    $where="ppt_isDelete=0 and ppt_verification_status=1";
+    $data['ads_list']=$this->Adslist_model->show_data_id('propertypost_table',$where);
       // $data['subcatlist']=$this->General_model->show_data_id('subcategory',$sub_catid,'sid','get','');
        //$data['countrylist']=$this->General_model->show_data_id('country','','','get','');
 
        
-    $data['title']='The Local Business';
+    $data['title']='Property Handshake';
     
     $this->load->view('staff_panel/header',$data);
     $this->load->view('staff_panel/adslist');
@@ -102,13 +103,10 @@ class Adsdata extends CI_Controller {
   {
       $uid=$this->session->userdata('logged_in_stf')['staff_id'];
 
-    $where="is_delete=0 and post_status=1 and approved_by=".$uid."";
-    $data['ads_list']=$this->Adslist_model->show_data_id('module_lbcontacts',$where);
-      // $data['subcatlist']=$this->General_model->show_data_id('subcategory',$sub_catid,'sid','get','');
-       //$data['countrylist']=$this->General_model->show_data_id('country','','','get','');
-
-       
-    $data['title']='The Local Business';
+       $where="ppt_isDelete=0 and ppt_verification_status=1 and ppt_verifiedBy=".$uid."";
+    $data['ads_list']=$this->Adslist_model->show_data_id('propertypost_table',$where);
+     
+    $data['title']='Property Handshake';
     
     $this->load->view('staff_panel/header',$data);
     $this->load->view('staff_panel/adslist');
@@ -121,10 +119,10 @@ class Adsdata extends CI_Controller {
       $uid=$this->session->userdata('logged_in_stf')['staff_id'];
 
     //$where="is_delete=0 and post_status=1 and approved_by=".$uid."";
-    $data['ads_list']=$this->Adslist_model->show_data_comads('module_lbcontacts');
+    $data['ads_list']=$this->Adslist_model->show_data_comads('propertypost_table');
       
        
-    $data['title']='The Local Business';
+     $data['title']='Property Handshake';
     
     $this->load->view('staff_panel/header',$data);
     $this->load->view('staff_panel/ads_complaint_list_view');
@@ -136,10 +134,10 @@ class Adsdata extends CI_Controller {
       $uid=$this->session->userdata('logged_in_stf')['staff_id'];
 
     //$where="is_delete=0 and post_status=1 and approved_by=".$uid."";
-     $data['ads_list']=$this->Adslist_model->show_data_repads('module_lbcontacts');
+     $data['ads_list']=$this->Adslist_model->show_data_repads('propertypost_table');
       
        
-    $data['title']='The Local Business';
+     $data['title']='Property Handshake';
     
     $this->load->view('staff_panel/header',$data);
     $this->load->view('staff_panel/ads_report_list_view');
@@ -156,51 +154,18 @@ public function adsdata_view(){
         $id = base64_decode($this->input->get('view',TRUE));
        //exit();
 
-        $query=$this->General_model->show_data_id('module_lbcontacts',$id,'lbcontactid','get','');
+        $query=$this->General_model->show_data_id('propertypost_table',$id,'ppt_id','get','');
 
         $data['result']=$query;
-      $g_catid=$data['result'][0]->cat_name;
-         $sub_catid=$data['result'][0]->sub_cat;
-       $data['catlist']=$this->General_model->show_data_id('category',$g_catid,'id','get','');
-       $data['subcatlist']=$this->General_model->show_data_id('subcategory',$sub_catid,'sid','get','');
-       $data['countrylist']=$this->General_model->show_data_id('country','','','get','');
-       $data['category_title']=$data['catlist'][0]->name;
+          
+       
         $data['multiimage']=$this->General_model->show_data_id('module_lbcontacts_part',$id,'lbcontact_id','get','');
-
-        $c_id=$data['result'][0]->country;
-
-        $data['add_country']=$this->General_model->show_data_id('country',$c_id,'id','get','');
-
-        $state_id=$data['result'][0]->state;
-
-        $data['add_state']=$this->General_model->show_data_id('state',$state_id,'sid','get','');
-
-        $s_id=$data['add_state'][0]->sid;
-
-        $city_id=$data['result'][0]->city;
-
-        $data['add_city']=$this->General_model->show_data_id('cities',$city_id,'cid','get','');
-
-        $cat_id=$data['result'][0]->cat_name;
-        $sub_cat_id=$data['result'][0]->sub_cat;
-
-        $data['category']=$this->General_model->show_data_id('category',$cat_id,'id','get','');
-
-        $data['sub_category']=$this->General_model->show_data_id('subcategory',$sub_cat_id,'sid','get','');
 
 
          $data['notification']=$this->Notice_model->backend_notice_data_list($id);
 
-         $arri_country=$data['result'][0]->depairport_country;
-
-    $dep_coun=$data['result'][0]->arrival_country;
-
-         $data['arrival_country']=$this->General_model->show_data_id('country',$arri_country,'countrycode','get','');
-
-    $data['dep_country']=$this->General_model->show_data_id('country',$dep_coun,'countrycode','get','');
-
-$data['val']=$this->General_model->show_data_id('delivery_location',$id,'post_id','get','');  
-$data['title']='The Local Business';
+  
+$data['title']='Ads details';
     
     $this->load->view('staff_panel/header',$data);
     $this->load->view('staff_panel/ads_list_view');
@@ -211,23 +176,23 @@ $data['title']='The Local Business';
 public function adsdata_checked(){
     //echo 1;
   date_default_timezone_set("Asia/Kolkata");
-          $today = date("Y-m-d H:i:s");
+          $today = date("Y-m-d");
   $uid=$this->session->userdata('logged_in_stf')['staff_id'];
   $id =$this->input->post('id');
   $post_st =$this->input->post('post_st');
-   $RowCount= $this->General_model->RowCount('module_lbcontacts','lbcontactId',$id);
+   $RowCount= $this->General_model->RowCount('propertypost_table','ppt_id',$id);
         if($RowCount<=0){
           $this->session->set_flashdata('error', 'Sorry something went wrong!');
       echo 1;
       }else{
         $datalist = array( 
-                'approved_by'   => $uid,
-                'approved_date' => $today,
-                'post_status'   =>$post_st,
-                'update_status'        => 0
+                'ppt_verifiedBy'   => $uid,
+                'ppt_verified_date' => $today,
+                'ppt_verification_status'   =>$post_st,
+                
                 //'status'        => $this->input->post('status'),
             );
-            $query= $this->General_model->show_data_id('module_lbcontacts',$id,'lbcontactId','update',$datalist);
+            $query= $this->General_model->show_data_id('propertypost_table',$id,'ppt_id','update',$datalist);
            if($query){
                if($post_st>0){
              $this->session->set_flashdata('message', 'Approved successfully done');
@@ -240,6 +205,7 @@ public function adsdata_checked(){
       echo 3;
       }
       }
+      //redirect($_SERVER['HTTP_REFERER']);
  }
 
  public function post_notification(){
@@ -274,11 +240,11 @@ public function adsdata_checked(){
     if($query){
       $this->session->set_flashdata('message', 'Notification successfully submit');
       redirect($_SERVER['HTTP_REFERER']);
-    //redirect('staff_panel/adsdata/adsdata_view?view='.base64_encode($ads_id)); 
+    //redirect('apanel/adsdata/adsdata_view?view='.base64_encode($ads_id)); 
     }else{
       $this->session->set_flashdata('error', 'Notification submit faild');
       redirect($_SERVER['HTTP_REFERER']);
-      //redirect('staff_panel/adsdata/adsdata_view?view='.base64_encode($ads_id)); 
+      //redirect('apanel/adsdata/adsdata_view?view='.base64_encode($ads_id)); 
     } 
       
  }
@@ -294,7 +260,7 @@ public function adsdata_checked(){
     $ads_id=base64_encode($ads);
     if($this->form_validation->run()== FALSE){
       $this->session->set_flashdata('error', 'Please try again');
-     redirect('staff_panel/adsdata/adsdata_view?view='.$ads_id); 
+     redirect('apanel/adsdata/adsdata_view?view='.$ads_id); 
     //redirect($_SERVER['HTTP_REFERER']);
     }else{
         //echo "good";
@@ -308,12 +274,12 @@ public function adsdata_checked(){
         $query=$this->General_model->show_data_id('support_team_quote','','','insert',$this->input->post());
         if($query){
             $this->session->set_flashdata('message', 'Message sent successfully');
-                redirect('staff_panel/adsdata/adsdata_view?view='.$ads_id); 
+                redirect($_SERVER['HTTP_REFERER']);
             }else{
                  //redirect('quote/message_list?ads='.base64_encode($ads).'&user='.base64_encode($chat_user));
                 
               $this->session->set_flashdata('error', 'Sorry message not send!');
-               redirect('staff_panel/adsdata/adsdata_view?view='.$ads_id); 
+              redirect($_SERVER['HTTP_REFERER']);
             }
     }
     

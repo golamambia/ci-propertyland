@@ -389,112 +389,112 @@ if($img_multi!=0){
                                                         
 <div class="row">
     <div class="col-lg-4">
-<h4>Property For</h4>
+<h6>Property For</h6>
 <p><?=$ads_view[0]->ppt_property_for; ?></p>
 </div>
 <div class="col-lg-4">
-<h4>Property Type</h4>
+<h6>Property Type</h6>
 <p><?=$ads_view[0]->ppt_property_type; ?></p>
 </div>
 <div class="col-lg-4">
-<h4>Property Cagatogy*</h4>
+<h6>Property Cagatogy*</h6>
 <p><?=$ads_view[0]->ppt_property_category; ?></p>
 </div>
 <?php if($ads_view[0]->ppt_property_category=='individual'){?>
-<div class="col-lg-6">
-<h4>Land Area*</h4>
+<div class="col-lg-4">
+<h6>Land Area*</h6>
 <p><?=$ads_view[0]->ppt_land_area; ?></p>
 </div>
 
-<div class="col-lg-6">
-<h4>Land Units*</h4>
+<div class="col-lg-4">
+<h6>Land Units*</h6>
 <p><?=$ads_view[0]->ppt_land_unit; ?></p>
 </div>
 
 
 
-<div class="col-lg-6">
-<h4>Facing*</h4>
+<div class="col-lg-4">
+<h6>Facing*</h6>
 <p><?=$ads_view[0]->ppt_facing; ?></p>
 </div>
 <?php  if($ads_view[0]->ppt_property_type=='apartment_flat' || $ads_view[0]->ppt_property_type=='house_villa'){?>
 
-<div class="col-lg-6">
-<h4>Built-Up Area*</h4>
+<div class="col-lg-4">
+<h6>Built-Up Area*</h6>
 <p><?=$ads_view[0]->ppt_builtup_area; ?></p>
 </div>
 
-<div class="col-lg-6">
-<h4>Built-up Units*</h4>
+<div class="col-lg-4">
+<h6>Built-up Units*</h6>
 <p><?=$ads_view[0]->ppt_builtup_unit; ?></p>
 </div>
 
-<div class="col-lg-6">
-<h4>Carpet Area*</h4>
+<div class="col-lg-4">
+<h6>Carpet Area*</h6>
 <p><?=$ads_view[0]->ppt_carpet_area; ?></p>
 </div>
 
-<div class="col-lg-6">
-<h4>Carpet Units*</h4>
+<div class="col-lg-4">
+<h6>Carpet Units*</h6>
 <p><?=$ads_view[0]->ppt_carpet_unit; ?></p>
 </div>
 
-<div class="col-lg-6">
-<h4>Bedrooms Count*</h4>
+<div class="col-lg-4">
+<h6>Bedrooms Count*</h6>
 <p><?=$ads_view[0]->ppt_bedroom_count; ?></p>
 </div>
 
-<div class="col-lg-6">
-<h4>Bathrooms Count*</h4>
+<div class="col-lg-4">
+<h6>Bathrooms Count*</h6>
 <p><?=$result[0]->ppt_bathroom_count; ?></p>
 </div>
 
-<div class="col-lg-6">
-<h4>Floor Number*</h4>
+<div class="col-lg-4">
+<h6>Floor Number*</h6>
 <p><?=$result[0]->ppt_floor_number; ?></p>
 </div>
 
 
-<div class="col-lg-6">
-<h4>Furnishing*</h4>
+<div class="col-lg-4">
+<h6>Furnishing*</h6>
 <p><?=$ads_view[0]->ppt_furnishing; ?></p>
 </div>
 
-<div class="col-lg-6">
-<h4>4Wheeler Parking Count</h4>
+<div class="col-lg-4">
+<h6>4Wheeler Parking Count</h6>
 <p><?=$ads_view[0]->ppt_4wheeler_count; ?></p>
 </div>
 
-<div class="col-lg-6">
-<h4>2Wheeler Parking Count</h4>
+<div class="col-lg-4">
+<h6>2Wheeler Parking Count</h6>
 <p><?=$ads_view[0]->ppt_2wheeler_count; ?></p>
 </div>
 <?php } }?>
 
-<div class="col-lg-6">
-<h4>Website</h4>
+<div class="col-lg-4">
+<h6>Website</h6>
 <?php if($ads_view[0]->ppt_website){?>
 <p style="overflow-wrap: break-word;" ><a target="_blank" href="<?=$ads_view[0]->ppt_website; ?>">Click here</a></p>
 <?php }?>
 </div>
 
-<div class="col-lg-6">
-<h4>Posted on</h4>
+<div class="col-lg-4">
+<h6>Posted on</h6>
 <p><?=$ads_view[0]->ppt_createdAt; ?></p>
 </div>
 
-<div class="col-lg-6">
-<h4>Price*</h4>
+<div class="col-lg-4">
+<h6>Price*</h6>
 <p><?=$ads_view[0]->ppt_total_price; ?></p>
 </div>
 
-<div class="col-lg-6">
-<h4>Available From*</h4>
+<div class="col-lg-4">
+<h6>Available From*</h6>
 <p><?=$ads_view[0]->ppt_available_from; ?></p>
 </div>
 </div>
                                         <br><br>
-                                       <h4> Property Details</h4>
+                                       <h6> Property Details</h6>
                                     <?=$ads_view[0]->ppt_details;?>
                                     
                                      </div>
@@ -923,11 +923,14 @@ echo '<iframe width="" height="" frameborder="0" style="border:0;" allowfullscre
                                     </div>
                                 </div>
                                 <div class="aside_box">
-                                    <h4>Agent tagged </h4>
+                                    <h4>Agents tagged </h4>
                                     <div class="aside_body">
                                         <table class="as shadow table" border="1">
                         <tbody><tr class="look">
                           <th>Sl.No
+                          
+                            </th>
+                            <th>Agent ID
                           
                             </th>
                           <th>Agent Name
@@ -944,7 +947,8 @@ echo '<iframe width="" height="" frameborder="0" style="border:0;" allowfullscre
                         foreach ($tagged_agent_list as $key => $tag_value) {
                             ?>
                         <tr>
-        <td><?=$key+1;?></td>
+                            <td><?=$key+1;?></td>
+      <td><a href="<?=base_url();?>search/user_details?user=<?=base64_encode($tag_value->agent_id);?>" title="Click here to view details" target="_blank"> <?php echo $tag_value->agent_id; ?> </a></td>
         <td><?=$tag_value->name;?></td>
         <td><?=$tag_value->agent_ppt_tag_cnt;?></td>
       </tr>

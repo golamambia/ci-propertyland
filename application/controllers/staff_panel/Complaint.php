@@ -19,9 +19,9 @@ class Complaint extends CI_Controller {
         $this->load->helper('url');
         $this->load->helper('string');
         //$this->load->helper('custom');
-       if(!$this->session->userdata('is_logged_in_stf')==1)
+ if(!$this->session->userdata('is_logged_in_stf')==1)
         {
-            redirect('manager_panel', 'refresh');
+            redirect('staff_panel', 'refresh');
         }
 
         //Admin Access

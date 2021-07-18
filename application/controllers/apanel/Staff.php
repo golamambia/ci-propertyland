@@ -157,6 +157,8 @@ class Staff extends CI_Controller {
         $this->form_validation->set_rules('name', 'Name', 'required');
         $this->form_validation->set_rules('email', 'Email', 'required');
         $this->form_validation->set_rules('phone', 'Phone', 'required');
+        $this->form_validation->set_rules('address', 'address', 'required');
+        $this->form_validation->set_rules('pincode', 'pincode', 'required');
 
         if ($this->form_validation->run() == FALSE) 
         {
@@ -164,21 +166,38 @@ class Staff extends CI_Controller {
            redirect('apanel/staff/staff_edit/'.$id);
 
         }else{
-            $datalist = array( 
-                'name'      => $this->input->post('name'),
-                //'email'      => $this->input->post('email'),
-                'password'      => md5($this->input->post('pass')),
-                'pass_view' => $this->input->post('pass'),
-                'phone'     => $this->input->post('phone'),
-                'user_type'     => $this->input->post('user_type'),
-                'country'     => $this->input->post('country'),
-                'status'   => $this->input->post('status'), 
-                'state'        => $this->input->post('state'),
-                'manager_name'        => $this->input->post('manager_name')
-            );
+           if(!empty($_FILES['photo']['name'])){ 
+                 
+                 $filename =time().$_FILES['photo']['name'];
+                $_POST['profile_photo']=$filename;
+ $location = "uploads/staff/".$filename;
+           
+    $this->compressImage($_FILES['photo']['tmp_name'],$location,50);
+                  
+                }
+                if(!empty($_FILES['photo2']['name'])){ 
+                 
+                 $filename =time().$_FILES['photo2']['name'];
+                $_POST['photo_id_proof']=$filename;
+ $location = "uploads/staff/".$filename;
+           
+    $this->compressImage($_FILES['photo2']['tmp_name'],$location,50);
+                  
+                }
+                if(!empty($_FILES['photo3']['name'])){ 
+                 
+                 $filename =time().$_FILES['photo3']['name'];
+                $_POST['address_id_proof']=$filename;
+ $location = "uploads/staff/".$filename;
+           
+    $this->compressImage($_FILES['photo3']['tmp_name'],$location,50);
+                  
+                }
             
-        
-        $query= $this->General_model->show_data_id('staff_table',$id,'id','update',$datalist);
+            
+        $_POST['password']=md5($this->input->post('pass'));
+     $_POST['pass_view'] = $this->input->post('pass');
+        $query= $this->General_model->show_data_id('staff_table',$id,'id','update',$this->input->post());
     $this->session->set_flashdata('message', 'Data successfully updated');
 
        redirect('apanel/staff/staff_edit/'.$id); 
@@ -246,17 +265,34 @@ public function industry_selection_add()
 
        redirect('apanel/staff/staff_add'); 
         }else{
-            // $datalist = array( 
-            //     'name'      => $this->input->post('name'),
-            //     'email'      => $this->input->post('email'),
-            //     'phone'     => $this->input->post('phone'),
-            //     //'status'   => $this->input->post('status'),
-            //      'entry_date'   =>date('Y-m-d'),
-            //     'status'        => $this->input->post('status')
-            // );
-
-            //$_POST['entry_date']=date('Y-m-d');
-      //$jj=formData('k');
+           
+            if(!empty($_FILES['photo']['name'])){ 
+                 
+                 $filename =time().$_FILES['photo']['name'];
+                $_POST['profile_photo']=$filename;
+ $location = "uploads/staff/".$filename;
+           
+    $this->compressImage($_FILES['photo']['tmp_name'],$location,50);
+                  
+                }
+                if(!empty($_FILES['photo2']['name'])){ 
+                 
+                 $filename =time().$_FILES['photo2']['name'];
+                $_POST['photo_id_proof']=$filename;
+ $location = "uploads/staff/".$filename;
+           
+    $this->compressImage($_FILES['photo2']['tmp_name'],$location,50);
+                  
+                }
+                if(!empty($_FILES['photo3']['name'])){ 
+                 
+                 $filename =time().$_FILES['photo3']['name'];
+                $_POST['address_id_proof']=$filename;
+ $location = "uploads/staff/".$filename;
+           
+    $this->compressImage($_FILES['photo3']['tmp_name'],$location,50);
+                  
+                }
              $rand='PHS'.rand (0,9999999);
      $_POST['password']=md5($this->input->post('pass'));
      $_POST['pass_view'] = $this->input->post('pass');
@@ -293,7 +329,7 @@ public function industry_selection_add()
               $mail->From = $this->config->item('from');
                 $mail->FromName = "Registration Successful - " . $this->input->post('name');
                 
-                $mail->AddAddress('wtm.golam@gmail.com');
+                //$mail->AddAddress('wtm.golam@gmail.com');
                 $mail->AddAddress($this->input->post('email'));
                 $mail->WordWrap = 5;
                 $mail->IsHTML(true);
@@ -401,6 +437,35 @@ public function industry_selection_add_post()
         }
     }
     
-    
+   function compressImage($source, $destination, $quality,$imgx=NULL,$imgy=NULL) {
+
+  $source_properties = getimagesize($source);
+
+  if ($source_properties['mime'] == 'image/jpeg') 
+    $image_resource_id = imagecreatefromjpeg($source);
+
+  elseif ($source_properties['mime'] == 'image/gif') 
+    $image_resource_id = imagecreatefromgif($source);
+
+  elseif ($source_properties['mime'] == 'image/png') 
+    $image_resource_id = imagecreatefrompng($source);
+
+  if($imgx && $imgy){
+  $target_layer = $this->fn_resize($image_resource_id,$source_properties[0],$source_properties[1]);
+    imagejpeg($target_layer, $destination, $quality); 
+  }else{
+    imagejpeg($image_resource_id, $destination, $quality);
+  }
+  
+
+}
+function fn_resize($image_resource_id,$width,$height) {
+$target_width =200;
+$target_height =200;
+$target_layer=imagecreatetruecolor($target_width,$target_height);
+imagecopyresampled($target_layer,$image_resource_id,0,0,0,0,$target_width,$target_height, $width,$height);
+return $target_layer;
+}
+
 }
 

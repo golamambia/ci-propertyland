@@ -14,10 +14,7 @@
     <div class="col-12">
       <div class="card">
         <div class="card-header">
-          <h4 class="card-title">
-            <a href="<?php echo base_url();?>staff_panel/adsdata/report_ads" class="btn btn-primary mr-1" >
-                <i class="icon-arrow-left"></i> Back
-            </a></h4>
+          
           <div class="heading-elements">
             <ul class="list-inline mb-0">
               <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
@@ -46,13 +43,13 @@
             <table id="example" class="table table-striped table-bordered base-style ">
               <thead>
                 <tr>
-                 <!--  <th>Name</th> -->
+                  <th>Name</th>
                   <th>Subject</th>
                   <th>Message</th>
                   <th>Ad</th>
                   <th>Date</th>
                   
-                 <th class="float-centre">Action</th>
+                 
                   <!-- <th></th> -->
                 </tr>
               </thead>
@@ -63,19 +60,12 @@
                 //print_r($value)
                ?>
                  <tr>
-                 <!--  <td><?=$value->rpt_name;?></td> -->
+                  <td><?=$value->rpt_name;?></td>
                   <td><?=$value->rpt_subject;?></td>
                   <td><?=$value->rpt_message;?></td>
-                  <!-- <td><?=$value->title;?></td> -->
-                  <td><a target="_blank" href="<?=base_url();?>adsview/dataview?ads=<?=base64_encode($value->rpt_adsid);?>"><?=$value->title;?></a></td>
+                  <td><?=$value->title;?></td>
                    <td><?=$value->rpt_entry_date;?></td>
-                   <td class="float-centre">
 
-                <a href="<?php echo base_url();?>staff_panel/adsdata/adsdata_view?view=<?=base64_encode($value->rpt_adsid);?>"><span class="badge bg-primary" title="Click for active or deactive"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> View</span></a>
-                
-            
-
-                   </td>
                  
                 </tr>
                               
@@ -84,12 +74,12 @@
               </tbody>
               <tfoot>
                 <tr>
-                 <!-- <th>Name</th> -->
+                 <th>Name</th>
                   <th>Subject</th>
                   <th>Message</th>
                   <th>Ad</th>
                   <th>Date</th>
-                 <th class="float-centre">Action</th>
+                 
                   <!-- <th></th> -->
                 </tr>
               </tfoot>        

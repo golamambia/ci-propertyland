@@ -237,6 +237,7 @@ public function razorPaySuccess()
             'payment_ref' => $this->input->post('razorpay_payment_id'),
             'payment_details' => $this->input->post('razorpay_payment_id'),
             'payment_cleared' => 1,
+            'staff_id'=>$this->session->userdata('front_sess')['tagged_staff_id'],
             
         ];
         $this->db->where('payment_id', $value);

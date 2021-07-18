@@ -649,6 +649,12 @@
                            <input type="text" name="pincode" class="form-control numeric_input"  id="pincode" placeholder="Enter pincode " value="<?=$this->session->userdata('pincode');?>" maxlength="6">
                           </div>
                         </div>
+                        <div class="col-md-4" >
+                          <div class="form-group">
+                            <input type="text" name="agentId" class="form-control form-control_btn1 "  id="agentId" placeholder="Enter agent ID" value="<?=$this->session->userdata('agentId');?>">
+                             
+                          </div>
+                        </div>
                         <div class="col-md-2 text-center">
                           <button type="submit" class="search_btn_down" style="width: auto !important;">SEARCH</button>
                         </div>
@@ -680,6 +686,7 @@
                   $i=0;
                   foreach ($product as  $value) { 
                   $i++;
+                 //echo $value->ppt_id;
                     ?>
          
           <aside class="aside_area">

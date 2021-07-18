@@ -115,7 +115,25 @@ function ad_list($offset=0){
     }
 
 //-------------------- ad pagination ---------------//
+function propertytagged_list($offset=0){
 
+      $limit=50000;
+
+      $user_id=$this->session->userdata('front_sess')['userid'];
+      $where=" and e.agent_id = '" .$user_id."' and e.tag_active=1 ";
+      $data['ads_list']=$this->db->query("SELECT m.* FROM propertypost_table as m inner join ppt_agent_tag as e on e.ppt_id=m.ppt_id  WHERE m.ppt_createdBy='$user_id' AND m.ppt_isDelete=0 ".$where." ORDER BY m.ppt_id DESC LIMIT $limit OFFSET $offset")->result();
+
+    //echo $this->db->last_query();
+        $data['title']="Tagged property";
+
+        $this->load->view('header',$data);
+
+        $this->load->view('propertytagged_list');
+
+        $this->load->view('footer');
+
+      //$this->load->view("admin/enquiry_list",compact('enquiry_list','page_link','profile','logo'));
+    }
 
 
 	public function ads_del($id){
@@ -507,6 +525,8 @@ $this->session->set_flashdata('error', 'Please give proper address!');
                $_POST['ppt_jointdev']=0; 
             }
 
+            $_POST['tagged_staff_id'] =$this->session->userdata('front_sess')['tagged_staff_id'];
+          $_POST['ppt_usertype'] =$this->session->userdata('front_sess')['user_type'];
             
             $query= $this->General_model->show_data_id('propertypost_table',$id,'ppt_id','update',$this->input->post());
 

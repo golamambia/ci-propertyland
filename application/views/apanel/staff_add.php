@@ -120,7 +120,18 @@
 
                                             <label for="eventInput3">Phone</label>
 
-                                            <input type="text" id="phone" class="form-control" placeholder="Phone" name="phone" required>
+                                            <input type="text" id="phone" class="form-control numeric_input" placeholder="Phone" name="phone" required maxlength="11">
+
+                                        </div>
+
+
+                                        <div class="form-group" style="position: relative;">
+
+                                            <label for="eventInput3">Password</label>
+
+                                            <input type="password" id="password-field" class="form-control" placeholder="Password" name="pass" required>
+
+                                            <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
 
                                         </div>
 
@@ -133,14 +144,11 @@
                                             
 
                                         </div>
+                                        <div class="form-group">
 
-                                        <div class="form-group" style="position: relative;">
+                                            <label for="pincode">Pincode</label>
 
-                                            <label for="eventInput3">Password</label>
-
-                                            <input type="password" id="password-field" class="form-control" placeholder="Password" name="pass" required>
-
-                                            <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                                            <input type="text" id="pincode" class="form-control numeric_input" placeholder="Pincode" name="pincode" value=""  required  maxlength="6">
 
                                         </div>
 
@@ -227,7 +235,30 @@
 
                                         </div>
 
+                                         <div class="form-group">
 
+                                            <label for="eventInput3">Profile photo</label>
+
+                                           <input type="file" class="form-control" name="photo" id="photo" required>
+
+                                           
+                                        </div>
+                                        <div class="form-group">
+
+                                            <label for="eventInput3">Photo id proof</label>
+
+                                           <input type="file" class="form-control" name="photo2" id="photo2" required>
+
+                                           
+                                        </div>
+                                        <div class="form-group">
+
+                                            <label for="eventInput3">Address id proof</label>
+
+                                           <input type="file" class="form-control" name="photo3" id="photo3" required>
+
+                                           
+                                        </div>
                                 
 
                             </div>

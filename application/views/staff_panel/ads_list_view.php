@@ -51,42 +51,182 @@
 </div>
 <?php }?>
 
-<!--------------------- Form -------------------->
-<?php
-$cat=$result[0]->cat_name;
-if($cat==15){
-require_once('local_business.php'); 
-}elseif($cat==5){
-require_once('SHARED_ACCOMMODATION_FOR_RENT.php');   
-}elseif($cat==4){
-require_once('FEED_REQUEST.php');   
-}elseif($cat==11){
-require_once('EVENTS.php');   
-}elseif($cat==13){
-require_once('GOOD_TO_KNOW.php');   
-}elseif($cat==17){
-require_once('WHOLE_ACCOMMODATION_FOR_RENT.php');   
-}elseif($cat==18){
-require_once('JOBS_SITES_LISTING.php');   
-}elseif($cat==19){
-require_once('JOB.php');   
-}elseif($cat==20){
-require_once('JOB_SEEKER.php');   
-}elseif($cat==21){
-require_once('COACHING.php');   
-}elseif($cat==22){
-require_once('FOOD_BOX.php');   
-}elseif($cat==23){
-require_once('OTHERS.php');   
-}elseif($cat==24){
-require_once('HELP_THROUGH_TRAVEL.php');   
-}
-?>                       
-<!--------------------- Form -------------------->
+
+                        <form class="form"  method="post" enctype="multipart/form-data" action="<?php echo base_url();?>staff_panel/adsdata/adsdata_checked">
+                            <input type="hidden" name="id" value="<?=$result[0]->ppt_id;?>" reuired>
+                             <input type="hidden" name="post_st" value="<?=$result[0]->ppt_verification_status;?>" reuired>
+                            <div class="form-body">
+                                <h4 class="form-section"><i class="ft-calendar"></i>Ads Info</h4>
+                                
+                                <div class="row">
+                                        
+                                        <div class="col-lg-6">
+                                            <h4>Title</h4>
+                                            <p><?=$result[0]->ppt_title; ?></p>
+
+                                             
+                                        </div>
+
+                                       <!--  <div class="col-lg-6">
+                                            <h4>Phone</h4>
+                                            <p><?=$result[0]->phone; ?></p>
+
+                                             
+                                        </div>
+
+                                        <div class="col-lg-6">
+                                            <h4>Email</h4>
+                                            <p><?=$result[0]->email; ?></p>
+
+                                             
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <h4>Contact Person</h4>
+                                            <p><?=$result[0]->contact_person; ?></p>
+
+                                             
+                                        </div> -->
+
+                                        <div class="col-lg-12">
+                                            <h4>Address</h4>
+                                            <p><?=$result[0]->ppt_property_address; ?></p>
+
+                                             
+                                        </div>
+
+
+                                        <div class="col-lg-12">
+                                            <h4>Location Infirmation</h4>
+
+                                            <p>Country : <?=$result[0]->ppt_country;?></p>
+                                            <p>State : <?=$result[0]->ppt_state;?></p>
+                                            <p>City : <?=$result[0]->ppt_city;?></p>
+                                             <p>Pincode : <?=$result[0]->ppt_pincode;?></p>
+
+                                             
+                                        </div>
+
+                                        
+                                        <div class="col-lg-6">
+                                            <h4>Category</h4>
+                                            <p><?=$result[0]->ppt_property_category;?></p>
+
+                                             
+                                        </div>
+
+                                        <div class="col-lg-6">
+                                            <h4>Property for</h4>
+                                            <p><?=$result[0]->ppt_property_for;?></p>
+
+                                             
+                                        </div>
+                                          <div class="col-lg-6">
+                                            <h4>Property type</h4>
+                                            <p><?=str_replace('_', ' ',$result[0]->ppt_property_type);?></p>
+
+                                             
+                                        </div>
+
+                                        
+
+                                        <div class="col-lg-12">
+                                            <h4>Description</h4>
+                                            <p><?=$result[0]->ppt_details;?></p>
+                                            
+                                        </div>
+
+                                       <!--  <div class="col-lg-12">
+
+                                            <h4>Search Keyword</h4>
+                                            <p><?=$result[0]->search_keyword;?></p>
+
+                                            
+                                        </div> -->
+
+                                        <div class="col-lg-12">
+                                            <h4>Social Media Informations:</h4>
+
+                                            <div>Web Link : <a style="text-decoration: underline;" target="_blank" href="<?=$result[0]->weblink;?>"><?=$result[0]->ppt_website;?></a></div>
+                                           <!--  <div>facebook :<a style="text-decoration: underline;" target="_blank" href="<?=$result[0]->media_facebook;?>"> <?=$result[0]->media_facebook;?></a></div>
+                                            <div>Linkedin : <a style="text-decoration: underline;" target="_blank" href="<?=$result[0]->media_linkedin;?>"><?=$result[0]->media_linkedin;?></a></div>
+                                            <div>Twitter : <a style="text-decoration: underline;" target="_blank" href="<?=$result[0]->media_twitter;?>"><?=$result[0]->media_twitter;?></a></div> -->
+
+                                             
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <h4>Google Map:</h4>
+                                            
+                                            <?php
+echo '<iframe width="" height="" frameborder="0" style="border:0;" allowfullscreen="" src="https://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=' . str_replace(",", "", str_replace(" ", "+",$result[0]->ppt_property_address)) . '&z=14&output=embed"></iframe>';
+
+                                        ?>
+                                            
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <h4>Single Image </h4>
+
+                                            <img src="<?=base_url();?>uploads/module_file/<?=$result[0]->ppt_main_img;?>" height="60"/>
+                                            
+                                        </div>
 
 
 
 
+
+
+                                        <div class="col-lg-12">
+                                            <h4>Photo Gallery</h4>
+
+
+
+<div class="row">
+<?php foreach ($multiimage as $key => $row_rec) { ?>
+    <div class="col-lg-1"> 
+        <img src="<?=base_url();?>uploads/module_file/<?PHP echo $row_rec->multi_image;?>" height="60"/>
+    </div>
+<?php } ?>   
+</div>
+
+
+
+
+
+                                             
+                                            
+
+                                        </div>
+                                        
+                                        
+                                    
+                                        
+                                    </div>        
+
+                                
+                            </div>
+
+                            <div class="form-actions">
+                               <a href="<?php echo base_url();?>staff_panel/adsdata/" class="btn btn-warning mr-1">
+                                    <i class="ft-x"></i> Close
+                                </a>
+                                <?php 
+                                  if($result[0]->ppt_verification_status==1){
+                                  $post_st=0;
+                                  ?>
+                                <button type="button" class="btn btn-success " id="sub">
+                                    <i class="fa fa-check-square-o"></i> Inactive Now
+                                </button>
+                                <?php }else{
+                                  $post_st=1;
+
+                                  ?>
+                                <button type="button" class="btn btn-primary " id="sub">
+                                    <i class="fa fa-check-square-o"></i> Approve Now
+                                </button>
+
+
+                              <?php }?>
+                            </div>
+                        </form> 
 
                     </div>
                 </div>
@@ -255,7 +395,7 @@ $i++;
 <script type="text/javascript">
   $(document).ready(function(){
     $('#sub').click(function(){
-      var val='<?=$result[0]->lbcontactId;?>';
+      var val='<?=$result[0]->ppt_id;?>';
       var val2='<?=$post_st;?>';
       //alert(val2);
       $.ajax({

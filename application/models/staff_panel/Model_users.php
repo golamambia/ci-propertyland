@@ -33,6 +33,7 @@
             $session_data = array(
 					'username'=>$id[0]["name"],
 					'name'=>$id[0]["name"],
+					'user_type'=>$id[0]["user_type"],
 					'staff_id'=>$id[0]["id"],
 					'logo'=>$logo_fetch[0]["admin_image"],
 					'is_logged_in_stf'=>1

@@ -13,9 +13,6 @@
     <!-- END: Footer-->
 
 
-
-
-
     <!-- BEGIN: Vendor JS-->
 
     <script src="<?php echo base_url();?>app-assets/vendors/js/vendors.min.js"></script>
@@ -375,7 +372,7 @@ return false;
 }
 
       </script>
-
+      
 
 
 

@@ -231,7 +231,8 @@ $this->session->set_flashdata('error', 'Please give proper address!');
         $_POST['ppt_longitude']=$longitude;
         $_POST['ppt_property_address']=$this->input->post('address');
         $_POST['ppt_landmark']=$this->input->post('landmark');
-
+        $_POST['tagged_staff_id'] =$this->session->userdata('front_sess')['tagged_staff_id'];
+        $_POST['ppt_usertype'] =$this->session->userdata('front_sess')['user_type'];
             $query= $this->General_model->show_data_id('propertypost_table','','','insert',$this->input->post());
 
 //-------------curse add----------------//

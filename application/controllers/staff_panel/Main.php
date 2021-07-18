@@ -164,6 +164,12 @@ class Main extends CI_Controller{
 				// 	//'name'=>$this->input->post('name'),
 				// 	'is_logged_in'=>1
 				// );
+ $datalist = array( 
+                'logon_date'   => date('Y-m-d')
+                //'status'        => $this->input->post('status'),
+            );
+ $userid=$this->session->userdata('logged_in_stf')['staff_id'];
+    $this->General_model->show_data_id('staff_table',$userid,'id','update',$datalist);
 
 			//$this->session->set_userdata('logged_in', $session_data);
 			$this->session->set_userdata('is_logged_in_stf', '1');

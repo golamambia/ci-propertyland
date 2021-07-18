@@ -15,13 +15,14 @@ class Shop_model extends CI_Model
     public function product_data_list($limit = null, $offset = null, $grouping1 = null, $search1 = null, $search_category1 = null)
     {
 
-
+       $groupby=' GROUP BY a.ppt_id ';
         $where    = '';
         $sort     = '';
         $orderby    = '';
         $property_type = $this->session->userdata('property_type');
        $property_category = $this->session->userdata('property_category');
        $property_for = $this->session->userdata('property_for');
+        $agentId = $this->session->userdata('agentId');
        $pincode = $this->session->userdata('pincode');
        $user_id=$this->session->userdata('front_sess')['userid'];
        $sort_by = $this->session->userdata('sort_by_session');
@@ -33,6 +34,7 @@ class Shop_model extends CI_Model
         $price_range_val = $this->session->userdata('price_range');
         $facing = $this->session->userdata('facing');
         $posted_by = $this->session->userdata('posted_by');
+       
         if ($posted_by) {
            
           $where.=" and d.user_type = '" .$posted_by."'";
@@ -168,18 +170,23 @@ if ($this->session->userdata('latitude') && $this->session->userdata('longitude'
         $current_date=date('Y-m-d');
 
        if($this->session->userdata('result_view')=='my_fav'){
-      $query = $this->db->query("SELECT d.user_type,b.*,a.*,(((acos(sin(($lat*pi()/180)) * sin((ppt_latitude*pi()/180))+cos(($lat*pi()/180)) * cos((ppt_latitude*pi()/180)) * cos((($long- ppt_longitude)* pi()/180))))*180/pi())*60*1.1515*1.609344) as distance FROM `propertypost_table` a inner join favourite_master as b on b.fv_adsid=a.ppt_id inner join user_table d on d.id=a.ppt_createdBy and a.ppt_isDelete=0 and a.ppt_property_status='active' and a.ppt_verification_status=1 and b.fv_userid=".$user_id." and a.ppt_valid_till>='".$current_date."'  " . $where . " ".$orderby." ")->result();
+      $query = $this->db->query("SELECT e.agent_id,e.tag_active,d.user_type,b.*,a.*,(((acos(sin(($lat*pi()/180)) * sin((ppt_latitude*pi()/180))+cos(($lat*pi()/180)) * cos((ppt_latitude*pi()/180)) * cos((($long- ppt_longitude)* pi()/180))))*180/pi())*60*1.1515*1.609344) as distance FROM `propertypost_table` a inner join favourite_master as b on b.fv_adsid=a.ppt_id left join ppt_agent_tag as e on e.ppt_id=a.ppt_id inner join user_table d on d.id=a.ppt_createdBy  and a.ppt_isDelete=0 and a.ppt_property_status='active' and a.ppt_verification_status=1 and b.fv_userid=".$user_id." and a.ppt_valid_till>='".$current_date."'  " . $where . " ".$groupby." ".$orderby." ")->result();
        }else if($this->session->userdata('result_view')=='my_view'){
-      $query = $this->db->query("SELECT d.user_type,c.*,b.*,a.*,(((acos(sin(($lat*pi()/180)) * sin((ppt_latitude*pi()/180))+cos(($lat*pi()/180)) * cos((ppt_latitude*pi()/180)) * cos((($long- ppt_longitude)* pi()/180))))*180/pi())*60*1.1515*1.609344) as distance FROM `propertypost_table` a left join favourite_master as b on b.fv_adsid=a.ppt_id inner join adsview_master as c on c.vw_adsid=a.ppt_id inner join user_table d on d.id=a.ppt_createdBy  where a.ppt_isDelete=0 and a.ppt_property_status='active'and a.ppt_verification_status=1 and c.vw_userid=".$user_id." and a.ppt_valid_till>='".$current_date."'  " . $where . "   group by c.vw_adsid having ".$distance." ".$orderby." ")->result();
+      $query = $this->db->query("SELECT e.agent_id,e.tag_active,d.user_type,c.*,b.*,a.*,(((acos(sin(($lat*pi()/180)) * sin((ppt_latitude*pi()/180))+cos(($lat*pi()/180)) * cos((ppt_latitude*pi()/180)) * cos((($long- ppt_longitude)* pi()/180))))*180/pi())*60*1.1515*1.609344) as distance FROM `propertypost_table` a left join favourite_master as b on b.fv_adsid=a.ppt_id inner join adsview_master as c on c.vw_adsid=a.ppt_id inner join user_table d on d.id=a.ppt_createdBy left join ppt_agent_tag as e on e.ppt_id=a.ppt_id where a.ppt_isDelete=0 and a.ppt_property_status='active'and a.ppt_verification_status=1 and c.vw_userid=".$user_id." and a.ppt_valid_till>='".$current_date."'  " . $where . "   group by c.vw_adsid having ".$distance." ".$orderby." ")->result();
        }
        else if($this->session->userdata('result_view')=='other_fav'){
-         $query = $this->db->query("SELECT d.user_type,b.*,a.*,(((acos(sin(($lat*pi()/180)) * sin((ppt_latitude*pi()/180))+cos(($lat*pi()/180)) * cos((ppt_latitude*pi()/180)) * cos((($long- ppt_longitude)* pi()/180))))*180/pi())*60*1.1515*1.609344) as distance FROM `propertypost_table` a inner join favourite_master as b on b.fv_adsid=a.ppt_id inner join user_table d on d.id=a.ppt_createdBy where a.ppt_isDelete=0 and a.ppt_property_status='active' and a.ppt_verification_status=1 and b.fv_userid!=".$user_id." and a.ppt_valid_till>='".$current_date."'  ". $where . "  group by a.ppt_id having ".$distance." ".$orderby." ")->result();
+         $query = $this->db->query("SELECT e.agent_id,e.tag_active,d.user_type,b.*,a.*,(((acos(sin(($lat*pi()/180)) * sin((ppt_latitude*pi()/180))+cos(($lat*pi()/180)) * cos((ppt_latitude*pi()/180)) * cos((($long- ppt_longitude)* pi()/180))))*180/pi())*60*1.1515*1.609344) as distance FROM `propertypost_table` a inner join favourite_master as b on b.fv_adsid=a.ppt_id inner join user_table d on d.id=a.ppt_createdBy left join ppt_agent_tag as e on e.ppt_id=a.ppt_id where a.ppt_isDelete=0 and a.ppt_property_status='active' and a.ppt_verification_status=1 and b.fv_userid!=".$user_id." and a.ppt_valid_till>='".$current_date."'  ". $where . "  group by a.ppt_id having ".$distance." ".$orderby." ")->result();
        }
        else{
-        $query = $this->db->query("SELECT d.user_type,b.*,a.*,(((acos(sin(($lat*pi()/180)) * sin((ppt_latitude*pi()/180))+cos(($lat*pi()/180)) * cos((ppt_latitude*pi()/180)) * cos((($long- ppt_longitude)* pi()/180))))*180/pi())*60*1.1515*1.609344) as distance FROM `propertypost_table` a left join favourite_master as b on b.fv_adsid=a.ppt_id inner join user_table d on d.id=a.ppt_createdBy having ".$distance." and a.ppt_isDelete=0 and a.ppt_property_status='active' and a.ppt_verification_status=1 and a.ppt_valid_till>='".$current_date."' " . $where . " ".$orderby."")->result();
+         if ($agentId) {
+           
+          $where.=" and e.agent_id = '" .$agentId."' and e.tag_active=1 ";
+          $groupby='';
+        }
+        $query = $this->db->query("SELECT e.agent_id,e.tag_active,d.user_type,b.*,a.*,(((acos(sin(($lat*pi()/180)) * sin((ppt_latitude*pi()/180))+cos(($lat*pi()/180)) * cos((ppt_latitude*pi()/180)) * cos((($long- ppt_longitude)* pi()/180))))*180/pi())*60*1.1515*1.609344) as distance FROM `propertypost_table` a left join favourite_master as b on b.fv_adsid=a.ppt_id inner join user_table d on d.id=a.ppt_createdBy left join ppt_agent_tag as e on e.ppt_id=a.ppt_id ".$groupby." having ".$distance." and a.ppt_isDelete=0 and a.ppt_property_status='active' and a.ppt_verification_status=1 and a.ppt_valid_till>='".$current_date."' " . $where . " ".$orderby."")->result();
        }
         
-       // echo $q=$this->db->last_query();
+        //echo $q=$this->db->last_query();
         return $query;
     }
     public function agent_list()

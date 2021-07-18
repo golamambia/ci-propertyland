@@ -35,9 +35,13 @@ $user_data=$this->General_model->show_data_id('user_table',$this->session->userd
 							<a href="<?=base_url();?>lbcontacts" <?php if($page_con=='category' || $page_con =='lbcontacts'){echo"class='leftbar_act'";} ?>><img src="<?php echo base_url(); ?>assets_front/images/dbl2.png" alt=""> Ad Post</a>
 						</li>
 						 <li>
-							<a href="<?=base_url();?>adslist" <?php if($page_con =='adslist'){echo"class='leftbar_act'";} ?>><img src="<?php echo base_url(); ?>assets_front/images/dbl3.png" alt="">Ads List</a>
+							<a href="<?=base_url();?>adslist" <?php if($page_con =='adslist' && $page_fun =='index'){echo"class='leftbar_act'";} ?>><img src="<?php echo base_url(); ?>assets_front/images/dbl3.png" alt="">Ads List</a>
 						</li>
-						
+						<?php if($this->session->userdata('front_sess')['user_type']=='agent'){?>
+						<li>
+							<a href="<?=base_url();?>adslist/propertytagged_list" <?php if($page_con =='adslist' && $page_fun =='propertytagged_list'){echo"class='leftbar_act'";} ?>><img src="<?php echo base_url(); ?>assets_front/images/dbl3.png" alt="">Tagged Properties</a>
+						</li>
+						<?php }?>
 						<li>
 							<a href="<?=base_url();?>noticeboard" <?php if($page_con =='noticeboard'){echo"class='leftbar_act'";} ?>><img src="<?php echo base_url(); ?>assets_front/images/dbl3.png" alt="">Notice Board</a>
 						</li>

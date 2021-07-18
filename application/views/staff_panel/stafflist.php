@@ -14,10 +14,10 @@
     <div class="col-12">
       <div class="card">
         <div class="card-header">
-          <h4 class="card-title">
+          <!-- <h4 class="card-title">
             <a href="<?php echo base_url();?>apanel/staff/staff_add" class="btn btn-primary mr-1">
                                     <i class="ft-plus"></i> Add New Staff
-                                </a></h4>
+                                </a></h4> -->
           <a class="heading-elements-toggle"><i class="fa fa-ellipsis-v font-medium-3"></i></a>
           <div class="heading-elements">
             <ul class="list-inline mb-0">
@@ -50,8 +50,9 @@
                   <th>Name</th>
                   <th>Email</th>
                   <th>Phone</th>
-                  <th>Country</th>
+                  <!-- <th>Country</th> -->
                   <th>Staff Type</th>
+                  <th>Manager</th>
                   <th>Status</th>
                   <th class="float-centre">Action</th>
                   <!-- <th></th> -->
@@ -67,8 +68,20 @@
                   <td><?=$value->name;?></td>
                   <td><?=$value->email;?></td>
                   <td><?=$value->phone;?></td>
-                  <td><?=$value->phone;?></td>
-                  <td><?=$value->phone;?></td>
+                  <!-- <td><?=$value->countryname;?></td> -->
+                  <td>
+                    <?php
+                    if($value->user_type=="manager_staff"){
+                        echo "Manager";
+                    }elseif($value->user_type=="support_staff"){
+                      echo "Support Staff";
+                    }elseif($value->user_type=="field_staff"){
+                      echo "Field Staff";
+                    }
+                    ?>
+                      
+                  </td>
+                  <td><?=$value->manager;?></td>
                   <td>
                     <?php 
                     
@@ -82,8 +95,8 @@
                   </td>
                   <td class="float-centre">
 
-                <a href="<?php echo base_url();?>apanel/staff/staff_edit/<?=$value->id;?>"><span class="badge bg-primary" title="Click here for edit"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</span></a>
-                <a href="<?php echo base_url();?>apanel/staff/staff_delete/<?=$value->id;?>" onclick="return confirm('Are you sure to delete?')"><span class="badge badge-danger" title="Click here for delete"><i class="fa fa-trash" aria-hidden="true"></i> Delete</span></a>
+                <a href="<?php echo base_url();?>staff_panel/staff/staff_edit/<?=$value->id;?>"><span class="badge bg-primary" title="Click here for view"><i class="fa fa-eye" aria-hidden="true"></i> View</span></a>
+               <!--  <a href="<?php echo base_url();?>apanel/staff/staff_delete/<?=$value->id;?>" onclick="return confirm('Are you sure to delete?')"><span class="badge badge-danger" title="Click here for delete"><i class="fa fa-trash" aria-hidden="true"></i> Delete</span></a> -->
             
 
                    </td>
@@ -98,8 +111,9 @@
                   <th>Name</th>
                   <th>Email</th>
                   <th>Phone</th>
-                  <th>Country</th>
+                  <!-- <th>Country</th> -->
                   <th>Staff Type</th>
+                  <th>Manager</th>
                   <th>Status</th>
                   <th class="float-centre">Action</th>
                   <!-- <th></th> -->

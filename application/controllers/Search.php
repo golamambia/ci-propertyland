@@ -115,6 +115,7 @@ class Search extends CI_Controller
             $this->session->set_userdata('property_type', base64_decode($this->input->post('property_type')));
             $this->session->set_userdata('property_category', base64_decode($this->input->post('property_category')));
             $this->session->set_userdata('property_for', base64_decode($this->input->post('property_for')));
+            $this->session->set_userdata('agentId', $this->input->post('agentId'));
              // $this->session->set_userdata('posted_by', $this->input->post('posted_by'));
             $this->session->set_userdata('location_type', $this->input->post('location_type'));
 

@@ -118,7 +118,7 @@
 
                                             <label for="eventInput3">Phone</label>
 
-                                            <input type="text" id="eventInput3" class="form-control" placeholder="Phone" name="phone" value="<?php echo $user[0]->phone; ?>"  required>
+                                            <input type="text" id="eventInput3" class="form-control numeric_input" placeholder="Phone" name="phone" value="<?php echo $user[0]->phone; ?>"  required  maxlength="11">
 
                                         </div>
 
@@ -129,6 +129,23 @@
                                             <input type="password" id="password-field" class="form-control" value="<?php echo $user[0]->pass_view; ?>" placeholder="Password" name="pass" required>
 
                                             <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+
+                                        </div>
+
+                                        <div class="form-group">
+
+                                            <label for="eventInput3">Address</label>
+
+                                            <textarea rows="6" class="form-control" placeholder="Address" name="address" required><?php echo $user[0]->address; ?></textarea>
+
+                                            
+
+                                        </div>
+                                         <div class="form-group">
+
+                                            <label for="pincode">Pincode</label>
+
+                                            <input type="text" id="pincode" class="form-control numeric_input" placeholder="Pincode" name="pincode" value="<?php echo $user[0]->pincode; ?>"  required  maxlength="6">
 
                                         </div>
 
@@ -236,6 +253,40 @@
 
                                         </div>
 
+                                          <div class="form-group">
+
+                                            <label for="eventInput3">Profile photo</label>
+
+                                           <input type="file" class="form-control" name="photo" id="photo" >
+
+                                           
+                                        </div>
+                                        <div class="form-group">
+                                          <img src="<?=base_url();?>uploads/staff/<?=$user[0]->profile_photo;?>" style="width: 100px;height: 100px">
+                                        </div>
+                                        <div class="form-group">
+
+                                            <label for="eventInput3">Photo id proof</label>
+
+                                           <input type="file" class="form-control" name="photo2" id="photo2" >
+
+                                           
+                                        </div>
+                                        <div class="form-group">
+                                          <img src="<?=base_url();?>uploads/staff/<?=$user[0]->photo_id_proof;?>" style="width: 100px;height: 100px">
+                                        </div>
+                                        <div class="form-group">
+
+                                            <label for="eventInput3">Address id proof</label>
+
+                                           <input type="file" class="form-control" name="photo3" id="photo3" >
+
+                                           
+                                        </div>
+                                        <div class="form-group">
+                                          <img src="<?=base_url();?>uploads/staff/<?=$user[0]->address_id_proof;?>" style="width: 100px;height: 100px">
+                                        </div>
+
 
                             </div>
 
@@ -313,7 +364,7 @@
             $('#user_type').bind("change", function() { 
             
                 var user_type=$('#user_type').val();
-                if(user_type=='support_staff'){
+                if(user_type!='manager_staff'){
 
                   $('.manager_name').show();
                   $("#manager_name").attr("required", true);

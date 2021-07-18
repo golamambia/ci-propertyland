@@ -46,9 +46,11 @@
               <thead>
                 <tr>
                   <th>Ads title</th>
+                  <th>Type</th>
+                  <th>Property For</th>
                   <th>Category</th>
-                  <th>Sub Category</th>
-                  <th>Date & Time</th>
+                  
+                  <th>Date</th>
                   
                   <th>Status</th>
                   <th class="float-centre">Action</th>
@@ -62,15 +64,17 @@
                 //print_r($value)
                ?>
                  <tr>
-                  <td><?=$value->title;?></td>
-                  <td><?=$value->name;?></td>
-                  <td><?=$value->subname;?></td>
-                  <td><?php echo $value->date_time;?></td>
+                  <td><a target="_blank" href="<?=base_url();?>/adsview/dataview?ads=<?=base64_encode($value->ppt_id);?>"><?=$value->ppt_title;?></a></td>
+                  <td><?php echo str_replace('_', ' ', $value->ppt_property_type); ?></td>
+                  <td><?=$value->ppt_property_for;?></td>
+                  <td><?=$value->ppt_property_category;?></td>
+                  
+                  <td><?php echo $value->ppt_createdAt;?></td>
                  
                   <td>
                     <?php 
                     
-                    if($value->post_status==1){
+                    if($value->ppt_verification_status==1){
                     ?>
                     <span class="badge bg-success"> Active</span>
 
@@ -80,7 +84,7 @@
                   </td>
                   <td class="float-centre">
 
-                <a href="<?php echo base_url();?>staff_panel/adsdata/adsdata_view?view=<?=base64_encode($value->lbcontactId);?>"><span class="badge bg-primary" title="Click here for view"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> View</span></a>
+                <a href="<?php echo base_url();?>staff_panel/adsdata/adsdata_view?view=<?=base64_encode($value->ppt_id);?>"><span class="badge bg-primary" title="Click here for view"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> View</span></a>
                 
             
 
@@ -93,15 +97,18 @@
               </tbody>
               <tfoot>
                 <tr>
-                 <th>Ads title</th>
+               <th>Ads title</th>
+                  <th>Type</th>
+                  <th>Property For</th>
                   <th>Category</th>
-                  <th>Sub Category</th>
-                   <th>Date & Time</th>
+                  
+                  <th>Date</th>
+                  
                   <th>Status</th>
                   <th class="float-centre">Action</th>
                 </tr>
               </tfoot>        
-            </table>        
+            </table>       
           </div>
         </div>
       </div>

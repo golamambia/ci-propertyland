@@ -25,42 +25,73 @@ class Settings extends CI_Controller {
 
 	public function profile()
 	{   
-        $query=$this->General_model->show_data_id('staff_table','','','get','');
-        $data['admin']=$query;
+        $userid=$this->session->userdata('logged_in_stf')['staff_id'];
+        $data['country_list']=$this->General_model->show_data_id('country','','','get','');
+         
+    $data['user']=$this->db->query("SELECT st.* FROM staff_table as st WHERE st.id=".$userid." ")->result();
+    $data['manager_list']=$this->db->query("SELECT st.* FROM staff_table as st WHERE st.id=".$data['user'][0]->manager_name." ")->result();
+        $data['state_list']=$this->General_model->show_data_id('state', $data['user'][0]->country,'countryid','get','');
         
 		$data['title']="Staff || Profile";
 		$this->load->view('staff_panel/header',$data);
 		$this->load->view('staff_panel/profile');
 		$this->load->view('staff_panel/footer');
 	}
-    public function update_admin_user($id)
+     public function staff_edit_post()
     {
-        
-       $this->form_validation->set_rules('admin_email', 'Admin Email', 'required');
-        $this->form_validation->set_rules('name', 'Admin name', 'required');
-
-          $this->form_validation->set_rules('phone', 'Phone', 'required');
+        $this->form_validation->set_rules('name', 'Name', 'required');
+        $this->form_validation->set_rules('email', 'Email', 'required');
+        $this->form_validation->set_rules('phone', 'Phone', 'required');
+        $this->form_validation->set_rules('address', 'address', 'required');
+        $this->form_validation->set_rules('pincode', 'pincode', 'required');
 
         if ($this->form_validation->run() == FALSE) 
         {
-            $this->session->set_flashdata('error', validation_errors('<li>', '</li>'));
-           redirect('staff_panel/settings/profile');
+            $this->session->set_flashdata('error', 'Data  update failed');
+           redirect($_SERVER['HTTP_REFERER']);
 
         }else{
-            $datalist = array( 
-                'name'      => $this->input->post('name'),
-                'email'   => $this->input->post('admin_email'),
-                'phone'   => $this->input->post('phone') 
-                //'status'        => $this->input->post('status'),
-            );
+           if(!empty($_FILES['photo']['name'])){ 
+                 
+                 $filename =time().$_FILES['photo']['name'];
+                $_POST['profile_photo']=$filename;
+ $location = "uploads/staff/".$filename;
+           
+    $this->compressImage($_FILES['photo']['tmp_name'],$location,50);
+                  
+                }
+                if(!empty($_FILES['photo2']['name'])){ 
+                 
+                 $filename =time().$_FILES['photo2']['name'];
+                $_POST['photo_id_proof']=$filename;
+ $location = "uploads/staff/".$filename;
+           
+    $this->compressImage($_FILES['photo2']['tmp_name'],$location,50);
+                  
+                }
+                if(!empty($_FILES['photo3']['name'])){ 
+                 
+                 $filename =time().$_FILES['photo3']['name'];
+                $_POST['address_id_proof']=$filename;
+ $location = "uploads/staff/".$filename;
+           
+    $this->compressImage($_FILES['photo3']['tmp_name'],$location,50);
+                  
+                }
             
-        
-        $query= $this->General_model->show_data_id('staff_table',$id,'id','update',$datalist);
-    $this->session->set_flashdata('message', 'Data successfully saved');
-
-       redirect('staff_panel/settings/profile'); 
+            $userid=$this->session->userdata('logged_in_stf')['staff_id'];
+        $_POST['password']=md5($this->input->post('pass'));
+     $_POST['pass_view'] = $this->input->post('pass');
+        $query= $this->General_model->show_data_id('staff_table',$userid,'id','update',$this->input->post());
+   
+    if($query){
+ $this->session->set_flashdata('message', 'Data successfully updated');
+    }else{
+        $this->session->set_flashdata('error', 'Data  update failed');
+    }
+      
         }  
-
+        redirect($_SERVER['HTTP_REFERER']);
     }
 
    
@@ -115,7 +146,36 @@ public function change_password()
       } 
 
     }
+    
+   function compressImage($source, $destination, $quality,$imgx=NULL,$imgy=NULL) {
 
+  $source_properties = getimagesize($source);
+
+  if ($source_properties['mime'] == 'image/jpeg') 
+    $image_resource_id = imagecreatefromjpeg($source);
+
+  elseif ($source_properties['mime'] == 'image/gif') 
+    $image_resource_id = imagecreatefromgif($source);
+
+  elseif ($source_properties['mime'] == 'image/png') 
+    $image_resource_id = imagecreatefrompng($source);
+
+  if($imgx && $imgy){
+  $target_layer = $this->fn_resize($image_resource_id,$source_properties[0],$source_properties[1]);
+    imagejpeg($target_layer, $destination, $quality); 
+  }else{
+    imagejpeg($image_resource_id, $destination, $quality);
+  }
+  
+
+}
+function fn_resize($image_resource_id,$width,$height) {
+$target_width =200;
+$target_height =200;
+$target_layer=imagecreatetruecolor($target_width,$target_height);
+imagecopyresampled($target_layer,$image_resource_id,0,0,0,0,$target_width,$target_height, $width,$height);
+return $target_layer;
+}
 	
 }
 

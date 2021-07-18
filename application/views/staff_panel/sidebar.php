@@ -75,12 +75,45 @@
 
                   
            -->
+             <li class="nav-item has-sub <?php if($this->router->fetch_class()=='staff'){echo "open";}?>"><a href="javascript:void(0)"><i class="ft-user"></i><span class="menu-title" data-i18n="">Staff</span><span class="badge badge badge-primary badge-pill float-right mr-2">1</span></a>
+            <ul class="menu-content" style="">
+              <li class="<?php if($this->router->fetch_method()=='index' && $this->router->fetch_class()=='staff'){echo "mn_act_cls";}?>"><a class="menu-item" href="<?php echo base_url();?>staff_panel/staff/">Staff list</a>
+              </li>
+            
+            </ul>
+          </li>
 
           <li class="nav-item has-sub <?php if($this->router->fetch_class()=='users'){echo "open";}?>"><a href="javascript:void(0)"><i class="ft-user"></i><span class="menu-title" data-i18n="">Users</span><span class="badge badge badge-primary badge-pill float-right mr-2">1</span></a>
             <ul class="menu-content" style="">
               <li class="<?php if($this->router->fetch_method()=='profile'){echo "mn_act_cls";}?>"><a class="menu-item" href="<?php echo base_url();?>staff_panel/users/register_user">Register user</a>
               </li>
+               <li class="<?php if($this->router->fetch_method()=='index' && $this->router->fetch_class()=='users'){echo "mn_act_cls";}?>"><a class="menu-item" href="<?php echo base_url();?>staff_panel/users/">User List</a>
+              </li>
+               <li class="<?php if($this->router->fetch_method()=='payment' && $this->router->fetch_class()=='users'){echo "mn_act_cls";}?>"><a class="menu-item" href="<?php echo base_url();?>staff_panel/users/payment">User payments</a>
+              </li>
+              <li class="<?php if($this->router->fetch_method()=='verify' && $this->router->fetch_class()=='users'){echo "mn_act_cls";}?>"><a class="menu-item" href="<?php echo base_url();?>staff_panel/users/verify">Verify users</a>
+              </li>
             
+            </ul>
+          </li>
+          <li class="nav-item has-sub <?php if($this->router->fetch_class()=='adsdata' || $this->router->fetch_class()=='complaint'){echo "open";}?>"><a href="javascript:void(0)"><i class="ft-file"></i><span class="menu-title" data-i18n="">Ads Section</span><span class="badge badge badge-primary badge-pill float-right mr-2">6</span></a>
+            <ul class="menu-content" style="">
+              <li class="<?php if($this->router->fetch_method()=='index'){echo "mn_act_cls";}?>"><a class="menu-item" href="<?php echo base_url();?>staff_panel/adsdata/">Ads All list</a>
+              </li>
+              <li class="<?php if($this->router->fetch_method()=='pending'){echo "mn_act_cls";}?>"><a class="menu-item" href="<?php echo base_url();?>staff_panel/adsdata/pending">Ads pending list</a>
+              </li>
+
+              <li class="<?php if($this->router->fetch_method()=='approved'){echo "mn_act_cls";}?>"><a class="menu-item" href="<?php echo base_url();?>staff_panel/adsdata/approved">Ads approved list</a>
+              </li>
+              <li class="<?php if($this->router->fetch_method()=='approved_you'){echo "mn_act_cls";}?>"><a class="menu-item" href="<?php echo base_url();?>staff_panel/adsdata/approved_you">Approved by you</a>
+              </li>
+              <li class="<?php if($this->router->fetch_method()=='complaint_ads'){echo "mn_act_cls";}?>"><a class="menu-item" href="<?php echo base_url();?>staff_panel/adsdata/complaint_ads">Complaint ads</a>
+              </li>
+
+              <li class="<?php if($this->router->fetch_method()=='report_ads'){echo "mn_act_cls";}?>"><a class="menu-item" href="<?php echo base_url();?>staff_panel/adsdata/report_ads">Report ads</a>
+              </li>
+              
+              
             </ul>
           </li>
 

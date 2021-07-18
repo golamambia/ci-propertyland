@@ -50,6 +50,7 @@
                   <th>Name</th>
                   <th>Email</th>
                   <th>Phone</th>
+                  <th>Reg. type</th>
                   <th>Status</th>
                   <th class="float-centre">Action</th>
                   <!-- <th></th> -->
@@ -65,6 +66,7 @@
                   <td><?=$value->name;?></td>
                   <td><?=$value->email;?></td>
                   <td><?=$value->phone;?></td>
+                  <td><?=ucfirst($value->registration_type);?></td>
                   <td>
                     <?php 
                     
@@ -94,6 +96,7 @@
                   <th>Name</th>
                   <th>Email</th>
                   <th>Phone</th>
+                  <th>Reg. type</th>
                   <th>Status</th>
                   <th class="float-centre">Action</th>
                   <!-- <th></th> -->

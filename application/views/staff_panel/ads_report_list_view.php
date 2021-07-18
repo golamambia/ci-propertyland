@@ -45,10 +45,11 @@
             <table id="example" class="table table-striped table-bordered base-style ">
               <thead>
                 <tr>
-                  <th>Ads title</th>
+                      <th>Ads title</th>
+                  <th>Type</th>
+                  <th>Property For</th>
                   <th>Category</th>
-                  <th>Sub Category</th>
-                  <th>Date & Time</th>
+                  <th>Date</th>
                   <th>Report list</th>
                   <th>Status</th>
                   <th class="float-centre">Action</th>
@@ -62,15 +63,17 @@
                 //print_r($value)
                ?>
                  <tr>
-                 <td><a title="Click here details view" target="_blank" href="<?=base_url();?>adsview/dataview?ads=<?=base64_encode($value->lbcontactId);?>"><?=$value->title;?></a></td>
-                  <td><?=$value->name;?></td>
-                  <td><?=$value->subname;?></td>
-                  <td><?php echo $value->date_time;?></td>
-                 <td><a href="<?=base_url();?>staff_panel/complaint/report_list?ads=<?=base64_encode($value->lbcontactId);?>">View list</a></td>
+                  <td><a target="_blank" href="<?=base_url();?>/adsview/dataview?ads=<?=base64_encode($value->ppt_id);?>"><?=$value->ppt_title;?></a></td>
+                  <td><?php echo str_replace('_', ' ', $value->ppt_property_type); ?></td>
+                  <td><?=$value->ppt_property_for;?></td>
+                  <td><?=$value->ppt_property_category;?></td>
+                  
+                  <td><?php echo $value->ppt_createdAt;?></td>
+                 <td><a href="<?=base_url();?>staff_panel/complaint/report_list?ads=<?=base64_encode($value->ppt_id);?>">View list</a></td>
                   <td>
                     <?php 
                     
-                    if($value->post_status==1){
+                    if($value->ppt_verification_status==1){
                     ?>
                     <span class="badge bg-success"> Active</span>
 
@@ -93,10 +96,11 @@
               </tbody>
               <tfoot>
                 <tr>
-                 <th>Ads title</th>
+                    <th>Ads title</th>
+                  <th>Type</th>
+                  <th>Property For</th>
                   <th>Category</th>
-                  <th>Sub Category</th>
-                   <th>Date & Time</th>
+                  <th>Date</th>
                    <th>Report list</th>
                   <th>Status</th>
                   <th class="float-centre">Action</th>

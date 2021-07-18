@@ -151,9 +151,9 @@ $this->session->set_flashdata('error', 'Please give proper address!');
                   $config['upload_path'] = 'uploads/restaurantImages/'; 
                   $config['allowed_types'] = 'jpg|jpeg|png|gif';
                   $config['file_name'] = time().$_FILES['photo']['name'];
-                  $this->load->library('upload',$config);  
+                 // $this->load->library('upload',$config);  
 
-                 $filename =$config['file_name'];
+                 $filename =time().$_FILES['photo']['name'];
                 $_POST['user_photo']=$filename;
  $location = "uploads/register/".$filename;
            
@@ -217,21 +217,34 @@ $this->session->set_flashdata('error', 'Please give proper address!');
 }
 }
 
-function compressImage($source, $destination, $quality) {
+function compressImage($source, $destination, $quality,$imgx=NULL,$imgy=NULL) {
 
-  $info = getimagesize($source);
+  $source_properties = getimagesize($source);
 
-  if ($info['mime'] == 'image/jpeg') 
-    $image = imagecreatefromjpeg($source);
+  if ($source_properties['mime'] == 'image/jpeg') 
+    $image_resource_id = imagecreatefromjpeg($source);
 
-  elseif ($info['mime'] == 'image/gif') 
-    $image = imagecreatefromgif($source);
+  elseif ($source_properties['mime'] == 'image/gif') 
+    $image_resource_id = imagecreatefromgif($source);
 
-  elseif ($info['mime'] == 'image/png') 
-    $image = imagecreatefrompng($source);
+  elseif ($source_properties['mime'] == 'image/png') 
+    $image_resource_id = imagecreatefrompng($source);
 
-  imagejpeg($image, $destination, $quality);
+  if($imgx && $imgy){
+  $target_layer = $this->fn_resize($image_resource_id,$source_properties[0],$source_properties[1]);
+    imagejpeg($target_layer, $destination, $quality); 
+  }else{
+    imagejpeg($image_resource_id, $destination, $quality);
+  }
+  
 
+}
+function fn_resize($image_resource_id,$width,$height) {
+$target_width =200;
+$target_height =200;
+$target_layer=imagecreatetruecolor($target_width,$target_height);
+imagecopyresampled($target_layer,$image_resource_id,0,0,0,0,$target_width,$target_height, $width,$height);
+return $target_layer;
 }
 
 }

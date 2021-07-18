@@ -142,7 +142,9 @@ class Dashboard extends CI_Controller {
 	}
 	public function logout()
     {
-        $this->session->sess_destroy();
+        $this->session->unset_userdata('log_check');
+        $this->session->unset_userdata('front_sess');
+        //$this->session->sess_destroy();
         redirect('register/login');
     }
 }
