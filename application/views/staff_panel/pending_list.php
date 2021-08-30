@@ -2,7 +2,7 @@
 <div class="content-wrapper">
         <div class="content-header row">
           <div class="content-header-left col-md-12 col-12 mb-2">
-            <h3 style="text-align: center;" class="content-header-title mb-0">Ads List</h3>
+            <h3 style="text-align: center;" class="content-header-title mb-0">Ads Pending List</h3>
             
           </div>
           
@@ -41,6 +41,28 @@
 <?php }?>
         <div class="card-content collapse show">
           <div class="card-body card-dashboard">
+               <form id="user_search" method="get">
+            <div class="row">
+              
+                           
+<div class="col-md">
+<label>From date</label>
+<input type="date" value="<?=$this->input->get('start_date',true);?>" class="form-control" name="start_date" id="start_date">
+  </div>
+  <div class="col-md">
+    <label>End date</label>
+<input type="date" value="<?=$this->input->get('end_date',true);?>" class="form-control" name="end_date" id="end_date" >
+  </div>
+  
+  <div class="col-md">
+    <input type="submit" style="margin-top: 27px;color: #fff;" class="form-control btn btn-sm btn-primary" value="Search Now">
+  </div>
+
+
+
+</div>
+</form>
+
             <!-- <p class="card-text">&nbsp;</p> -->
             <table id="example" class="table table-striped table-bordered base-style ">
               <thead>
@@ -52,7 +74,8 @@
                   
                   <th>Date</th>
                   
-                  <th>Status</th>
+                 
+                   <th>V Status</th>
                   <th class="float-centre">Action</th>
                   <!-- <th></th> -->
                 </tr>
@@ -72,19 +95,13 @@
                   <td><?php echo $value->ppt_createdAt;?></td>
                  
                   <td>
-                    <?php 
                     
-                    if($value->ppt_verification_status==1){
-                    ?>
-                    <span class="badge bg-success"> Active</span>
-
-                  <?php }else{?>
-                     <span class="badge bg-warning"> Inactive</span>
-                  <?php }?>
+                  <p style="margin-bottom: 2px;">Status : <?php echo ($value->ppt_verification_status==0)?'<span class="badge bg-warning">Inactive</span>':'<span class="badge bg-success">Active</span>'; ?> </p>
+                                    <p style="margin-bottom: 2px;">V By : <?=getStaff($value->ppt_verifiedBy);?></p>
                   </td>
                   <td class="float-centre">
 
-                <a href="<?php echo base_url();?>staff_panel/adsdata/adsdata_view?view=<?=base64_encode($value->ppt_id);?>"><span class="badge bg-primary" title="Click here for view"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> View</span></a>
+                <a target="_blank" href="<?php echo base_url();?>staff_panel/adsdata/adsdata_view?view=<?=base64_encode($value->ppt_id);?>"><span class="badge bg-primary" title="Click here for view"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> View</span></a>
                 
             
 
@@ -104,7 +121,7 @@
                   
                   <th>Date</th>
                   
-                  <th>Status</th>
+                  <th>V Status</th>
                   <th class="float-centre">Action</th>
                 </tr>
               </tfoot>        

@@ -234,11 +234,11 @@ $geo =  unserialize(file_get_contents('http://www.geoplugin.net/php.gp?ip=' . $u
 <?php 
 
 $currentURL = current_url(); 
-$params = $_SERVER['QUERY_STRING']; 
-$fullURL = $currentURL . '?' . $params; 
-
+//echo $params = $_SERVER['QUERY_STRING']; 
+$fullURL = base_url().'adsview/dataview?ads='.base64_encode($ads).'&refferral_id='.base64_encode($refferral_id); 
+//(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"
 ?>
-<?php $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>
+<?php $actual_link = base_url()."adsview/dataview?ads=".base64_encode($ads)."&refferral_id=".base64_encode($refferral_id); ?>
 
 
 <div class="social-share-btns clearfix mt-2">
@@ -291,10 +291,12 @@ $fullURL = $currentURL . '?' . $params;
 <li class="d-inline"><a href="#three">CONTACT INFO</a></li>
 <?php 
 
-if($this->session->userdata('front_sess')['user_type']=='agent'){?>
+if($this->session->userdata('front_sess')['user_type']=='agent'){
+    if($ads_view[0]->ppt_usertype!='agent'){
+    ?>
 <li class="d-inline"><a href="#two">AGENTS TAGGED</a></li>
 
-<?php }?>
+<?php }}?>
 <?php 
 
 if($this->session->userdata('front_sess')['userid']==$ads_view[0]->ppt_createdBy){?>
@@ -664,7 +666,9 @@ if($img_multi!=0){
 <!------------agent tagged------>
 <?php 
 
-if($this->session->userdata('front_sess')['user_type']=='agent'){?>
+if($this->session->userdata('front_sess')['user_type']=='agent'){
+ if($ads_view[0]->ppt_usertype!='agent'){
+    ?>
 <div class="box_area" id="two">
                                     <div class="heading_area">
                                         <h3> <strong>Agents Tagged</strong></h3>
@@ -774,7 +778,7 @@ if($this->session->userdata('front_sess')['user_type']=='agent'){?>
                       </tbody></table>
                                     </div>
                                 </div>
-                            <?php }?>
+                            <?php }}?>
 
 <!------------agent tagged------>
 <?php 
@@ -985,7 +989,10 @@ echo '<iframe width="" height="" frameborder="0" style="border:0;" allowfullscre
                                         <div class="form-group">
                                                         <textarea class="form-control" name="qt_message" placeholder="Write Message" required></textarea>
                                                     </div>
-                                        <button type="submit" class="btn btn-primary sub">SEND</button>
+                                                    <?php if($this->session->userdata('log_check')!=1){?>
+                         <a href="<?=base_url();?>register/login?log=<?=base64_encode($ads_view[0]->lbcontactId);?>" class="btn btn-primary">Login </a>
+                     <?php }else{?>
+                                        <button type="submit" class="btn btn-primary sub">SEND</button><?php }?>
                                     </div>
                                     </form>
                                 </div>

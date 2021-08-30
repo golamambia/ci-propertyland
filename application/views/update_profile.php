@@ -94,7 +94,7 @@
 
                                 <div class="form_area mb-3">
 
-                                    <form method="post" enctype="multipart/form-data" action="<?=base_url();?>profile/update_post">
+                                    <form method="post" enctype="multipart/form-data" action="<?=base_url();?>profile/update_post"  onsubmit="return confirm('Are you sure to update ,after update your profile will deactive for verification ?')">
 
                                     <div class="row">
 

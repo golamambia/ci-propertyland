@@ -29,6 +29,9 @@ class Staff extends CI_Controller {
 
 	public function index()
 	{
+    if(!checkStaff($this->session->userdata('logged_in_stf')['user_type'],'manager')){
+      redirect('staff_panel', 'refresh');
+    }
          $userid=$this->session->userdata('logged_in_stf')['staff_id'];
 		$data['datatable']=$this->db->query("SELECT d.name as manager,st.*,c.countryname FROM staff_table as st LEFT JOIN country as c on(st.country=c.id) left join staff_table d on d.id=st.manager_name WHERE st.id!='' and st.manager_name=".$userid."")->result();
         

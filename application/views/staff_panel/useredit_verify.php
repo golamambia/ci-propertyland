@@ -10,7 +10,7 @@
           <section id="basic-form-layouts">
    
 <div class="row match-height">
-        <div class="col-md-12">
+        <div class="col-md-8">
             <div class="card">
                 <div class="card-header">
                     <h4 class="card-title" id="basic-layout-form-center">Verify Profile</h4>
@@ -41,8 +41,8 @@
 <?php }?>
 
                         <form class="form"  method="post" enctype="multipart/form-data" action="<?php echo base_url();?>staff_panel/users/verify_edit_post/<?php echo $user[0]->id?>">
-                            <div class="row justify-content-md-center">
-                                <div class="col-md-6">
+                            <div class="row justify-content-md-center1">
+                                <div class="col-md-12">
                                     <div class="form-body">
                                       
                                         <div class="col-lg-12">
@@ -368,7 +368,7 @@
                                 <a href="<?php echo base_url();?>staff_panel/users/verify" class="btn btn-warning mr-1">
                                     <i class="ft-x"></i> Close
                                 </a>
-                                <?php if($user[0]->status=="Active"){?>
+                                <?php if($user[0]->status=="Active" && $this->session->userdata('logged_in_stf')['user_type']=='support_staff'){?>
                                 <button type="submit" class="btn btn-primary">
                                     <i class="fa fa-check-square-o"></i> Update Now
                                 </button>
@@ -380,6 +380,160 @@
                 </div>
             </div>
         </div>
+
+<div class="col-md-4">
+    
+            <div class="card">
+
+                <div class="card-content collapse show">
+                    <div class="card-body">
+
+
+                      <!-- <form class="form"  method="post"  action="<?php echo base_url();?>staff_panel/adsdata/post_quote">
+ 
+                           
+
+                            <div class="form-body">
+                                <h4 class="form-section"><i class="ft-calendar"></i>Message</h4>
+
+                                
+
+                                        <div class="form-group">
+                                            
+                                          <textarea name="qt_message" class="form-control" required></textarea>
+                                        </div>
+
+                                        <input type="hidden" value="<?=$result[0]->user_id; ?>" name="user_id">
+
+                                        <input type="hidden" value="<?=base64_encode($result[0]->lbcontactId);?>" name="ads">
+
+                                
+
+                            </div>
+                            <br>
+                            <div class="form-body">
+                                <button type="submit" class="btn btn-primary " id="">
+                                    <i class="fa fa-check-square-o"></i> Send
+                                </button>
+
+                            </div>
+
+                        </form>
+
+                        <br> -->
+
+
+                        <form class="form"  method="post"  action="<?php echo base_url();?>staff_panel/users/post_notification">
+ 
+                           
+
+                            <div class="form-body">
+                                <h4 class="form-section"><i class="ft-calendar"></i>Comment</h4>
+
+                                <div class="form-group">
+                                            
+                                            <input type="text" class="form-control" placeholder="Title" name="comment_title"  required>
+                                        </div>
+
+
+                                        <div class="form-group">
+                                            
+                                          <textarea name="comment" class="form-control" required></textarea>
+                                        </div>
+
+                                        <input type="hidden" value="<?php echo $user[0]->id?>" name="user_id">
+
+                                        <input type="hidden" value="0" name="ads_id">
+
+                                
+
+                            </div>
+                            <br>
+                            <div class="form-body">
+                                <button type="submit" class="btn btn-primary " id="">
+                                    <i class="fa fa-check-square-o"></i> Submit
+                                </button>
+
+                            </div>
+
+                        </form>
+
+
+
+<br>
+
+
+
+<div class="listing_area table-responsive">
+                       <table class="table table-striped table-bordered">
+                           <thead>
+                              <tr>
+                                 <th data-type="numeric">#</th>
+                                 
+                                 <th>Details</th>
+                                                                 
+                                 
+                              </tr>
+                           </thead>
+                           <tbody>
+
+<?php
+$i=0; 
+foreach ($notification as $value) {
+$i++; 
+?>
+
+                        <tr class="dview1">
+                        <td class="add-img-selector">
+                        <?=$i;?>                                 
+                        </td>
+
+                        <td class="ads-details-td">
+                        <h4><?=$value->notice_title;?></h4>
+                        <p> 
+                            <strong> Posted On </strong>:
+                                       <?=date('d-M-Y',strtotime($value->entry_date));?>
+                                     
+                        </p>
+
+
+                         <p>                                               
+                            
+                        <strong>Description:</strong> <?=$value->description;?> 
+                        </p>
+                        </td>
+
+
+                        </tr>
+                             
+
+<?php } ?>                            
+                            
+ 
+                             
+                              
+                              
+                                                           
+                              
+                           </tbody>
+                        </table>
+                    </div>
+
+
+
+
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        
+</div>
+
+
     </div>
 </section>
 

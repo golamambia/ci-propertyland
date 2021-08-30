@@ -47,17 +47,28 @@
             <div class="row">
               
               
-             <?php if($this->session->userdata('logged_in_stf')['user_type']=='manager_staff'){?>
+             <?php if($this->session->userdata('logged_in_stf')['user_type']=='manager_staff'){
+              if($this->input->get() && $cart_list){
+              ?>
               <div class="col-md">
-                <label>Staff</label>
+                <label>Support Staff</label>
             <select  class="form-control" name="staff" >
-  <option value=""  selected>--Select staff--</option>
+  <option value=""  selected>All</option>
   <?php foreach ($staff_list as $key => $value) {?>
   <option <?php if($this->input->get('staff',true)==$value->id){echo"selected";}?> value="<?=$value->id;?>"><?=$value->name;?></option>
  <?php } ?>
 </select>
 </div>
-<?php }?>
+<div class="col-md">
+                <label>Field Staff</label>
+            <select  class="form-control" name="fstaff" >
+  <option value=""  selected>All</option>
+  <?php foreach ($fstaff_list as $key => $value) {?>
+  <option <?php if($this->input->get('fstaff',true)==$value->id){echo"selected";}?> value="<?=$value->id;?>"><?=$value->name;?></option>
+ <?php } ?>
+</select>
+</div>
+<?php } }?>
 <div class="col-md">
 <label>From date</label>
 <input type="date" value="<?=$this->input->get('start_date',true);?>" class="form-control" name="start_date" id="start_date">
@@ -80,16 +91,12 @@
             <table id="example" class="table table-striped table-bordered base-style ">
               <thead>
                 <tr>
+                  <th>Pay Ref</th>
+                  <th>Date</th>
+                  
                   <th>User</th>
-               <!--     <th>Payment Type</th> -->
-                                 <!-- <th>Payment For</th> -->
-                                <!--   <th>Post ID</th> -->
-                                 <!-- <th>Days</th>
-                                 <th>Price</th> -->
-                                 <th>Payment Ref</th>
-                                
-                                 <th>Date</th>
-                                  <th>Total Amount</th>
+                  <th>Paid Amount</th>
+                  <th>Short Desc.</th>
                   <th class="float-centre">Action</th>
                   <!-- <th></th> -->
                 </tr>
@@ -98,33 +105,10 @@
                
                <?php 
                foreach ($cart_list as $key => $result) {
-                //print_r($value)
+               // print_r($result);
                ?>
                  <tr>
-                   <td class="price-td">
-                                 <?=$result->name;?>
-                                 </td>
-                                 <!-- <td class="price-td">
-                                 <?=$result->payment_type_text;?>
-                                 </td> -->
-                                 <!-- <td class="price-td">
-                                    <?=$result->payment_text;?>
-                                 </td> -->
-                             <!--     <td class="ads-details-td">
-                                    <h4><a href="<?=base_url();?>adsview/dataview?ads=<?=base64_encode($result->ppt_id);?>" target="_blank"><?=$result->ppt_title;?></a></h4>
-                                   
-                                 </td> -->
-                               <!--    <td class="price-td">
-                                 <?=$result->days_valid;?>
-                                 </td>
-                                 <td class="price-td">
-                                  <?php 
-                                 
-                                 echo $result->amount;
-                                  
-                                  ?>
-                                 </td> -->
-                                  <td class="action-td">
+                  <td class="action-td">
                                 <?=$result->payment_ref;?>
                                   
                                  </td>
@@ -132,16 +116,30 @@
                                 <?=$result->payment_date;?>
                                   
                                  </td>
+                                  
+                   <td class="price-td">
+                                 <?=$result->name;?>
+                                 </td>
+                                                                 
+                                 
                                  <td class="action-td">
-                                <?=$result->total;?>
+                                <?=$result->paid_amount;?>
                                   
                                  </td>
+                                 <td style="font-size: 12px;font-weight: 600;">
+                                   <p style="margin-bottom: 2px;">Pay Mode : <?=$result->payment_mode;?></p>
+                                   <p style="margin-bottom: 2px;">Tagged Staff : <?=getStaff($result->tagged_staff_id);?></p>
+                                   <p style="margin-bottom: 2px;">V Status : <?php echo ($result->verification_status==0)?'<span class="badge bg-warning">Pending</span>':'<span class="badge bg-success">Verified</span>'; ?> </p>
+                                    <p style="margin-bottom: 2px;">V By : <?=getStaff($result->verified_by);?></p>
+                                 </td>
+                                 
                   <td class="float-centre">
 
-                <a href="<?php echo base_url();?>staff_panel/users/payment_details?view=<?=base64_encode($result->payment_ref);?>"><span class="badge bg-primary" title="Click here for view"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> View</span></a>
-                
-            
-
+                <a target="_blank" href="<?php echo base_url();?>staff_panel/users/payment_details?view=<?=base64_encode($result->payment_ref);?>"><span class="badge bg-primary" title="Click here for view"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> View</span></a>
+                <br>
+                <?php if(checkStaff($this->session->userdata('logged_in_stf')['user_type'],'support')){?>
+             <a target="_blank" href="<?php echo base_url();?>staff_panel/users/payment_verify?view=<?=base64_encode($result->payment_ref);?>"><span class="badge bg-warning" title="Click here for verify"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Verify</span></a>
+           <?php }?>
                    </td>
                  
                 </tr>

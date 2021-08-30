@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Jul 04, 2021 at 02:38 AM
+-- Generation Time: Aug 22, 2021 at 06:42 AM
 -- Server version: 10.4.18-MariaDB-cll-lve
 -- PHP Version: 7.2.34
 
@@ -105,7 +105,7 @@ CREATE TABLE `admin_details` (
 --
 
 INSERT INTO `admin_details` (`id`, `username`, `password`, `pass_view`, `admin_email`, `name`, `company`, `admin_image`, `status`) VALUES
-(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'admin', 'localbrowse@gmail.com', 'TheLocalBrowse', 'TheLocalBrowse', '1577104428logo.png', '1');
+(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'admin', 'phs@gmail.com', 'Property Handshake', 'Property Handshake', '1577104428logo.png', '1');
 
 -- --------------------------------------------------------
 
@@ -158,7 +158,18 @@ INSERT INTO `adsview_master` (`vw_id`, `vw_adsid`, `vw_userid`, `vw_ip`, `vw_no`
 (29, 4, 7, '157.43.220.186', 1, '2021-06-22 09:04:51'),
 (30, 2, 7, '157.43.201.13', 1, '2021-06-23 08:38:19'),
 (31, 8, 7, '47.11.35.162', 1, '2021-06-24 08:36:09'),
-(32, 8, 7, '47.11.50.15', 1, '2021-06-28 07:29:28');
+(32, 8, 7, '47.11.50.15', 1, '2021-06-28 07:29:28'),
+(33, 10, 28, '79.136.53.164', 1, '2021-07-08 16:39:18'),
+(34, 4, 7, '157.43.198.195', 1, '2021-07-12 09:38:18'),
+(35, 5, 14, '79.136.53.164', 1, '2021-07-14 17:22:39'),
+(36, 7, 7, '47.11.68.212', 1, '2021-07-15 10:15:23'),
+(37, 4, 7, '47.11.78.76', 1, '2021-07-16 09:09:07'),
+(38, 2, 7, '47.11.78.76', 1, '2021-07-16 11:04:06'),
+(39, 11, 14, '79.136.53.164', 1, '2021-07-20 13:25:31'),
+(40, 4, 7, '47.11.0.179', 1, '2021-08-04 10:53:08'),
+(41, 4, 7, '157.43.204.211', 1, '2021-08-21 07:20:33'),
+(42, 4, 7, '157.43.211.81', 1, '2021-08-22 10:03:34'),
+(43, 11, 7, '157.43.211.81', 1, '2021-08-22 12:00:51');
 
 -- --------------------------------------------------------
 
@@ -48925,6 +48936,38 @@ INSERT INTO `general_setting` (`id`, `logo`, `contact`, `email`, `facebook`, `ad
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `measure_effort`
+--
+
+CREATE TABLE `measure_effort` (
+  `measure_id` varchar(40) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `user_staff_id` int(11) NOT NULL,
+  `customer_id` int(11) NOT NULL,
+  `post_id` bigint(20) NOT NULL,
+  `payment_ref` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `payment_type_id` int(2) NOT NULL,
+  `measure_date` date NOT NULL,
+  `user_catg` varchar(1) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `measure_ts` bigint(14) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `measure_effort`
+--
+
+INSERT INTO `measure_effort` (`measure_id`, `user_staff_id`, `customer_id`, `post_id`, `payment_ref`, `payment_type_id`, `measure_date`, `user_catg`, `measure_ts`) VALUES
+('202108_S_18_20210813152534', 18, 7, 0, 'pay_HKpqbgyPKsRcCa', 93, '2021-08-13', 'S', 20210813152534),
+('202108_S_19_20210812174300', 19, 28, 0, '', 81, '2021-08-12', 'S', 20210812174300),
+('202108_S_19_20210812180834', 19, 0, 4, '', 84, '2021-08-12', 'S', 20210812180834),
+('202108_S_28_20210812174218', 28, 28, 0, '', 80, '2021-08-12', 'S', 20210812174218),
+('202108_S_28_20210812180732', 28, 0, 4, '', 83, '2021-08-12', 'S', 20210812180732),
+('202108_S_29_20210813152534', 29, 7, 0, 'pay_HKpqbgyPKsRcCa', 92, '2021-08-13', 'S', 20210813152534),
+('202108_S_29_20210814165901', 29, 28, 0, '', 91, '2021-08-14', 'S', 20210814165901),
+('202108_S_3_20210813152534', 3, 7, 0, 'pay_HKpqbgyPKsRcCa', 82, '2021-08-13', 'S', 20210813152534);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `message_relpy`
 --
 
@@ -49079,7 +49122,9 @@ INSERT INTO `module_lbcontacts_part` (`id`, `multi_image`, `lbcontact_id`) VALUE
 (30, '1624010347_Siri_1_bedroom2.jpg', 8),
 (29, '1624010347_Siri_1_kitchen.jpg', 8),
 (28, '1624010347_Siri_1_livingroom.jpg', 8),
-(31, '1624010347_Siri_1_bedroom1.jpg', 8);
+(31, '1624010347_Siri_1_bedroom1.jpg', 8),
+(32, '1625755057_address_proof1.jpg', 10),
+(33, '1626780246_Pooja.jpeg', 11);
 
 -- --------------------------------------------------------
 
@@ -49128,7 +49173,7 @@ INSERT INTO `notification` (`nid`, `notice_title`, `description`, `user_id`, `en
 (29, '', 'kbkjbj', 19, '12:12:04', '2020-05-12', 'staff', 3, 0, '', 0, 0),
 (30, '', 'jkkj', 19, '12:21:51', '2020-05-12', 'admin', 0, 0, '', 0, 0),
 (31, '', 'kknkn', 16, '12:25:28', '2020-05-12', 'admin', 0, 0, '', 0, 0),
-(33, '', 'This is to notify that you post validty is expiring.\r\n', 7, '23:57:04', '2021-06-17', 'staff', 1, 1, '2021-06-17 20:30:42', 0, 0),
+(33, '', 'This is to notify that you post validty is expiring.\r\n', 7, '23:57:04', '2021-06-17', 'staff', 1, 1, '2021-06-17 20:30:42', 1, 0),
 (44, 'Your Property Post Validity is expiring', 'Your property Post validity is expiring, kindly extend it on the Property Post Edit page.', 20, '08:14:07', '2021-06-19', 'admin', 0, 0, '', 0, 2),
 (38, 'Your Agent Listing Validity is expiring', 'Your Agent Listing Validity is expiring, kindly extend it on the PAYMENT page.', 20, '07:15:40', '2021-06-19', 'admin', 0, 0, '', 0, 0),
 (37, 'Your Agent Listing Validity is expiring', 'Your Agent Listing Validity is expiring, kindly extend it on the PAYMENT page.', 20, '07:13:11', '2021-06-19', 'admin', 0, 0, '', 0, 0),
@@ -49136,7 +49181,9 @@ INSERT INTO `notification` (`nid`, `notice_title`, `description`, `user_id`, `en
 (40, 'Your Agent Listing Validity is expiring', 'Your Agent Listing Validity is expiring, kindly extend it on the PAYMENT page.', 20, '07:17:27', '2021-06-19', 'admin', 0, 0, '', 0, 0),
 (41, 'Your Search Validity is expiring', 'Your Search Validity is expiring, kindly extend it on the PAYMENT page.', 20, '07:17:27', '2021-06-19', 'admin', 0, 0, '', 0, 0),
 (42, 'Your Agent Listing Validity is expiring', 'Your Agent Listing Validity is expiring, kindly extend it on the PAYMENT page.', 1, '07:20:20', '2021-06-19', 'admin', 0, 0, '', 0, 0),
-(43, 'Your Search Validity is expiring', 'Your Search Validity is expiring, kindly extend it on the PAYMENT page.', 20, '07:20:20', '2021-06-19', 'admin', 0, 0, '', 0, 0);
+(43, 'Your Search Validity is expiring', 'Your Search Validity is expiring, kindly extend it on the PAYMENT page.', 20, '07:20:20', '2021-06-19', 'admin', 0, 0, '', 0, 0),
+(45, 'testing', 'hello user', 7, '01:35:27', '2021-07-30', 'staff', 3, 0, '', 0, 0),
+(46, 'Update your profile', 'Agent Service details are not mentioned', 7, '12:01:20', '2021-08-05', 'staff', 29, 0, '', 1, 0);
 
 -- --------------------------------------------------------
 
@@ -49184,8 +49231,14 @@ INSERT INTO `payments` (`payment_id`, `price_id`, `payment_type_id`, `payment_mo
 (22, 11, 50, 'Razorpay', '100.000', '2021-06-18', '2021-06-18', 'pay_HOUZKOkWLC2Fq4', 8, 7, 0, 'pay_HOUZKOkWLC2Fq4', 1, ''),
 (23, 11, 50, 'Razorpay', '100.000', '2021-06-22', '2021-06-22', 'pay_HPzX6l550XnD5h', 8, 7, 0, 'pay_HPzX6l550XnD5h', 1, ''),
 (24, 11, 50, 'Razorpay', '75.000', '2021-06-22', '2021-06-22', 'pay_HPzX6l550XnD5h', 8, 7, 0, 'pay_HPzX6l550XnD5h', 1, ''),
-(27, 6, 20, 'null', '250.000', '2021-06-23', '0000-00-00', '', 8, 13, 0, '', 0, ''),
-(28, 11, 50, 'Razorpay', '125.000', '2021-06-23', '2021-06-23', 'pay_HQa2EXM2KcSViN', 8, 7, 0, 'pay_HQa2EXM2KcSViN', 1, '');
+(27, 6, 20, 'Razorpay', '250.000', '2021-06-23', '2021-07-10', 'pay_HX7O5CNgtuyIPY', 8, 13, 0, 'pay_HX7O5CNgtuyIPY', 1, ''),
+(28, 11, 50, 'Razorpay', '125.000', '2021-06-23', '2021-06-23', 'pay_HQa2EXM2KcSViN', 8, 7, 0, 'pay_HQa2EXM2KcSViN', 1, ''),
+(29, 5, 20, 'Razorpay', '150.000', '2021-07-08', '2021-07-08', 'pay_HWTPFsIY7SX67P', 10, 28, 0, 'pay_HWTPFsIY7SX67P', 1, ''),
+(30, 2, 10, 'Razorpay', '100.000', '2021-07-10', '2021-07-10', 'pay_HX7O5CNgtuyIPY', 0, 13, 0, 'pay_HX7O5CNgtuyIPY', 1, ''),
+(31, 2, 10, 'Razorpay', '100.000', '2021-07-14', '2021-07-14', 'pay_HYpxbsvaxz4waJ', 0, 7, 0, 'pay_HYpxbsvaxz4waJ', 1, ''),
+(32, 5, 20, 'Razorpay', '150.000', '2021-07-20', '2021-07-20', 'pay_HbAVB1eqnmviyS', 11, 14, 0, 'pay_HbAVB1eqnmviyS', 1, ''),
+(33, 5, 20, 'Razorpay', '150.000', '2021-08-05', '2021-08-05', 'pay_HhSTP4CWsvClBd', 3, 7, 0, 'pay_HhSTP4CWsvClBd', 1, ''),
+(34, 4, 10, 'Razorpay', '1000.000', '2021-08-22', '2021-08-22', 'pay_Ho8KEXQ5vVqxY4', 0, 7, 0, 'pay_Ho8KEXQ5vVqxY4', 1, '');
 
 --
 -- Triggers `payments`
@@ -49241,6 +49294,102 @@ DELIMITER ;
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `payments_hdr`
+--
+
+CREATE TABLE `payments_hdr` (
+  `payment_ref` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `payment_date` date NOT NULL,
+  `user_staff_id` int(11) NOT NULL,
+  `tagged_staff_id` int(11) NOT NULL,
+  `payment_mode` enum('null','Googlepay','PhonePe','Paytm','Razorpay','Bank') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'null',
+  `user_catg` varchar(1) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `verified_by` int(11) NOT NULL,
+  `verified_date` date NOT NULL,
+  `verified_comments` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `verification_status` int(1) NOT NULL,
+  `paid_amount` decimal(15,3) NOT NULL,
+  `tax` decimal(15,3) NOT NULL,
+  `net_amount` decimal(15,3) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `payments_hdr`
+--
+
+INSERT INTO `payments_hdr` (`payment_ref`, `payment_date`, `user_staff_id`, `tagged_staff_id`, `payment_mode`, `user_catg`, `verified_by`, `verified_date`, `verified_comments`, `verification_status`, `paid_amount`, `tax`, `net_amount`) VALUES
+('pay_HKpqbgyPKsRcCa', '2021-06-09', 7, 18, 'Razorpay', 'C', 3, '2021-08-04', 'tested and its  okay', 1, '1052.000', '0.000', '0.000'),
+('pay_HKpvvqL0lGuTNm', '2021-06-09', 7, 0, 'Razorpay', 'C', 0, '0000-00-00', '', 0, '100.000', '0.000', '0.000'),
+('pay_HKslupwdsHsYaV', '2021-06-09', 7, 0, 'Razorpay', 'C', 0, '0000-00-00', '', 0, '250.000', '0.000', '0.000'),
+('pay_HKuyGODODA09P8', '2021-06-09', 7, 0, 'Razorpay', 'C', 0, '0000-00-00', '', 0, '300.000', '0.000', '0.000'),
+('pay_HKvB22K5zsFMmB', '2021-06-09', 7, 0, 'Razorpay', 'C', 0, '0000-00-00', '', 0, '150.000', '0.000', '0.000'),
+('pay_HLoFROktQjIVrt', '2021-06-11', 7, 0, 'Razorpay', 'C', 0, '0000-00-00', '', 0, '350.000', '0.000', '0.000'),
+('pay_HOUM4vTCzZFl3a', '2021-06-18', 13, 0, 'Razorpay', 'C', 0, '0000-00-00', '', 0, '150.000', '0.000', '0.000'),
+('pay_HOUZKOkWLC2Fq4', '2021-06-18', 7, 0, 'Razorpay', 'C', 0, '0000-00-00', '', 0, '100.000', '0.000', '0.000'),
+('pay_HPzX6l550XnD5h', '2021-06-22', 7, 0, 'Razorpay', 'C', 0, '0000-00-00', '', 0, '175.000', '0.000', '0.000'),
+('pay_HQa2EXM2KcSViN', '2021-06-23', 7, 0, 'Razorpay', 'C', 0, '0000-00-00', '', 0, '125.000', '0.000', '0.000'),
+('pay_HWTPFsIY7SX67P', '2021-07-08', 28, 0, 'Razorpay', 'C', 0, '0000-00-00', '', 0, '150.000', '0.000', '0.000'),
+('pay_HX7O5CNgtuyIPY', '2021-07-10', 13, 0, 'Razorpay', 'C', 0, '0000-00-00', '', 0, '350.000', '0.000', '0.000'),
+('pay_HYpxbsvaxz4waJ', '2021-07-14', 7, 0, 'Razorpay', 'C', 0, '0000-00-00', '', 0, '100.000', '0.000', '0.000');
+
+--
+-- Triggers `payments_hdr`
+--
+DELIMITER $$
+CREATE TRIGGER `after_insert_phdr-update-verify-fields` AFTER INSERT ON `payments_hdr` FOR EACH ROW IF new.user_catg = 'C' and new.tagged_staff_id = 0 THEN
+	UPDATE payments_hdr
+    set verified_date = CURRENT_DATE ,verified_by = 0, verification_status = 1
+    where payment_ref = new.payment_ref ;
+End IF
+$$
+DELIMITER ;
+DELIMITER $$
+CREATE TRIGGER `after_update_paymentshdr_insert-to-measure-effort` AFTER UPDATE ON `payments_hdr` FOR EACH ROW BEGIN
+	if old.verification_status <> new.verification_status and new.verification_status = 1 and new.user_catg = 'C' THEN
+    
+/* Begin 82 Payment verfication measure */    
+		SET 
+		@c_yyyymm := (select substring( now() +0, 1,6)),
+        @c_ts := (select now() +0),
+		@c_id := (select concat_ws('_',@c_yyyymm,'S',new.verified_by,now() + 0)),
+		@c_date := ( select CURRENT_DATE ),
+		@c_payment_type_id = 82;
+		Insert into measure_effort(measure_id,user_staff_id,customer_id,post_id,payment_ref,user_catg,measure_date,payment_type_id,measure_ts) values (@c_id,new.verified_by,new.user_staff_id,0,new.payment_ref,'S',@c_date,@c_payment_type_id,@c_ts);
+
+/* End 82 Payment verfication measure */   
+/* Begin 93 user assistance measure (to field staff)  */    
+		if new.tagged_staff_id <> 0 THEN
+			SET
+				@c_id := (select concat_ws('_',@c_yyyymm,'S',new.tagged_staff_id,now() + 0)),
+				@c_payment_type_id = 93;
+			Insert into measure_effort(measure_id,user_staff_id,customer_id,post_id,payment_ref,user_catg,measure_date,payment_type_id,measure_ts) values (@c_id,new.tagged_staff_id,new.user_staff_id,0,new.payment_ref,'S',@c_date,@c_payment_type_id,@c_ts);
+		End if;
+/* End 93 user assistance measure (to field staff)  */    
+/* Begin 92 payment commission measure (to customer/ staff)  */    
+		SET
+			@C_referred_by := (select referred_by from user_table where id = new.user_staff_id),
+			@c_user_catg := ' ';
+		if @C_referred_by is NOT NULL THEN
+			select user_staff_id,user_catg into @c_user_staff_id,@c_user_catg from reference_id where reference_id = @C_referred_by limit 1 ;
+			If @c_user_catg IN ('S','C')  THEN
+				SET
+				@c_id := (select concat_ws('_',@c_yyyymm,@c_user_catg,@c_user_staff_id,now() + 0)),
+				@c_payment_type_id = 92;
+				Insert into measure_effort(measure_id,user_staff_id,customer_id,post_id,payment_ref,user_catg,measure_date,payment_type_id,measure_ts) values (@c_id,@c_user_staff_id,new.user_staff_id,0,new.payment_ref,@c_user_catg,@c_date,@c_payment_type_id,@c_ts);
+			end if;
+		end if;
+/* End 92 payment commission measure (to customer/ staff)  */    
+  
+
+
+	End if;
+END
+$$
+DELIMITER ;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `pincode_table`
 --
 
@@ -49266,7 +49415,8 @@ INSERT INTO `pincode_table` (`pt_id`, `pt_pin`, `pt_country`, `pt_country_shortn
 (4, '731222', 'India', 'IN', '731222, India', '24.5451362', '87.8844309', '2021-05-18'),
 (5, '560045', 'India', 'IN', 'Bengaluru, Karnataka 560045, India', '13.0262152', '77.6199836', '2021-05-18'),
 (6, '560058', 'India', 'IN', 'Bengaluru, Karnataka 560058, India', '13.0280874', '77.5120799', '2021-05-18'),
-(7, '500039', 'India', 'IN', 'Hyderabad, Telangana 500039, India', '17.4014883', '78.5666052', '2021-06-18');
+(7, '500039', 'India', 'IN', 'Hyderabad, Telangana 500039, India', '17.4014883', '78.5666052', '2021-06-18'),
+(8, '560039', 'India', 'IN', 'Bengaluru, Karnataka 560039, India', '12.9445624', '77.5252997', '2021-07-10');
 
 -- --------------------------------------------------------
 
@@ -49294,7 +49444,8 @@ INSERT INTO `ppt_agent_tag` (`tag_id`, `ppt_id`, `agent_id`, `last_bid_date`, `t
 (5, 4, 7, '2021-06-02', 150, 0),
 (6, 2, 7, '2021-06-02', 1, 1),
 (7, 4, 14, '2021-06-12', 150, 0),
-(8, 8, 7, '2021-06-18', 400, 1);
+(8, 8, 7, '2021-06-18', 400, 1),
+(9, 11, 14, '2021-07-20', 0, 1);
 
 --
 -- Triggers `ppt_agent_tag`
@@ -49348,7 +49499,17 @@ INSERT INTO `price` (`price_id`, `payment_type_id`, `payment_type_text`, `date_f
 (10, 30, 'Agent Listing Charges', '2021-05-01', '2021-07-31', 'Agent Listed for 300 days', 300, 1000, 1),
 (11, 50, 'Property Tagging Charges', '2021-05-01', '2021-07-31', 'Property Tagged for 999 days', 999, 100, 1),
 (12, 99, 'Reimbursement', '2021-05-01', '2021-12-31', 'Reimbursement', 0, 0, 1),
-(13, 50, 'Property Tagging Charges', '2021-08-01', '2021-12-31', 'Property Tagged for 999 days', 999, 150, 0);
+(13, 50, 'Property Tagging Charges', '2021-08-01', '2021-12-31', 'Property Tagged for 999 days', 999, 150, 0),
+(14, 80, 'User Verification', '2021-08-01', '2021-12-31', 'Per User Verification', 0, 5, 1),
+(15, 81, 'User Re-Verification', '2021-08-01', '2021-12-31', 'Per User Re-Verification', 0, 3, 1),
+(16, 83, 'Property Verification', '2021-08-01', '2021-12-31', 'Per Property Verification', 0, 10, 1),
+(17, 84, 'Property Re-Verification', '2021-08-01', '2021-12-31', 'Per Property Re-Verification', 0, 5, 1),
+(18, 82, 'Payment Verification', '2021-08-01', '2021-12-31', 'Per Payment Verification', 0, 5, 1),
+(19, 90, 'Marketing(Reference link)', '2021-08-01', '2021-12-31', 'Marketing Through Reference Link', 0, 3, 1),
+(20, 91, 'Referred By (staff)', '2021-08-01', '2021-12-31', 'User / Staff joins through Reference ID', 0, 2500, 1),
+(21, 92, 'Referred By payment commission', '2021-08-01', '2021-12-31', 'commission on payments', 0, 10, 1),
+(22, 93, 'user assistance commission', '2021-08-01', '2021-12-31', 'user assistance commission', 0, 33, 1),
+(23, 95, 'Managing & mentoring staff', '2021-08-01', '2021-12-31', '% on staff earning', 0, 10, 1);
 
 -- --------------------------------------------------------
 
@@ -49408,23 +49569,26 @@ CREATE TABLE `propertypost_table` (
   `ppt_createdBy` int(11) NOT NULL,
   `ppt_createdAt` date NOT NULL,
   `ppt_isDelete` int(11) NOT NULL DEFAULT 0,
-  `tagged_staff_id` int(11) NOT NULL
+  `tagged_staff_id` int(11) NOT NULL,
+  `ppt_usertype` varchar(155) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `ppt_verified_cnt` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `propertypost_table`
 --
 
-INSERT INTO `propertypost_table` (`ppt_id`, `ppt_latitude`, `ppt_longitude`, `ppt_property_for`, `ppt_property_type`, `ppt_property_category`, `ppt_title`, `ppt_available_from`, `ppt_land_area`, `ppt_land_unit`, `ppt_land_l`, `ppt_land_b`, `ppt_facing`, `ppt_corner`, `ppt_gated`, `ppt_jointdev`, `ppt_builtup_area`, `ppt_builtup_unit`, `ppt_carpet_area`, `ppt_carpet_unit`, `ppt_details`, `ppt_total_price`, `ppt_broker_need`, `ppt_website`, `ppt_bedroom_count`, `ppt_bathroom_count`, `ppt_floor_number`, `ppt_furnishing`, `ppt_4wheeler_count`, `ppt_2wheeler_count`, `ppt_property_address`, `ppt_landmark`, `ppt_country`, `ppt_state`, `ppt_city`, `ppt_pincode`, `ppt_property_status`, `ppt_terms`, `ppt_search_keyword`, `ppt_main_img`, `ppt_verification_status`, `ppt_verified_date`, `ppt_verification_comment`, `ppt_verifiedBy`, `ppt_delete_date`, `ppt_updatedBy`, `ppt_updatedAt`, `ppt_valid_till`, `ppt_createdBy`, `ppt_createdAt`, `ppt_isDelete`, `tagged_staff_id`) VALUES
-(1, '22.6253542', '88.3870781', 'rent', 'apartment_flat', 'individual', 'test', '2021-03-31', 'India', 'feet', '0', '0', 'east', 0, 0, 0, 'ibnjhgj', 'individual', 'bggjg', 'individual', '<p>ghghghgh</p>\r\n<p>ghghg</p>\r\n<p>ghghg</p>', 100000, 1, 'http://propertylandshake.searchforbest.club/', 2, 5, 5, 'Furnished', 5, 5, '', '', 'India', 'West Bengal', '', '700050', 'active', '', '', '1616616636coverpage.jpg', 0, '0000-00-00', '', 0, '0000-00-00', 0, '0000-00-00', '0000-00-00', 7, '2021-03-25', 1, 0),
-(2, '22.6253542', '88.3870781', 'rent', 'apartment_flat', 'individual', 'test', '2021-03-31', 'India', 'feet', '0', '0', 'east', 0, 0, 0, 'ffb', 'feet', 'gbgb', 'feet', '<p>xvvxvx</p>\r\n<p>nggmg</p>\r\n<p>cbbbb</p>', 100000, 1, '', 2, 5, 5, 'Furnished', 5, 5, 'Kolkata, West Bengal 700050, India', 'uj', 'India', 'West Bengal', '', '700050', 'active', '', '', '1618730258coverpage.jpg', 1, '0000-00-00', '', 0, '0000-00-00', 7, '2021-04-18', '2021-06-23', 7, '2021-03-25', 0, 0),
-(3, '13.106229', '77.6035432', 'sale', 'plot', 'individual', 'West Facing Plot in Prime location on NH7 in Yalahanka', '2021-03-01', '1347', 'feet', 'India', 'fbf', 'west', 1, 1, 1, 'ibnjhgj', 'feet', 'bggjg', 'yard', '<p>West facing vacant plot (1327.5 s.ft ) at a prime location in Yelahanka on National Highway available for sale.</p>\r\n<p>The site is in \"Krishnaja Avenue\" on the Right Side of NH7 (Bangalore to Hyderabad). Landmark : opposite to Kendriya Vihar Apartments (which are on left side of NH7). Price 8000 per S.ft . Contact me on messenger or whatapp me on 6309694722</p>\r\n<p>&nbsp;</p>\r\n<p><span style=\"font-family: Arial; font-size: 13px; white-space: pre-wrap;\">&nbsp;</span></p>', 10000000, 1, 'https://www.google.com/maps/place/Krishnaja+Ave,+K+B+Sandra,+Maruthi+Nagar,+Yelahanka,+Bengaluru,+Karnataka+560064,+India/@13.1062342,77.6013545,17z/data=!3m1!4b1!4m5!3m4!1s0x3bae18fee81b0a99:0xf3bc8da5d2b854d9!8m2!3d13.106229!4d77.6035432?hl=en', 0, 5, 5, '', 5, 5, '19/1, Krishnaja Avenue, K B Sandra, Maruthi Nagar, Yelahanka, Bengaluru, Karnataka 560064, India', 'Opp to Kendriya Vihar', 'India', 'Karnataka', 'Bangalore Urban', '560064', 'active', '', '', '16203302577bfce9156e7e6c6e2e682c03dbb67142.jpg', 0, '0000-00-00', '', 0, '0000-00-00', 7, '2021-05-25', '0000-00-00', 7, '2021-03-27', 0, 0),
-(4, '13.028656', '77.6048957', 'rent', 'house_villa', 'individual', 'West facing Independent 2BHK  house for rent ', '2021-03-15', '1200', 'feet', 'grr', 'rg', 'west', 1, 1, 0, '1100', 'feet', '900', 'feet', '<p>Independent 2BHK House opposite to Manyata Tech Park .&nbsp; Bangalore Opposite to Manyata TECH PARK, Nagawara Junction.&nbsp; Whatsapp me on 06309694722</p>', 17000, 1, 'https://www.google.com/maps/place/13%C2%B002\'12.6%22N+77%C2%B036\'49.1%22E/@13.0368182,77.6136457,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d13.0368182!4d77.6136457', 2, 2, 0, 'UnFurnished', 1, 2, '565, 11th Cross Road, Veerannapalya Main Rd, Pragathi Layout, Vyalikaval HBCS Layout, Nagavara, Bengaluru, Karnataka 560045, India', 'Opposite to Manyata TECH PARK & Beside Abodh valmark.', 'India', 'Karnataka', 'Bangalore Urban', '560032', 'active', '', '', '1619615540coverpage.jpg', 1, '0000-00-00', '', 0, '2021-06-16', 7, '2021-06-28', '2021-07-09', 7, '2021-03-27', 0, 0),
-(5, '13.0481467', '77.6221884', 'rent', 'house_villa', 'individual', 'West facing Independent 2BHK  house for rent  near Nagawara', '2021-03-01', '1200', 'feet', '0', '0', 'west', 0, 0, 0, '1100', 'feet', '900', 'feet', '<p><span data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Independent 2BHK House opposite to Manyata Tech park .\\nNo. 565, 11th Cross VHBCS Layout, Veerannapalya Road, Nagawara post, Next to Zam Zam Garage,\\nPincode- 560045 , Bangalore\\nOpposite to Manyata TECH PARK, Nagawara Junction.\\nBeside Abodh valmark.\\nWhatsapp me on 06309694722\\n\\nhttps://www.google.com/maps/place/13%C2%B002\'12.6%22N+77%C2%B036\'49.1%22E/@13.0368182,77.6136457,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d13.0368182!4d77.6136457\\n&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:513,&quot;3&quot;:{&quot;1&quot;:0},&quot;12&quot;:0}\">Independent 2BHK House opposite to Manyata Tech park .<br /><br />Whatsapp me on 06309694722<br /><br /><br /></span></p>', 17000, 1, 'https://maps.google.com/?q=13.0368182,77.6136457', 2, 2, 0, 'UnFurnished', 1, 2, 'No. 565, 11th Cross VHBCS Layout, Veerannapalya Road, Nagawara post, Next to Zam Zam Garage,Pincode- 560045 , Bangalore\r\n', 'Opposite to Manyata TECH PARK, Beside Abodh valmark.', 'India', 'Karnataka', 'Bangalore Urban', '560045', 'active', '', '', '1616934464IMG_5588.jpg', 0, '0000-00-00', '', 0, '0000-00-00', 0, '2021-03-28', '0000-00-00', 14, '2021-03-28', 0, 0),
-(6, '22.6253542', '88.3870781', 'rent', 'apartment_flat', 'individual', 'test', '2021-03-31', 'India', 'feet', '0', '0', 'east', 0, 0, 0, 'ffb', 'feet', 'gbgb', 'feet', '<p>xvvxvx</p>\r\n<p>nggmg</p>\r\n<p>cbbbb</p>', 100000, 0, '', 2, 5, 5, 'Furnished', 5, 5, 'Kolkata, West Bengal 700050, India', 'land ', 'India', 'West Bengal', '', '700050', 'active', '', '', '1618729015coverpage.jpg', 1, '2021-06-17', '', 0, '0000-00-00', 7, '2021-04-18', '0000-00-00', 0, '0000-00-00', 0, 0),
-(7, '13.0366873', '77.6137754', 'rent', 'house_villa', 'individual', '2BHK individual house for rent', '2021-04-01', '1200', 'feet', '30', '40', 'west', 1, 1, 0, '1100', 'feet', '950', 'feet', '<p>Independent house. Very near to Manyata Tech Park (SEZ) Nagawara Junction.&nbsp; Available for rent for long term.</p>\r\n<p>Very near to hospitals,schools,market etc.</p>\r\n<p>Has Cauvery water connection.</p>\r\n<p>Has a good neighbourhood and association to resolve common problems.</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>', 17000, 1, 'https://www.google.com/maps/place/13%C2%B002\'12.6%22N+77%C2%B036\'49.1%22E/@13.0368182,77.6136457,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d13.0368182!4d77.6136457', 2, 2, 0, 'UnFurnished', 1, 2, 'No. 565, 11th Cross VHBCS Layout, Veerannapalya Road, Nagawara post, Next to Zam Zam Garage,\r\nPincode- 560045 , Bangalore\r\n\r\n', 'Opposite to Manyata TECH PARK, Nagawara Junction,Beside Abodh valmark', 'India', 'Karnataka', 'Bangalore Urban', '560045', 'active', '', '', '1620036112IMG_5588.jpg', 1, '2021-06-17', '', 0, '0000-00-00', 13, '2021-05-03', '0000-00-00', 13, '2021-05-03', 0, 0),
-(8, '17.4120013', '78.5616238', 'sale', 'house_villa', 'individual', '2 BHK Flat For Sale In Shiva Sai Residency In Uppal', '2021-07-01', '1500', 'feet', '30', '50', 'south_east', 0, 0, 0, '1132', 'feet', '1200', 'feet', '<p>windows and doors with mosquito nets</p>\r\n<p>2 bore wells</p>\r\n<p>900m from metro Station&nbsp;</p>\r\n<p>Vetrified tiles</p>', 6500000, 1, 'https://www.nobroker.in/property/buy/2-bhk-apartment-for-sale-in-uppal-hyderabad/8a9f9b827a09fce0017a0a1c24670f50/detail', 2, 2, 0, 'Furnished', 1, 2, 'Rd Number 4, East Kalyanpuri, Sri Raghavendra Nagar, Adarsh Nagar, Uppal, Hyderabad, Telangana ', 'Raj Laxmi Theater, Sri Krishna Theater, Master Chef, Srinivas Theater', 'India', 'Telangana', 'Ranga Reddy', '500039', 'active', '', '', '1624010347Siri_1_Main1.jpg', 1, '2021-06-18', 'All the details are mentioned properly', 1, '0000-00-00', 13, '2021-06-24', '2021-07-04', 13, '2021-06-18', 0, 0),
-(9, '17.4772104', '78.6824194', 'sale', 'plot', 'project', 'GRAND CITY Independent Plots - Ghatkeswar', '2021-08-01', '', '', '', '', '', 0, 0, 0, '', '', '', '', '<p>Independent Gated community Plot Venture.</p>\r\n<p>&nbsp;</p>\r\n<p>Refer to the website for more information and pictures.</p>\r\n<p>you can email us&nbsp;<strong>Info@indoinfra.in</strong></p>\r\n<p>or call us at&nbsp;84999 00009</p>', 800000, 1, 'https://www.indoinfra.in/projectDetails.php?property=4', 0, 0, 0, '', 0, 0, 'Padamatisaiguda, Telangana 501301, India', 'Sai Baba Temple,\r\nKesara- Bogaram - Ghatkesar Rd.', 'India', 'Telangana', 'Ranga Reddy', '501301', 'active', '', '', '1624179034Grand_City_Ghatkesar.jpg', 1, '2021-06-20', '', 0, '0000-00-00', 22, '2021-06-20', '2021-06-21', 22, '2021-06-20', 0, 0);
+INSERT INTO `propertypost_table` (`ppt_id`, `ppt_latitude`, `ppt_longitude`, `ppt_property_for`, `ppt_property_type`, `ppt_property_category`, `ppt_title`, `ppt_available_from`, `ppt_land_area`, `ppt_land_unit`, `ppt_land_l`, `ppt_land_b`, `ppt_facing`, `ppt_corner`, `ppt_gated`, `ppt_jointdev`, `ppt_builtup_area`, `ppt_builtup_unit`, `ppt_carpet_area`, `ppt_carpet_unit`, `ppt_details`, `ppt_total_price`, `ppt_broker_need`, `ppt_website`, `ppt_bedroom_count`, `ppt_bathroom_count`, `ppt_floor_number`, `ppt_furnishing`, `ppt_4wheeler_count`, `ppt_2wheeler_count`, `ppt_property_address`, `ppt_landmark`, `ppt_country`, `ppt_state`, `ppt_city`, `ppt_pincode`, `ppt_property_status`, `ppt_terms`, `ppt_search_keyword`, `ppt_main_img`, `ppt_verification_status`, `ppt_verified_date`, `ppt_verification_comment`, `ppt_verifiedBy`, `ppt_delete_date`, `ppt_updatedBy`, `ppt_updatedAt`, `ppt_valid_till`, `ppt_createdBy`, `ppt_createdAt`, `ppt_isDelete`, `tagged_staff_id`, `ppt_usertype`, `ppt_verified_cnt`) VALUES
+(1, '22.6253542', '88.3870781', 'rent', 'apartment_flat', 'individual', 'test1', '2021-03-31', 'India', 'feet', '0', '0', 'east', 0, 0, 0, 'ibnjhgj', 'individual', 'bggjg', 'individual', '<p>ghghghgh</p>\r\n<p>ghghg</p>\r\n<p>ghghg</p>', 100000, 1, 'http://propertylandshake.searchforbest.club/', 2, 5, 5, 'Furnished', 5, 5, '', '', 'India', 'West Bengal', '', '700050', 'active', '', '', '1616616636coverpage.jpg', 0, '0000-00-00', '', 0, '0000-00-00', 0, '0000-00-00', '0000-00-00', 7, '2021-03-25', 1, 0, 'agent', 0),
+(2, '22.6253542', '88.3870781', 'rent', 'apartment_flat', 'individual', 'test2', '2021-03-31', 'India', 'feet', '0', '0', 'east', 0, 0, 0, 'ffb', 'feet', 'gbgb', 'feet', '<p>xvvxvx</p>\r\n<p>nggmg</p>\r\n<p>cbbbb</p>', 100000, 1, '', 2, 5, 5, 'Furnished', 5, 5, 'Kolkata, West Bengal 700050, India', 'uj', 'India', 'West Bengal', '', '700050', 'active', '', '', '1618730258coverpage.jpg', 1, '0000-00-00', '', 0, '0000-00-00', 7, '2021-04-18', '2021-07-30', 7, '2021-03-25', 0, 0, 'agent', 0),
+(3, '13.106229', '77.6035432', 'sale', 'plot', 'individual', 'West Facing Plot in Prime location on NH7 in Yalahanka', '2021-03-01', '1347', 'feet', 'India', 'fbf', 'west', 1, 1, 1, 'ibnjhgj', 'feet', 'bggjg', 'yard', '<p>West facing vacant plot (1327.5 s.ft ) at a prime location in Yelahanka on National Highway available for sale.</p>\r\n<p>The site is in \"Krishnaja Avenue\" on the Right Side of NH7 (Bangalore to Hyderabad). Landmark : opposite to Kendriya Vihar Apartments (which are on left side of NH7). Price 8000 per S.ft . Contact me on messenger or whatapp me on 6309694722</p>\r\n<p>&nbsp;</p>\r\n<p><span style=\"font-family: Arial; font-size: 13px; white-space: pre-wrap;\">&nbsp;</span></p>', 10000000, 1, 'https://www.google.com/maps/place/Krishnaja+Ave,+K+B+Sandra,+Maruthi+Nagar,+Yelahanka,+Bengaluru,+Karnataka+560064,+India/@13.1062342,77.6013545,17z/data=!3m1!4b1!4m5!3m4!1s0x3bae18fee81b0a99:0xf3bc8da5d2b854d9!8m2!3d13.106229!4d77.6035432?hl=en', 0, 5, 5, '', 5, 5, '19/1, Krishnaja Avenue, K B Sandra, Maruthi Nagar, Yelahanka, Bengaluru, Karnataka 560064, India', 'Opp to Kendriya Vihar', 'India', 'Karnataka', 'Bangalore Urban', '560064', 'active', '', '', '16203302577bfce9156e7e6c6e2e682c03dbb67142.jpg', 1, '2021-07-01', '', 28, '0000-00-00', 7, '2021-05-25', '2021-08-20', 7, '2021-03-27', 0, 0, 'agent', 0),
+(4, '13.028656', '77.6048957', 'rent', 'house_villa', 'individual', 'West facing Independent 2BHK  house for rent ', '2021-03-15', '1200', 'feet', 'grr', 'rg', 'west', 1, 1, 0, '1100', 'feet', '900', 'feet', '<p>Independent 2BHK House opposite to Manyata Tech Park .&nbsp; Bangalore Opposite to Manyata TECH PARK, Nagawara Junction.&nbsp; Whatsapp me on 06309694722</p>', 17000, 1, 'https://www.google.com/maps/place/13%C2%B002\'12.6%22N+77%C2%B036\'49.1%22E/@13.0368182,77.6136457,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d13.0368182!4d77.6136457', 2, 2, 0, 'UnFurnished', 1, 2, '565, 11th Cross Road, Veerannapalya Main Rd, Pragathi Layout, Vyalikaval HBCS Layout, Nagavara, Bengaluru, Karnataka 560045, India', 'Opposite to Manyata TECH PARK & Beside Abodh valmark.', 'India', 'Karnataka', 'Bangalore Urban', '560032', 'active', '', '', '1619615540coverpage.jpg', 1, '2021-07-01', '', 19, '2021-06-16', 7, '2021-06-28', '2021-07-29', 7, '2021-03-27', 0, 3, 'agent', 2),
+(5, '13.0481467', '77.6221884', 'rent', 'house_villa', 'individual', 'West facing Independent 2BHK  house for rent  near Nagawara', '2021-03-01', '1200', 'feet', '0', '0', 'west', 0, 0, 0, '1100', 'feet', '900', 'feet', '<p><span data-sheets-value=\"{&quot;1&quot;:2,&quot;2&quot;:&quot;Independent 2BHK House opposite to Manyata Tech park .\\nNo. 565, 11th Cross VHBCS Layout, Veerannapalya Road, Nagawara post, Next to Zam Zam Garage,\\nPincode- 560045 , Bangalore\\nOpposite to Manyata TECH PARK, Nagawara Junction.\\nBeside Abodh valmark.\\nWhatsapp me on 06309694722\\n\\nhttps://www.google.com/maps/place/13%C2%B002\'12.6%22N+77%C2%B036\'49.1%22E/@13.0368182,77.6136457,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d13.0368182!4d77.6136457\\n&quot;}\" data-sheets-userformat=\"{&quot;2&quot;:513,&quot;3&quot;:{&quot;1&quot;:0},&quot;12&quot;:0}\">Independent 2BHK House opposite to Manyata Tech park .<br /><br />Whatsapp me on 06309694722<br /><br /><br /></span></p>', 17000, 1, 'https://maps.google.com/?q=13.0368182,77.6136457', 2, 2, 0, 'UnFurnished', 1, 2, 'No. 565, 11th Cross VHBCS Layout, Veerannapalya Road, Nagawara post, Next to Zam Zam Garage,Pincode- 560045 , Bangalore\r\n', 'Opposite to Manyata TECH PARK, Beside Abodh valmark.', 'India', 'Karnataka', 'Bangalore Urban', '560045', 'active', '', '', '1616934464IMG_5588.jpg', 0, '0000-00-00', '', 0, '0000-00-00', 0, '2021-03-28', '0000-00-00', 14, '2021-03-28', 0, 0, 'agent', 0),
+(7, '13.0366873', '77.6137754', 'rent', 'house_villa', 'individual', '2BHK individual house for rent', '2021-04-01', '1200', 'feet', '30', '40', 'west', 1, 1, 0, '1100', 'feet', '950', 'feet', '<p>Independent house. Very near to Manyata Tech Park (SEZ) Nagawara Junction.&nbsp; Available for rent for long term.</p>\r\n<p>Very near to hospitals,schools,market etc.</p>\r\n<p>Has Cauvery water connection.</p>\r\n<p>Has a good neighbourhood and association to resolve common problems.</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>', 17000, 1, 'https://www.google.com/maps/place/13%C2%B002\'12.6%22N+77%C2%B036\'49.1%22E/@13.0368182,77.6136457,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d13.0368182!4d77.6136457', 2, 2, 0, 'UnFurnished', 1, 2, 'No. 565, 11th Cross VHBCS Layout, Veerannapalya Road, Nagawara post, Next to Zam Zam Garage,\r\nPincode- 560045 , Bangalore\r\n\r\n', 'Opposite to Manyata TECH PARK, Nagawara Junction,Beside Abodh valmark', 'India', 'Karnataka', 'Bangalore Urban', '560045', 'active', '', '', '1620036112IMG_5588.jpg', 1, '2021-06-17', '', 0, '0000-00-00', 13, '2021-05-03', '2021-07-25', 13, '2021-05-03', 0, 0, 'individual', 0),
+(8, '17.4120013', '78.5616238', 'sale', 'house_villa', 'individual', '2 BHK Flat For Sale In Shiva Sai Residency In Uppal', '2021-07-01', '1500', 'feet', '30', '50', 'south_east', 0, 0, 0, '1132', 'feet', '1200', 'feet', '<p>windows and doors with mosquito nets</p>\r\n<p>2 bore wells</p>\r\n<p>900m from metro Station&nbsp;</p>\r\n<p>Vetrified tiles</p>', 6500000, 1, 'https://www.nobroker.in/property/buy/2-bhk-apartment-for-sale-in-uppal-hyderabad/8a9f9b827a09fce0017a0a1c24670f50/detail', 2, 2, 0, 'Furnished', 1, 2, 'Rd Number 4, East Kalyanpuri, Sri Raghavendra Nagar, Adarsh Nagar, Uppal, Hyderabad, Telangana ', 'Raj Laxmi Theater, Sri Krishna Theater, Master Chef, Srinivas Theater', 'India', 'Telangana', 'Ranga Reddy', '500039', 'pause', '', '', '1624010347Siri_1_Main1.jpg', 1, '2021-07-08', 'All the details are mentioned properly', 28, '0000-00-00', 13, '2021-07-14', '2021-08-31', 13, '2021-06-18', 0, 0, 'individual', 0),
+(9, '17.4772104', '78.6824194', 'sale', 'plot', 'project', 'GRAND CITY Independent Plots - Ghatkeswar', '2021-08-01', '', '', '', '', '', 0, 0, 0, '', '', '', '', '<p>Independent Gated community Plot Venture.</p>\r\n<p>&nbsp;</p>\r\n<p>Refer to the website for more information and pictures.</p>\r\n<p>you can email us&nbsp;<strong>Info@indoinfra.in</strong></p>\r\n<p>or call us at&nbsp;84999 00009</p>', 800000, 1, 'https://www.indoinfra.in/projectDetails.php?property=4', 0, 0, 0, '', 0, 0, 'Padamatisaiguda, Telangana 501301, India', 'Sai Baba Temple,\r\nKesara- Bogaram - Ghatkesar Rd.', 'India', 'Telangana', 'Ranga Reddy', '501301', 'active', '', '', '1624179034Grand_City_Ghatkesar.jpg', 1, '2021-06-20', '', 0, '0000-00-00', 22, '2021-06-20', '0000-00-00', 22, '2021-06-20', 0, 0, 'builder', 0),
+(10, '13.0428244', '77.6191039', 'rent', 'plot', 'individual', '2BHK individual house for rent', '2021-07-15', '1200', 'feet', '30', '40', 'west', 0, 0, 0, '1100', 'feet', '1000', 'feet', '<p>Independent 2BHK house available for Rent .</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>', 7000, 1, '', 2, 2, 1, 'UnFurnished', 1, 1, 'Manyata Embassy Business Park, Outer Ring Road, MS Ramaiah North City, Manayata Tech Park, Nagavara, Bangalore, Karnataka 560045, India', 'Manyata Embassy Business Park, Nagavara', 'India', 'Karnataka', 'Bangalore Urban', '560045', 'active', '', '', '1625755057address_proof1.jpg', 0, '0000-00-00', '', 0, '0000-00-00', 0, '2021-07-08', '0000-00-00', 28, '2021-07-08', 0, 0, 'individual', 0),
+(11, '17.4047994', '78.5579439', 'rent', 'house_villa', 'individual', '2 BHK Independent House For Rent In Uppal', '2021-08-01', '267', 'yard', '40', '60', 'east', 0, 0, 0, '2000', 'feet', '1800', 'feet', '<p>(1)Rental portion is close to Uppal stadium , Metro station, Survey of India ,Uppal Genpact , Uppal . (2)Small families and employees preferred. (3)CC cameras are fixed in the premises ,AC points and it\'s out let stands are provided. Corporation water for drinking and cooking purpose expected come in alternate days. (4) cable TV and Net in built wires provided. (5) Common Corridors Powerbackup This North facing 950 sqft. home comes with a convenient car parking facility. This independent house in Uppal has very few 2 BHK homes available, so don\'t let this opportunity slip away. Looking to rent a house for Rs. 12,000? This home is perfect for families, it is loaded with amenities &amp; is in a convenient location. This home is on the 1st floor &amp; brings in light &amp; air to the home. With amenities such as power back up this home offers you a lot of convenience. With premium amenities such as visitor parking, rainwater harvesting &amp; house keeping this home provides you with many added benefits. With Raj Laxmi Theater, Aradhana 70mm Theater &amp; Vyjayanthi Cinema close by, you can catch your favourite movies running &amp; never worry about missing a show because of traffic. Never miss out on lifestyle as Thehydoffers, maruti suzuki showroom and Srinivas Agencies are so close by. With a subway station located nearby, this home is well connected &amp; offers many transit options. If you are a frequent traveller, then you\'ll be happy to note that train station is less than 10 minutes from this house. With Kendriya vidyalaya no 1 uppal, EuroKids Preschool Habsiguda, Best Kindergarten in Hyderabad and KENDRIYA VIDYALAYA NO:2 UPPAL close to this home, you\'ll be able to provide your children with many options to choose from. Being situated near Sri Balaji Nursing Home, Government Hospital and Smile Dental Hospital, emergency care is very easily available at any time. Access to bus stop &amp; pharmacies is very easy &amp; convenient from this house.</p>', 17000, 0, '', 2, 2, 0, 'UnFurnished', 1, 2, 'Bank colony , Street No 2, behind Little flower Junior college, Uppal,500039, Hyderabad.', 'Survey of India, Little flower Junior college, ', 'India', 'Telangana', 'Ranga Reddy', '500039', 'active', '', '', '1626780246Living_room.jpeg', 1, '2021-07-20', '', 28, '0000-00-00', 0, '2021-07-20', '2021-08-31', 14, '2021-07-20', 0, 0, 'agent', 0);
 
 --
 -- Triggers `propertypost_table`
@@ -49438,14 +49602,26 @@ end IF
 $$
 DELIMITER ;
 DELIMITER $$
-CREATE TRIGGER `after_update-agent-post-verified` AFTER UPDATE ON `propertypost_table` FOR EACH ROW if old.ppt_verification_status = 0 and new.ppt_verification_status = 1 THEN
+CREATE TRIGGER `after_update-agent-post-verified` AFTER UPDATE ON `propertypost_table` FOR EACH ROW BEGIN
+if old.ppt_verification_status = 0 and new.ppt_verification_status = 1 THEN
 	set @tag_active_v := (select tag_active from ppt_agent_tag where ppt_id = new.ppt_id and agent_id = new.ppt_createdby );
 	set @user_type_v := (select user_type from user_table where id = new.ppt_createdby );
-
-	if @tag_active_v = 0 and @user_type_v = 'agent' THEN
-		INSERT INTO ppt_agent_tag (ppt_id, agent_id,last_bid_date,total_bid_amount,tag_active) VALUES ( new.ppt_id,new.ppt_createdby,CURRENT_DATE,0,1);
+	if  @user_type_v = 'agent' and @tag_active_v is NULL THEN
+		INSERT INTO ppt_agent_tag (ppt_id, agent_id,last_bid_date,total_bid_amount,tag_active) VALUES ( new.ppt_id,new.ppt_createdby,CURRENT_DATE,0,1); 
 	end IF;
-end IF
+    
+		SET 
+		@c_yyyymm := (select substring( now() +0, 1,6)),
+		@c_id := (select concat_ws('_',@c_yyyymm,'S',new.ppt_verifiedBy,now() + 0)),
+		@c_date := ( select CURRENT_DATE ),
+		@c_payment_type_id = 84;
+		if new.ppt_verified_cnt = 1 THEN
+    		SET @c_payment_type_id = 83;
+    	END if;      
+		Insert into measure_effort(measure_id,user_staff_id,customer_id,post_id,user_catg,measure_date,payment_type_id) values (@c_id,new.ppt_verifiedBy,0,new.ppt_id,'S',@c_date,@c_payment_type_id);
+  
+end IF;
+END
 $$
 DELIMITER ;
 
@@ -49483,6 +49659,121 @@ CREATE TABLE `quote_team_user` (
   `qt_view` int(11) NOT NULL,
   `qt_isdelete` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `reference_id`
+--
+
+CREATE TABLE `reference_id` (
+  `reference_id` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `user_staff_id` int(11) NOT NULL,
+  `user_type` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `user_catg` varchar(1) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_date` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `reference_id`
+--
+
+INSERT INTO `reference_id` (`reference_id`, `user_staff_id`, `user_type`, `user_catg`, `created_date`) VALUES
+('PHS1320713', 20, 'manager_staff', 'S', '2021-06-30'),
+('PHS1867251', 27, 'manager_staff', 'S', '2021-07-06'),
+('PHS1954634', 25, 'builder', 'C', '2021-06-23'),
+('PHS2470929', 26, 'agent', 'C', '2021-07-03'),
+('PHS2554265', 29, 'manager_staff', 'S', '2021-07-08'),
+('PHS3334073', 14, 'agent', 'C', '2021-03-28'),
+('PHS3334074', 15, 'individual', 'C', '2021-05-05'),
+('PHS3334075', 16, 'individual', 'C', '2021-06-06'),
+('PHS3334076', 17, 'individual', 'C', '2021-06-06'),
+('PHS3334077', 18, 'individual', 'C', '2021-06-09'),
+('PHS3334078', 19, 'individual', 'C', '2021-06-09'),
+('PHS3334079', 20, 'individual', 'C', '2021-06-09'),
+('PHS3334080', 99, 'individual', 'C', '2021-07-14'),
+('PHS3450851', 1, 'agent', 'C', '2021-03-04'),
+('PHS3450852', 9, 'individual', 'C', '2021-03-08'),
+('PHS3457624', 7, 'agent', 'C', '2021-03-07'),
+('PHS3457625', 13, 'individual', 'C', '2021-03-28'),
+('PHS3791328', 25, 'support_staff', 'S', '2021-07-06'),
+('PHS474253', 28, 'support_staff', 'S', '2021-07-08'),
+('PHS4937233', 26, 'manager_staff', 'S', '2021-07-06'),
+('PHS4940949', 28, 'individual', 'C', '2021-07-08'),
+('PHS515970', 24, 'field_staff', 'S', '2021-07-06'),
+('PHS5656', 31, 'individual', 'C', '2021-07-18'),
+('PHS6441416', 23, 'support_staff', 'S', '2021-07-06'),
+('PHS6538529', 29, 'agent', 'C', '2021-07-10'),
+('PHS7399131', 27, 'individual', 'C', '2021-07-03'),
+('PHS8105249', 18, 'field_staff', 'S', '2020-04-03'),
+('PHS8105250', 3, 'support_staff', 'S', '2019-11-08'),
+('PHS9984812', 21, 'individual', 'C', '2021-06-20'),
+('PHS9984813', 22, 'builder', 'C', '2021-06-20'),
+('PHS9984814', 24, 'individual', 'C', '2021-06-20');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `reference_id_measure`
+--
+
+CREATE TABLE `reference_id_measure` (
+  `measure_id` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `reference_id` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `yearmonth` int(6) NOT NULL,
+  `referral_cnt` int(6) NOT NULL,
+  `referby_user_cnt` int(6) NOT NULL,
+  `referby_staff_cnt` int(6) NOT NULL,
+  `verify_user_cnt` int(6) NOT NULL,
+  `verify_property_cnt` int(6) NOT NULL,
+  `verify_payment_cnt` int(6) NOT NULL,
+  `ou_paid_amount` decimal(15,3) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `referral_link_measure`
+--
+
+CREATE TABLE `referral_link_measure` (
+  `vw_mon_ip_ppt_id` varchar(40) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `vw_ip` varchar(30) CHARACTER SET latin1 NOT NULL,
+  `vw_date` date NOT NULL,
+  `reference_id` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `vw_ppt_id` bigint(20) NOT NULL,
+  `referral_link` text COLLATE utf8mb4_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `referral_link_mktg`
+--
+
+CREATE TABLE `referral_link_mktg` (
+  `id` int(11) NOT NULL,
+  `vw_ip_ppt_id` varchar(40) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `vw_ip` varchar(30) CHARACTER SET latin1 NOT NULL,
+  `vw_date` date NOT NULL,
+  `reference_id` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `vw_ppt_id` bigint(20) NOT NULL,
+  `referral_link` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `vw_country` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `vw_state` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `vw_city` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `vw_pincode` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `referral_link_mktg`
+--
+
+INSERT INTO `referral_link_mktg` (`id`, `vw_ip_ppt_id`, `vw_ip`, `vw_date`, `reference_id`, `vw_ppt_id`, `referral_link`, `vw_country`, `vw_state`, `vw_city`, `vw_pincode`) VALUES
+(1, '157.43.204.2114', '157.43.204.211', '2021-08-21', 'PHS3457624', 4, 'https://www.sharingmakesmehappy.com/adsview/dataview?ads=NA==&refferral_id=UEhTMzQ1NzYyNA==', 'DE', '', '', ''),
+(2, '79.136.53.1644', '79.136.53.164', '2021-08-21', 'PHS3457624', 4, 'https://www.sharingmakesmehappy.com/adsview/dataview?ads=NA==&refferral_id=UEhTMzQ1NzYyNA==', 'DE', '', '', ''),
+(3, '79.136.53.1648', '79.136.53.164', '2021-08-21', 'PHS3457624', 8, 'https://www.sharingmakesmehappy.com/adsview/dataview?ads=OA==&refferral_id=UEhTMzQ1NzYyNA==', 'DE', '', '', ''),
+(4, '157.43.211.814', '157.43.211.81', '2021-08-22', 'PHS3457624', 4, 'https://www.sharingmakesmehappy.com/adsview/dataview?ads=NA==&refferral_id=UEhTMzQ1NzYyNA==', 'India', 'West Bengal', 'Kolkata', '700040');
 
 -- --------------------------------------------------------
 
@@ -49573,17 +49864,58 @@ CREATE TABLE `staff_table` (
   `reference_id` varchar(100) NOT NULL,
   `referred_by` varchar(100) NOT NULL,
   `entry_date` date NOT NULL,
-  `address` text NOT NULL
+  `address` text NOT NULL,
+  `pincode` varchar(10) NOT NULL,
+  `profile_photo` varchar(255) NOT NULL,
+  `photo_id_proof` varchar(255) NOT NULL,
+  `address_id_proof` varchar(255) NOT NULL,
+  `logon_date` date NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `staff_table`
 --
 
-INSERT INTO `staff_table` (`id`, `name`, `email`, `phone`, `password`, `pass_view`, `country`, `state`, `user_type`, `manager_name`, `status`, `mail_verification`, `reference_id`, `referred_by`, `entry_date`, `address`) VALUES
-(20, 'Manager Anupam', 'anuraj8@yahoo.com', '9949012345', '0795151defba7a4b5dfa89170de46277', 'manager123', 101, 36, 'manager_staff', 0, 'Active', 'Inactive', 'TLB1320713', '', '2021-06-30', 'Srinivasa Hills, Parvathapuram, Telangana, India'),
-(18, 'Staff KP', 'kpalla.2019@gmail.com', '009140272045', '1253208465b1efa876f982d8a9e73eef', 'staff', 101, 36, 'support_staff', 20, 'Active', 'Active', 'TLB8105249', '', '2020-04-03', 'Dharmapuri colony Uppal, Hyderabad, Telengana 500039.'),
-(3, 'golam ambia', 'wtm.golam@gmail.com', '07003832809', '21232f297a57a5a743894a0e4a801fc3', 'admin', 101, 41, 'support_staff', 20, 'Active', 'Active', '', '', '2019-11-08', '');
+INSERT INTO `staff_table` (`id`, `name`, `email`, `phone`, `password`, `pass_view`, `country`, `state`, `user_type`, `manager_name`, `status`, `mail_verification`, `reference_id`, `referred_by`, `entry_date`, `address`, `pincode`, `profile_photo`, `photo_id_proof`, `address_id_proof`, `logon_date`) VALUES
+(20, 'Manager Anupam', 'anuraj8@yahoo.com', '9949012345', '0795151defba7a4b5dfa89170de46277', 'manager123', 101, 36, 'manager_staff', 0, 'Active', 'Inactive', 'PHS1320713', '', '2021-06-30', 'Srinivasa Hills, Parvathapuram, Telangana, India', '', '', '', '', '0000-00-00'),
+(18, 'Field Staff KP', 'kpalla.2019@gmail.com', '009140272045', '1253208465b1efa876f982d8a9e73eef', 'staff', 101, 36, 'field_staff', 29, 'Active', 'Active', 'PHS8105249', '', '2020-04-03', 'Dharmapuri colony Uppal, Hyderabad, Telengana 500039.', '500039', '', '', '', '2021-08-01'),
+(3, 'golam ambia', 'wtm.golam@gmail.com', '07003832809', '21232f297a57a5a743894a0e4a801fc3', 'admin', 101, 41, 'support_staff', 20, 'Active', 'Active', 'PHS8105250', '', '2019-11-08', 'kolkata1', '700150', '1625599067profile-photos-600x425.jpg', '', '', '2021-08-14'),
+(23, 'teesy', 'golamambia781@gmail.com', '89563212458', '202cb962ac59075b964b07152d234b70', '123', 1, 57, 'support_staff', 20, 'Active', 'Inactive', 'PHS6441416', '', '2021-07-06', 'kol', '700050', '1625546451gh.jpg', '1625547609coverpage.jpg', '16255476091576847135730.jpg', '0000-00-00'),
+(24, 'cdd', 'dvsdvsdv@gmail.com', '56356566556', '202cb962ac59075b964b07152d234b70', '123', 4, 164, 'field_staff', 0, 'Active', 'Inactive', 'PHS515970', '', '2021-07-06', '65\r\n56dbdfbf', '656565', '1625546601sample certificate guruskool - Copy.webp', '1625546601coverpage.jpg', '', '0000-00-00'),
+(25, ',kuiiukyu', 'yjttyjy@gmail.com', '5665686', '202cb962ac59075b964b07152d234b70', '123', 19, 411, 'support_staff', 20, 'Active', 'Inactive', 'PHS3791328', '', '2021-07-06', ',k,jk.kj.k.', '700050', '1625546723coverpage.jpg', '1625546723gh.jpg', '1625546723sample certificate guruskool.webp', '0000-00-00'),
+(26, 'rhhtyh', 'hhththt@gmail.com', '1546546466', '202cb962ac59075b964b07152d234b70', '123', 17, 328, 'manager_staff', 0, 'Active', 'Inactive', 'PHS4937233', '', '2021-07-06', 'hthththyt', '700050', '1625547081profile-photos-600x425.jpg', '1625547081coverpage.jpg', '1625547081sample certificate guruskool.webp', '0000-00-00'),
+(27, 'bfgbfgb', 'gbgf@gmail.com', '661545454', '202cb962ac59075b964b07152d234b70', '123', 15, 304, 'manager_staff', 3, 'Active', 'Inactive', 'PHS1867251', '', '2021-07-06', 'fgbgfbfg', '700050', '1625547153coverpage.jpg', '1625547153profile-photos-600x425.jpg', '16255471531576847135730.jpg', '0000-00-00'),
+(28, 'Mittu Support', 'mittu.chilli@gmail.com', '764445794', 'de9bf5643eabf80f4a56fda3bbb84483', 'staff123', 101, 2, 'support_staff', 29, 'Active', 'Active', 'PHS474253', 'PHS2554265', '2021-07-08', 'NARASIMHARAO PETA,Eluru,ANDHRA PRADESH,534006', '534006', '1625749860Supporting_staff.jpg', '1625749860Photo_id1.jpg', '1625749860address_proof1.jpg', '2021-07-20'),
+(29, 'Manager Rama', 'ramaprasad.paladugu@gmail.com', '709659593', '0795151defba7a4b5dfa89170de46277', 'manager123', 101, 36, 'manager_staff', 0, 'Active', 'Active', 'PHS2554265', '', '2021-07-08', 'Srinivasa Hills, Parvathapuram, Telangana, India', '500039', '1625752086manager_1.jpg', '1625752086Photo_id1.jpg', '1625752086address_proof2.jpg', '2021-08-11');
+
+--
+-- Triggers `staff_table`
+--
+DELIMITER $$
+CREATE TRIGGER `after_insert_staff_insert-to-reference_id` AFTER INSERT ON `staff_table` FOR EACH ROW INSERT INTO `reference_id` (`reference_id`, `user_staff_id`, `user_type`, `user_catg`, `created_date`) VALUES (new.reference_id, new.id, new.user_type, 'S', new.entry_date)
+$$
+DELIMITER ;
+DELIMITER $$
+CREATE TRIGGER `after_update_staff_insert-to-measure_effort` AFTER UPDATE ON `staff_table` FOR EACH ROW BEGIN
+	if old.logon_date ='0000-00-00' and  old.logon_date <> new.logon_date and new.referred_by is NOT NULL THEN
+/* Begin 91 Referring Staff Commission  */    
+		SET
+        @c_yyyymm := (select substring( now() +0, 1,6)),
+		@c_date := ( select CURRENT_DATE ),
+        @c_ts := (select now() +0),
+		@c_user_catg := ' ';    
+			select user_staff_id,user_catg into @c_user_staff_id,@c_user_catg from reference_id where reference_id = new.referred_by limit 1 ;
+			If @c_user_catg IN ('S','C')  THEN
+				SET
+				@c_id := (select concat_ws('_',@c_yyyymm,@c_user_catg,@c_user_staff_id,now() + 0)),
+				@c_payment_type_id = 91;
+				Insert into measure_effort(measure_id,user_staff_id,customer_id,post_id,payment_ref,user_catg,measure_date,payment_type_id,measure_ts) values (@c_id,@c_user_staff_id,new.id,0,'',@c_user_catg,@c_date,@c_payment_type_id,@c_ts);
+			end if;
+/* End 91 Referring Staff Commission  */ 
+	End if;
+END
+$$
+DELIMITER ;
 
 -- --------------------------------------------------------
 
@@ -53882,7 +54214,8 @@ INSERT INTO `table_quote_new` (`qt_id`, `qt_name`, `qt_email`, `qt_phone`, `qt_m
 (3, 'Agent 007', 'golamambia78@gmail.com', '7003832809', 'I am not able to reach you on your phone. When can I meet you to see the document and finalize the deal', '7', 8, '13', 13, 'English, Hindi, Telugu', '2021-06-18 18:39:53', 0, 0, 0, '2021-06-24'),
 (4, 'Krishna Prasad', 'akp.prasad@gmail.com', 'akp.prasad@g', 'I am not able to reach you on your phone. Kindly call me or email me.', '24', 8, '13', 13, 'English or Hindi', '2021-06-23 13:45:08', 0, 0, 0, NULL),
 (5, 'Deekshitha Alla', 'deekshitha.alla@gmail.com', '0764445794', 'I am interested. Pls call me ', '13', 4, '7', 7, 'English or Hindi', '2021-06-25 10:44:01', 0, 0, 13, '2021-06-25'),
-(6, 'Deekshitha Alla', 'deekshitha.alla@gmail.com', '9949012345', 'I am interested in your property . Kindly respond to my emails.', '13', 4, '7', 7, 'English or Hindi', '2021-06-29 18:09:38', 0, 0, 13, '2021-06-29');
+(6, 'Deekshitha Alla', 'deekshitha.alla@gmail.com', '9949012345', 'I am interested in your property . Kindly respond to my emails.', '13', 4, '7', 7, 'English or Hindi', '2021-06-29 18:09:38', 0, 0, 13, '2021-06-29'),
+(7, 'Agent 007', 'golamambia78@gmail.com', '7003832809', 'I am interested to look at this website', '7', 7, '13', 13, 'Hindi', '2021-07-14 19:34:45', 0, 0, 0, NULL);
 
 -- --------------------------------------------------------
 
@@ -53937,6 +54270,29 @@ CREATE TABLE `table_tagged_agent` (
 INSERT INTO `table_tagged_agent` (`tag_id`, `tag_userid`, `tag_amount`, `tag_adsid`, `tag_adsowner`, `tag_entry_date`, `tag_createdAt`, `tag_isdelete`) VALUES
 (1, '7', 200, 7, 13, '2021-05-28 09:11:15', '2021-05-28', 0),
 (2, '7', 300, 7, 13, '2021-05-28 09:14:43', '2021-05-28', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user_change_history`
+--
+
+CREATE TABLE `user_change_history` (
+  `c_id` varchar(26) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `u_id` int(11) NOT NULL,
+  `c_log` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `c_date` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `user_change_history`
+--
+
+INSERT INTO `user_change_history` (`c_id`, `u_id`, `c_log`, `c_date`) VALUES
+('13_20210807140055', 13, 'changed', '2021-08-07'),
+('13_20210807140412', 13, 'Name:: old:Deekshitha Owner New:Deekshitha Owner - test|Phone:: old:6309694725 New:6309694726', '2021-08-07'),
+('13_20210807140741', 13, 'Name:: old:Deekshitha Owner - test New:Deekshitha Owner', '2021-08-07'),
+('13_20210807144018', 13, 'Name:: old:Deekshitha Owner New:Deekshitha Owner-txt|user_photo:: old:1628347070ceap1cc.jpg New:1628347218ceen1cc.jpg|speak_lang:: old:English New:English,Hindi', '2021-08-07');
 
 -- --------------------------------------------------------
 
@@ -54029,31 +54385,164 @@ CREATE TABLE `user_table` (
   `verification_status` enum('pending','verified') NOT NULL DEFAULT 'pending',
   `verified_date` date NOT NULL,
   `verified_comments` text NOT NULL,
-  `verified_by` int(11) NOT NULL
+  `verified_by` int(11) NOT NULL,
+  `isDelete` int(11) NOT NULL DEFAULT 0,
+  `logon_date` date NOT NULL,
+  `verified_count` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `user_table`
 --
 
-INSERT INTO `user_table` (`id`, `oauth_provider`, `oauth_uid`, `name`, `email`, `phone`, `dob`, `contact_mode`, `user_type`, `pass`, `user_photo`, `identity_proof`, `office_project_name`, `address`, `landmark`, `country`, `state`, `city`, `pincode`, `agent_service`, `office_photo`, `speak_lang`, `social_media_link`, `website`, `latitude`, `longitude`, `status`, `mail_verification`, `reference_id`, `referred_by`, `know_tlb`, `know_tlb_other`, `agreement`, `entry_date`, `search_validity`, `agent_listing_validity`, `agent_ppt_tag_cnt`, `deletion_date`, `updated_date`, `registration_type`, `blocked_comment`, `tagged_staff_id`, `verification_status`, `verified_date`, `verified_comments`, `verified_by`) VALUES
-(1, 'normal', NULL, 'test', 'wtm.golam@gmail.com', '7003832809', '0000-00-00', 'any', 'agent', 'MTIz', '1615094459profile-photos-600x425.jpg', '', 'demo', 'Baguiati, Kolkata, West Bengal, India', '44 bus stand', 'India', 'West Bengal', 'kolkata', '700050', 'all', '1615094459coverpage.jpg', 'all', 'gn', 'bnb', '', '', 'Active', 'Inactive', 'PLS3450851', '', 'facebook', '', '1', '2021-03-04', '0000-00-00', '2021-06-23', 1, '0000-00-00', '0000-00-00', 'direct', '', 0, 'pending', '0000-00-00', '', 0),
-(9, 'google', '106346171074274715960', 'Golam Ambia', 'speaktoambia@gmail.com', '', '0000-00-00', 'phone', 'individual', 'ODc3Mjk=', 'https://lh3.googleusercontent.com/a-/AOh14Gh7rJlodxRWvVT_Ad6La2-0A2FlNHOULt0tmUKd=s96-c', '', '', '', '', NULL, NULL, NULL, NULL, '', '', '', '', '', '', '', 'Active', 'Active', '', '', '', '', '', '2021-03-08', '0000-00-00', '0000-00-00', 0, '0000-00-00', '0000-00-00', 'direct', '', 0, 'pending', '0000-00-00', '', 0),
-(7, 'normal', NULL, 'Agent 007', 'golamambia78@gmail.com', '7003832809', '2021-03-01', 'any', 'agent', 'MTIz', '1624166890profile-photos-600x425.jpg', '1624508546gh.jpg', 'office project', 'Baguiati, Kolkata, West Bengal 700159, India', 'bus stand', 'India', 'West Bengal', 'North 24 Parganas', '700159', 'agent service', '1624508546coverpage.jpg', 'english', '', '', '22.6077783', '88.4319073', 'Active', 'Active', 'PLS3457624', '', 'facebook', '', '1', '2021-03-07', '2021-06-16', '2021-07-09', 3, '0000-00-00', '2021-06-24', 'direct', '', 0, 'pending', '0000-00-00', '', 0),
-(13, 'google', '115026521136898344612', 'Deekshitha Owner', 'deekshitha.alla@gmail.com', '6309694722', '2013-01-01', 'any', 'individual', 'MjM3ODU=', '1624468385divisun_thumbnail_300x300.jpg', '', '', 'Kolkata, West Bengal 700050, India', '', NULL, NULL, NULL, NULL, '', '', 'English', '', '', NULL, NULL, 'Active', 'Active', '', '', '', '', '', '2021-03-28', '2021-06-30', '0000-00-00', 0, '0000-00-00', '2021-06-23', 'direct', '', 0, 'pending', '0000-00-00', '', 0),
-(25, 'google', '118150208689155384073', 'KPALLA Test', 'kpalla.2019@gmail.com', '9949012345', '0000-00-00', 'phone', 'builder', 'ODg2ODM=', '1624520241Grand_City_Ghatkesar.jpg', '', 'Harshitha Property Builders', '', '', NULL, NULL, NULL, NULL, '', '1624520241divisun_thumbnail_300x300.jpg', 'English , Hindi, Telugu', 'www.facebook.com', 'www.yahoo.com', NULL, NULL, 'Active', 'Active', 'PLS1954634', '', '', '', '', '2021-06-23', '0000-00-00', '0000-00-00', 0, '0000-00-00', '2021-06-24', 'direct', '', 0, 'pending', '0000-00-00', '', 0),
-(14, 'normal', NULL, 'krishna Agent', 'kp_a@yahoo.com', '6309694722', '0000-00-00', 'any', 'agent', 'MjUwMzAzMg==', '1616934070KP_PHOTO.jpeg', '1616934070December.JPG', 'Krishna Real Estate', '17-21/1,Dharmapuri colony , uppal, Hyderabad, 500039', 'Behind Sai Baba Temple', 'India', 'Telangana', 'Ranga Reddy', '500039', 'Property Buy /Sale and Rental Services.\r\nI can show the properties and finalize the deal for you and can help in other related services', '1616934070IMG_5588.jpg', 'English, Hindi', 'https://www.facebook.com/mail2kp/', 'www.yahoo.com', '17.4079378', '78.5605766', 'Active', 'Active', 'PLS3334073', '', 'other', 'Google', '1', '2021-03-28', '0000-00-00', '0000-00-00', 0, '0000-00-00', '0000-00-00', 'direct', '', 0, 'pending', '0000-00-00', '', 0),
-(15, 'google', '117437777967866984029', 'Ambia', 'wtm.golam@gmail.com', '89561247855', '0000-00-00', 'any', 'individual', 'NjM1MTI=', '1624416930coverpage.jpg', '', '', '', '', NULL, NULL, NULL, NULL, '', '', '', '', '', NULL, NULL, 'Active', 'Active', '', '', '', '', '', '2021-05-05', '0000-00-00', '0000-00-00', 0, '0000-00-00', '2021-06-23', 'direct', '', 0, 'pending', '0000-00-00', '', 0),
-(16, 'facebook', '162512359174164', 'Prity Wishes', 'sendmail2prity@gmail.com', '', '0000-00-00', 'phone', 'individual', '', '', '', '', '', '', NULL, NULL, NULL, NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '1', '2021-06-06', '0000-00-00', '0000-00-00', 0, '0000-00-00', '0000-00-00', 'direct', '', 0, 'pending', '0000-00-00', '', 0),
-(17, 'google', '103885916829177765185', 'Golam Ambia', 'golamambia78@gmail.com', '', '0000-00-00', 'phone', 'individual', 'NzIxMjIyMw==', 'https://lh3.googleusercontent.com/a-/AOh14Gg36SZu8x2RupV2N0_jPjaxTRTlRo3shPS0QQBkvg=s96-c', '', '', '', '', NULL, NULL, NULL, NULL, '', '', '', '', '', '', '', 'Active', 'Active', '', '', '', '', '', '2021-06-06', '0000-00-00', '0000-00-00', 0, '0000-00-00', '0000-00-00', 'direct', '', 0, 'pending', '0000-00-00', '', 0),
-(18, 'facebook', '45702200458744', 'Patricia Boothsky', 'dffqexfjqn_1593485215@tfbnw.net', '', '0000-00-00', 'phone', 'individual', '', '', '', '', '', '', NULL, NULL, NULL, NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '1', '2021-06-09', '0000-00-00', '0000-00-00', 0, '0000-00-00', '0000-00-00', 'direct', '', 0, 'pending', '0000-00-00', '', 0),
-(19, 'facebook', '37002200440301', 'Richard Seligsteinez', 'whyznravnx_1616244698@tfbnw.net', '', '0000-00-00', 'phone', 'individual', '', '', '', '', '', '', NULL, NULL, NULL, NULL, '', '', '', '', '', '', '', '', '', '', '', '', '', '1', '2021-06-09', '0000-00-00', '0000-00-00', 0, '0000-00-00', '0000-00-00', 'direct', '', 0, 'pending', '0000-00-00', '', 0),
-(20, 'facebook', '10150004249511617', 'Betty Bhoraskarescu', 'geogatedproject349@gmail.com', '', '0000-00-00', 'phone', 'individual', '', '', '', '', '', '', NULL, NULL, NULL, NULL, '', '', '', '', '', '', '', 'Active', '', '', '', '', '', '1', '2021-06-09', '2021-06-22', '0000-00-00', 0, '0000-00-00', '0000-00-00', 'direct', '', 0, 'pending', '0000-00-00', '', 0),
-(21, 'normal', NULL, 'Buyer', 'buyer@gmail.com', '7889124578', '0000-00-00', 'any', 'individual', 'MTIz', '1624165176coverpage.jpg', '', '', '', '', NULL, NULL, NULL, NULL, '', '', '', '', '', NULL, NULL, 'Active', 'Inactive', 'PLS9984812', '', 'facebook', '', '1', '2021-06-20', '0000-00-00', '0000-00-00', 0, '0000-00-00', '0000-00-00', 'direct', '', 0, 'pending', '0000-00-00', '', 0),
-(22, 'google', '106354158128011756416', 'Rama Devi', 'ramaprasad.paladugu@gmail.com', '9959510635', '0000-00-00', 'any', 'builder', 'NzY1NTU=', 'https://lh3.googleusercontent.com/a-/AOh14GhR2kR3pVKZrb0S2DK9mDYbct0eyHAmfpZdlRY8rA=s96-c', '', 'INDO INFRA DEVELOPERS (P) Limited', '', '', NULL, NULL, NULL, NULL, '', '1624406778INFO INFRA.png', 'English , Telugu', 'https://www.facebook.com/indoinfradeveloperspvtltd/', 'https://www.indoinfra.in/', NULL, NULL, 'Active', 'Active', '', '', '', '', '', '2021-06-20', '0000-00-00', '0000-00-00', 0, '0000-00-00', '2021-06-23', 'direct', '', 0, 'pending', '0000-00-00', '', 0),
-(24, 'google', '115376421656469685743', 'Krishna Prasad', 'akp.prasad@gmail.com', '8500283629', '0000-00-00', 'phone', 'individual', 'OTQxMTI=', 'https://lh3.googleusercontent.com/a-/AOh14Ghv0M0P3-tX4669GOrlEYlyatS_2c9-5V1dZGquVg=s96-c', '', '', '', '', NULL, NULL, NULL, NULL, '', '', 'English, Hindi, Telugu', '', '', NULL, NULL, 'Active', 'Active', '', '', '', '', '', '2021-06-20', '2021-06-30', '0000-00-00', 0, '0000-00-00', '2021-06-20', 'direct', '', 0, 'pending', '0000-00-00', '', 0),
-(26, 'normal', NULL, 'stf', '', '12354788125', '0000-00-00', 'phone', 'agent', 'YWRtaW4=', '1625289041profile-photos-600x425.jpg', '1625289041sample certificate guruskool.webp', 'bgbgb', 'gbgb', 'gbg', 'United States', 'California', 'Los Angeles County', '90015', 'gbgb', '1625289041coverpage.jpg', 'gb', 'bg', 'gb', '34.0371395', '-118.254718', 'Active', 'Inactive', 'PHS2470929', '', 'facebook', '', '1', '2021-07-03', '0000-00-00', '0000-00-00', 0, '0000-00-00', '0000-00-00', 'direct', '', 3, 'pending', '0000-00-00', '', 0),
-(27, 'normal', NULL, 'test', '', '46464646464', '0000-00-00', 'phone', 'individual', 'YWRtaW4=', '1625290294profile-photos-600x425.jpg', '', '', '', '', NULL, NULL, NULL, NULL, '', '', 'eng', 'eefe', 'efef', NULL, NULL, 'Active', 'Inactive', 'PHS7399131', '', 'whatsapp', '', '1', '2021-07-03', '0000-00-00', '0000-00-00', 0, '0000-00-00', '0000-00-00', 'direct', '', 3, 'pending', '0000-00-00', '', 0);
+INSERT INTO `user_table` (`id`, `oauth_provider`, `oauth_uid`, `name`, `email`, `phone`, `dob`, `contact_mode`, `user_type`, `pass`, `user_photo`, `identity_proof`, `office_project_name`, `address`, `landmark`, `country`, `state`, `city`, `pincode`, `agent_service`, `office_photo`, `speak_lang`, `social_media_link`, `website`, `latitude`, `longitude`, `status`, `mail_verification`, `reference_id`, `referred_by`, `know_tlb`, `know_tlb_other`, `agreement`, `entry_date`, `search_validity`, `agent_listing_validity`, `agent_ppt_tag_cnt`, `deletion_date`, `updated_date`, `registration_type`, `blocked_comment`, `tagged_staff_id`, `verification_status`, `verified_date`, `verified_comments`, `verified_by`, `isDelete`, `logon_date`, `verified_count`) VALUES
+(1, 'normal', NULL, 'test', 'wtm.golam@gmail.com', '7003832809', '0000-00-00', 'any', 'agent', 'MTIz', '1615094459profile-photos-600x425.jpg', '', 'demo', 'Baguiati, Kolkata, West Bengal, India', '44 bus stand', 'India', 'West Bengal', 'kolkata', '700050', 'all', '1615094459coverpage.jpg', 'all', 'gn', 'bnb', '', '', 'Active', 'Inactive', 'PHS3450851', '', 'facebook', '', '1', '2021-03-04', '0000-00-00', '2021-06-23', 1, '0000-00-00', '0000-00-00', 'direct', '', 0, 'pending', '0000-00-00', '', 0, 0, '0000-00-00', 0),
+(9, 'google', '106346171074274715960', 'Golam Ambia', 'speaktoambia@gmail.com', '', '0000-00-00', 'phone', 'individual', 'ODc3Mjk=', 'https://lh3.googleusercontent.com/a-/AOh14Gh7rJlodxRWvVT_Ad6La2-0A2FlNHOULt0tmUKd=s96-c', '', '', '', '', NULL, NULL, NULL, NULL, '', '', '', '', '', '', '', 'Active', 'Active', 'PHS3450852', '', '', '', '', '2021-03-08', '0000-00-00', '0000-00-00', 0, '0000-00-00', '0000-00-00', 'direct', '', 0, 'pending', '0000-00-00', '', 0, 0, '0000-00-00', 0),
+(7, 'normal', NULL, 'Agent 007', 'golamambia78@gmail.com', '7103832809', '2021-03-01', 'any', 'agent', 'MTIz', '1625484819profile-photos-600x425.jpg', '1624508546gh.jpg', 'office project', 'Baguiati, Kolkata, West Bengal 700159, India', 'bus stand', 'India', 'West Bengal', 'Kolkata', '', 'agent service', '1624508546coverpage.jpg', 'english', '', '', '22.6137645', '88.4305721', 'Active', 'Active', 'PHS3457624', 'PHS2554265', 'facebook', '', '1', '2021-03-07', '2022-06-18', '2021-07-09', 3, '0000-00-00', '2021-08-06', 'direct', '', 0, 'pending', '0000-00-00', '', 0, 0, '2021-08-22', 0),
+(13, 'google', '115026521136898344612', 'Deekshitha Owner-txt', 'deekshitha.alla@gmail.com', '6309694726', '2013-01-01', 'email', 'individual', 'MjM3ODU=', '1628347218ceen1cc.jpg', '', '', 'Kolkata, West Bengal 700050, India', '', NULL, NULL, NULL, NULL, '', '', 'English,Hindi', '', '', NULL, NULL, 'Active', 'Active', 'PHS3457625', '', '', '', '', '2021-03-28', '2021-07-17', '0000-00-00', 0, '0000-00-00', '2021-08-07', 'direct', '', 0, 'pending', '0000-00-00', '', 0, 0, '0000-00-00', 0),
+(25, 'google', '118150208689155384073', 'KPALLA Test', 'kpalla.2019@gmail.com', '9949012345', '0000-00-00', 'phone', 'builder', 'ODg2ODM=', '1624520241Grand_City_Ghatkesar.jpg', '', 'Harshitha Property Builders', '', '', NULL, NULL, NULL, NULL, '', '1624520241divisun_thumbnail_300x300.jpg', 'English , Hindi, Telugu', 'www.facebook.com', 'www.yahoo.com', NULL, NULL, 'Active', 'Active', 'PHS1954634', '', '', '', '', '2021-06-23', '0000-00-00', '0000-00-00', 0, '0000-00-00', '2021-06-24', 'direct', '', 0, 'pending', '0000-00-00', '', 0, 0, '0000-00-00', 0),
+(14, 'normal', NULL, 'krishna Agent', 'kp_a@yahoo.com', '6309694722', '0000-00-00', 'any', 'agent', 'YWdlbnQ=', '1616934070KP_PHOTO.jpeg', '1616934070December.JPG', 'Krishna Real Estate', '17-21/1,Dharmapuri colony , uppal, Hyderabad, 500039', 'Behind Sai Baba Temple', 'India', 'Telangana', 'Ranga Reddy', '500039', 'Property Buy /Sale and Rental Services.\r\nI can show the properties and finalize the deal for you and can help in other related services', '1616934070IMG_5588.jpg', 'English, Hindi', 'https://www.facebook.com/mail2kp/', 'www.yahoo.com', '17.4079378', '78.5605766', 'Active', 'Active', 'PHS3334073', '', 'other', 'Google', '1', '2021-03-28', '0000-00-00', '0000-00-00', 1, '0000-00-00', '0000-00-00', 'direct', '', 0, 'pending', '0000-00-00', '', 0, 0, '2021-07-20', 0),
+(15, 'google', '117437777967866984029', 'Ambia', 'wtm.golam@gmail.com', '89561247855', '0000-00-00', 'any', 'individual', 'NjM1MTI=', '1624416930coverpage.jpg', '', '', '', '', NULL, NULL, NULL, NULL, '', '', '', '', '', NULL, NULL, 'Active', 'Active', 'PHS3334074', '', '', '', '', '2021-05-05', '0000-00-00', '0000-00-00', 0, '0000-00-00', '2021-06-23', 'direct', '', 0, 'pending', '0000-00-00', '', 0, 0, '0000-00-00', 0),
+(16, 'facebook', '162512359174164', 'Prity Wishes', 'sendmail2prity@gmail.com', '', '0000-00-00', 'phone', 'individual', '', '', '', '', '', '', NULL, NULL, NULL, NULL, '', '', '', '', '', '', '', '', '', 'PHS3334075', '', '', '', '1', '2021-06-06', '0000-00-00', '0000-00-00', 0, '0000-00-00', '0000-00-00', 'direct', '', 0, 'pending', '0000-00-00', '', 0, 0, '0000-00-00', 0),
+(17, 'google', '103885916829177765185', 'Golam Ambia', 'golamambia78@gmail.com', '', '0000-00-00', 'phone', 'individual', 'NzIxMjIyMw==', 'https://lh3.googleusercontent.com/a-/AOh14Gg36SZu8x2RupV2N0_jPjaxTRTlRo3shPS0QQBkvg=s96-c', '', '', '', '', NULL, NULL, NULL, NULL, '', '', '', '', '', '', '', 'Active', 'Active', 'PHS3334076', '', '', '', '', '2021-06-06', '0000-00-00', '0000-00-00', 0, '0000-00-00', '0000-00-00', 'direct', '', 0, 'pending', '0000-00-00', '', 0, 0, '0000-00-00', 0),
+(18, 'facebook', '45702200458744', 'Patricia Boothsky', 'dffqexfjqn_1593485215@tfbnw.net', '', '0000-00-00', 'phone', 'individual', '', '', '', '', '', '', NULL, NULL, NULL, NULL, '', '', '', '', '', '', '', '', '', 'PHS3334077', '', '', '', '1', '2021-06-09', '0000-00-00', '0000-00-00', 0, '0000-00-00', '0000-00-00', 'direct', '', 0, 'pending', '0000-00-00', '', 0, 0, '0000-00-00', 0),
+(19, 'facebook', '37002200440301', 'Richard Seligsteinez', 'whyznravnx_1616244698@tfbnw.net', '', '0000-00-00', 'phone', 'individual', '', '', '', '', '', '', NULL, NULL, NULL, NULL, '', '', '', '', '', '', '', '', '', 'PHS3334078', '', '', '', '1', '2021-06-09', '0000-00-00', '0000-00-00', 0, '0000-00-00', '0000-00-00', 'direct', '', 0, 'pending', '0000-00-00', '', 0, 0, '0000-00-00', 0),
+(20, 'facebook', '10150004249511617', 'Betty Bhoraskarescu', 'geogatedproject349@gmail.com', '', '0000-00-00', 'phone', 'individual', '', '', '', '', '', '', NULL, NULL, NULL, NULL, '', '', '', '', '', '', '', 'Active', 'Active', 'PHS3334079', '', '', '', '1', '2021-06-09', '2021-06-22', '0000-00-00', 0, '0000-00-00', '0000-00-00', 'direct', '', 0, 'pending', '0000-00-00', '', 0, 0, '0000-00-00', 0),
+(21, 'normal', NULL, 'Buyer', 'buyer@gmail.com', '7889124578', '0000-00-00', 'any', 'individual', 'MTIz', '1624165176coverpage.jpg', '', '', '', '', NULL, NULL, NULL, NULL, '', '', '', '', '', NULL, NULL, 'Active', 'Active', 'PHS9984812', '', 'facebook', '', '1', '2021-06-20', '0000-00-00', '0000-00-00', 0, '0000-00-00', '0000-00-00', 'direct', '', 0, 'pending', '0000-00-00', '', 0, 0, '2021-08-22', 0),
+(22, 'google', '106354158128011756416', 'Rama Devi', 'ramaprasad.paladugu@gmail.com', '9959510635', '0000-00-00', 'any', 'builder', 'NzY1NTU=', 'https://lh3.googleusercontent.com/a-/AOh14GhR2kR3pVKZrb0S2DK9mDYbct0eyHAmfpZdlRY8rA=s96-c', '', 'INDO INFRA DEVELOPERS (P) Limited', '', '', NULL, NULL, NULL, NULL, '', '1624406778INFO INFRA.png', 'English , Telugu', 'https://www.facebook.com/indoinfradeveloperspvtltd/', 'https://www.indoinfra.in/', NULL, NULL, 'Active', 'Active', 'PHS9984813', '', '', '', '', '2021-06-20', '0000-00-00', '0000-00-00', 0, '0000-00-00', '2021-06-23', 'direct', '', 0, 'pending', '0000-00-00', '', 0, 0, '0000-00-00', 0),
+(24, 'google', '115376421656469685743', 'Krishna Prasad', 'akp.prasad@gmail.com', '8500283629', '0000-00-00', 'phone', 'individual', 'OTQxMTI=', 'https://lh3.googleusercontent.com/a-/AOh14Ghv0M0P3-tX4669GOrlEYlyatS_2c9-5V1dZGquVg=s96-c', '', '', '', '', NULL, NULL, NULL, NULL, '', '', 'English, Hindi, Telugu', '', '', NULL, NULL, 'Active', 'Active', 'PHS9984814', '', '', '', '', '2021-06-20', '2021-06-30', '0000-00-00', 0, '0000-00-00', '2021-06-20', 'direct', '', 0, 'pending', '0000-00-00', '', 0, 0, '0000-00-00', 0),
+(26, 'normal', NULL, 'name1', '', '707931235', '0000-00-00', 'phone', 'agent', 'YWRtaW4=', '1625289041profile-photos-600x425.jpg', '1625289041sample certificate guruskool.webp', 'bgbgb', 'gbgb', 'gbg', 'United States', 'California', 'Los Angeles County', '90015', 'gbgb', '1625289041coverpage.jpg', 'gb', 'bg', 'gb', '34.0371395', '-118.254718', 'Inactive', 'Active', 'PHS2470929', '', 'facebook', '', '1', '2021-07-03', '0000-00-00', '0000-00-00', 0, '2021-07-04', '0000-00-00', 'offline', 'This user is blocked', 3, 'pending', '2021-07-14', 'user is blocked', 28, 0, '0000-00-00', 0),
+(27, 'normal', NULL, 'test', '', '46464646464', '0000-00-00', 'phone', 'individual', 'YWRtaW4=', '1625290294profile-photos-600x425.jpg', '', '', '', '', NULL, NULL, NULL, NULL, '', '', 'eng', 'eefe', 'efef', NULL, NULL, 'Active', 'Inactive', 'PHS7399131', '', 'whatsapp', '', '1', '2021-07-03', '0000-00-00', '0000-00-00', 0, '0000-00-00', '0000-00-00', 'offline', '', 3, 'pending', '0000-00-00', '', 0, 0, '0000-00-00', 0),
+(28, 'normal', NULL, 'kpalla1 owner', '', '8500212345', '0000-00-00', 'phone', 'individual', 'cmVtb3RlMTIz', '1625753666Photo_id1.jpg', '', '', '', '', NULL, NULL, NULL, NULL, '', '', 'English', '', '', NULL, NULL, 'Active', 'Active', 'PHS4940949', '', 'facebook', '', '1', '2021-07-08', '0000-00-00', '0000-00-00', 0, '0000-00-00', '0000-00-00', 'offline', '', 18, 'verified', '2021-07-14', 'All the details are correct', 19, 0, '0000-00-00', 2),
+(29, 'normal', NULL, 'kpalla agent', '', '9949012345', '0000-00-00', 'phone', 'agent', 'ZGF5aXNnb29k', '1625889720agent.png', '1625889720Photo_id1.jpg', 'Maharshi Property Services', 'Prashanth Nagar, Uppal, Secunderabad, Telangana, India', 'Beside SBI', 'India', 'Telangana', 'Ranga Reddy', '500039', 'We provide selling and Buying and property Rental services.', '1625889720Agent_office2.jpg', 'English, Hindi, Telugu', '', '', '17.4084178', '78.5565029', 'Active', 'Active', 'PHS6538529', '', 'other', 'Google', '1', '2021-07-10', '0000-00-00', '0000-00-00', 0, '0000-00-00', '0000-00-00', 'offline', '', 18, 'verified', '2021-07-14', 'all good', 3, 0, '0000-00-00', 0),
+(30, 'normal', NULL, '', '', '', '0000-00-00', '', '', '', '', '', '', '', '', NULL, NULL, NULL, NULL, '', '', '', '', '', NULL, NULL, '', '', '', '', '', '', '', '0000-00-00', '0000-00-00', '0000-00-00', 0, '0000-00-00', '0000-00-00', 'direct', '', 0, 'pending', '0000-00-00', '', 0, 0, '0000-00-00', 0),
+(31, 'normal', NULL, 'Alla Satyanarayana Rama Prasad', 'prasadasr@gmail.com', '8309750763', '0000-00-00', 'any', 'individual', 'YW51aGFyJjAx', '1626587298asr photo.png', '', '', '', '', NULL, NULL, NULL, NULL, '', '', 'Telugu, English, Hindi', '', '', NULL, NULL, 'Active', 'Active', 'PHS5656', '', 'gmail', '', '1', '2021-07-18', '0000-00-00', '0000-00-00', 0, '0000-00-00', '0000-00-00', 'direct', '', 0, 'pending', '0000-00-00', '', 0, 0, '2021-07-18', 0);
+
+--
+-- Triggers `user_table`
+--
+DELIMITER $$
+CREATE TRIGGER `after_insert_customer_insert-to-reference_id` AFTER INSERT ON `user_table` FOR EACH ROW INSERT INTO `reference_id` (`reference_id`, `user_staff_id`, `user_type`, `user_catg`, `created_date`) VALUES (new.reference_id, new.id, new.user_type, 'C', new.entry_date)
+$$
+DELIMITER ;
+DELIMITER $$
+CREATE TRIGGER `after_update_customer_insert-to-change-history` AFTER UPDATE ON `user_table` FOR EACH ROW BEGIN
+if new.isDelete = 0 THEN
+	if new.name <>  old.name THEN
+		set @c_text := concat('Name::',' old:', old.name,' New:', new.name);
+		set @c_rec = 1;
+	end if;
+	if new.phone <> old.phone THEN
+		set @c_text :=  Concat(@c_text,'|','Phone::',' old:', old.phone,' New:',new.phone);
+		set @c_rec = 1;
+    end if;
+	if new.contact_mode <> old.contact_mode THEN
+		set @c_text :=  Concat(@c_text,'|','contact_mode::',' old:', old.contact_mode,' New:',new.contact_mode);
+		set @c_rec = 1;
+    end if;
+	if new.user_photo <> old.user_photo THEN
+		set @c_text :=  Concat(@c_text,'|','user_photo::',' old:', old.user_photo,' New:',new.user_photo);
+		set @c_rec = 1;
+    end if;
+	if new.identity_proof <> old.identity_proof THEN
+		set @c_text :=  Concat(@c_text,'|','identity_proof::',' old:', old.identity_proof,' New:',new.identity_proof);
+		set @c_rec = 1;
+    end if;
+	if new.office_project_name <> old.office_project_name THEN
+		set @c_text :=  Concat(@c_text,'|','office_project_name::',' old:', old.office_project_name,' New:',new.office_project_name);
+		set @c_rec = 1;
+    end if;
+	if new.address <> old.address THEN
+		set @c_text :=  Concat(@c_text,'|','address::',' old:', old.address,' New:',new.address);
+		set @c_rec = 1;
+    end if;
+	if new.landmark <> old.landmark THEN
+		set @c_text :=  Concat(@c_text,'|','landmark::',' old:', old.landmark,' New:',new.landmark);
+		set @c_rec = 1;
+    end if;
+	if new.country <> old.country THEN
+		set @c_text :=  Concat(@c_text,'|','country::',' old:', old.country,' New:',new.country);
+		set @c_rec = 1;
+    end if;
+	if new.state <> old.state THEN
+		set @c_text :=  Concat(@c_text,'|','state::',' old:', old.state,' New:',new.state);
+		set @c_rec = 1;
+    end if;
+	if new.city <> old.city THEN
+		set @c_text :=  Concat(@c_text,'|','city::',' old:', old.city,' New:',new.city);
+		set @c_rec = 1;
+   	end if;
+	if new.pincode <> old.pincode THEN
+		set @c_text :=  Concat(@c_text,'|','pincode::',' old:', old.pincode,' New:',new.pincode);
+		set @c_rec = 1;
+   	end if;
+	if new.agent_service <> old.agent_service THEN
+		set @c_text :=  Concat(@c_text,'|','agent_service::',' old:', old.agent_service,' New:',new.agent_service);
+		set @c_rec = 1;
+ 	end if;
+	if new.office_photo <> old.office_photo THEN
+		set @c_text :=  Concat(@c_text,'|','office_photo::',' old:', old.office_photo,' New:',new.office_photo);
+		set @c_rec = 1;
+ 	end if;
+	if new.speak_lang <> old.speak_lang THEN
+		set @c_text :=  Concat(@c_text,'|','speak_lang::',' old:', old.speak_lang,' New:',new.speak_lang);
+		set @c_rec = 1;
+ 	end if;
+	if new.social_media_link <> old.social_media_link THEN
+		set @c_text :=  Concat(@c_text,'|','social_media_link::',' old:', old.social_media_link,' New:',new.social_media_link);
+		set @c_rec = 1;
+ 	end if;
+	if new.social_media_link <> old.social_media_link THEN
+		set @c_text :=  Concat(@c_text,'|','social_media_link::',' old:', old.social_media_link,' New:',new.social_media_link);
+		set @c_rec = 1;
+ 	end if;
+	if new.deletion_date <> old.deletion_date THEN
+		set @c_text :=  Concat(@c_text,'|','deletion_date::',' old:', old.deletion_date,' New:',new.deletion_date);
+		set @c_rec = 1;
+	end if;
+	if @c_text is NOT NULL THEN
+		set 
+		@c_id := (select concat_ws('_',new.id,now() + 0)),
+		@c_date := ( select CURRENT_DATE );
+		INSERT INTO user_change_history(c_id, u_id, c_log, c_date) 
+		VALUES(@c_id, new.id, @c_text, @c_date);
+	end IF;
+
+	if old.verification_status <> new.verification_status and new.verification_status = 'verified' THEN
+		SET 
+		@c_yyyymm := (select substring( now() +0, 1,6)),
+        @c_ts := (select now() +0),
+		@c_id := (select concat_ws('_',@c_yyyymm,'S',new.verified_by,now() + 0)),
+		@c_date := ( select CURRENT_DATE ),
+		@c_payment_type_id = 81;
+		if new.verified_count = 1 THEN
+    		SET @c_payment_type_id = 80;
+    	END if;      
+		Insert into measure_effort(measure_id,user_staff_id,customer_id,post_id,user_catg,measure_date,payment_type_id,measure_ts) values (@c_id,new.verified_by,new.id,0,'S',@c_date,@c_payment_type_id,@c_ts);
+	End if;
+end if;    
+END
+$$
+DELIMITER ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `z_table1`
+--
+
+CREATE TABLE `z_table1` (
+  `ID` int(11) NOT NULL,
+  `s_text` text COLLATE utf8mb4_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `z_table1`
+--
+
+INSERT INTO `z_table1` (`ID`, `s_text`) VALUES
+(1, '202108_20210813144017'),
+(2, '202108_C_26_20210813144330');
 
 --
 -- Indexes for dumped tables
@@ -54150,6 +54639,13 @@ ALTER TABLE `general_setting`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `measure_effort`
+--
+ALTER TABLE `measure_effort`
+  ADD PRIMARY KEY (`measure_id`),
+  ADD KEY `user_staff_id` (`user_staff_id`);
+
+--
 -- Indexes for table `message_relpy`
 --
 ALTER TABLE `message_relpy`
@@ -54179,6 +54675,12 @@ ALTER TABLE `notification`
 ALTER TABLE `payments`
   ADD PRIMARY KEY (`payment_id`),
   ADD KEY `price_id` (`price_id`);
+
+--
+-- Indexes for table `payments_hdr`
+--
+ALTER TABLE `payments_hdr`
+  ADD PRIMARY KEY (`payment_ref`);
 
 --
 -- Indexes for table `pincode_table`
@@ -54215,6 +54717,31 @@ ALTER TABLE `quick_enquiry`
 --
 ALTER TABLE `quote_team_user`
   ADD PRIMARY KEY (`qt_id`);
+
+--
+-- Indexes for table `reference_id`
+--
+ALTER TABLE `reference_id`
+  ADD PRIMARY KEY (`reference_id`),
+  ADD KEY `user_staff_id` (`user_staff_id`);
+
+--
+-- Indexes for table `reference_id_measure`
+--
+ALTER TABLE `reference_id_measure`
+  ADD PRIMARY KEY (`measure_id`);
+
+--
+-- Indexes for table `referral_link_measure`
+--
+ALTER TABLE `referral_link_measure`
+  ADD PRIMARY KEY (`vw_mon_ip_ppt_id`);
+
+--
+-- Indexes for table `referral_link_mktg`
+--
+ALTER TABLE `referral_link_mktg`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `save_location_list`
@@ -54291,6 +54818,12 @@ ALTER TABLE `table_tagged_agent`
   ADD PRIMARY KEY (`tag_id`);
 
 --
+-- Indexes for table `user_change_history`
+--
+ALTER TABLE `user_change_history`
+  ADD PRIMARY KEY (`c_id`);
+
+--
 -- Indexes for table `user_review`
 --
 ALTER TABLE `user_review`
@@ -54301,6 +54834,12 @@ ALTER TABLE `user_review`
 --
 ALTER TABLE `user_table`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `z_table1`
+--
+ALTER TABLE `z_table1`
+  ADD PRIMARY KEY (`ID`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -54316,7 +54855,7 @@ ALTER TABLE `admin_details`
 -- AUTO_INCREMENT for table `adsview_master`
 --
 ALTER TABLE `adsview_master`
-  MODIFY `vw_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `vw_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 
 --
 -- AUTO_INCREMENT for table `category`
@@ -54406,43 +54945,43 @@ ALTER TABLE `module_lbcontacts`
 -- AUTO_INCREMENT for table `module_lbcontacts_part`
 --
 ALTER TABLE `module_lbcontacts_part`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
 -- AUTO_INCREMENT for table `notification`
 --
 ALTER TABLE `notification`
-  MODIFY `nid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+  MODIFY `nid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 
 --
 -- AUTO_INCREMENT for table `payments`
 --
 ALTER TABLE `payments`
-  MODIFY `payment_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `payment_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT for table `pincode_table`
 --
 ALTER TABLE `pincode_table`
-  MODIFY `pt_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `pt_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `ppt_agent_tag`
 --
 ALTER TABLE `ppt_agent_tag`
-  MODIFY `tag_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `tag_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `price`
 --
 ALTER TABLE `price`
-  MODIFY `price_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `price_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `propertypost_table`
 --
 ALTER TABLE `propertypost_table`
-  MODIFY `ppt_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `ppt_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `quick_enquiry`
@@ -54455,6 +54994,12 @@ ALTER TABLE `quick_enquiry`
 --
 ALTER TABLE `quote_team_user`
   MODIFY `qt_id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `referral_link_mktg`
+--
+ALTER TABLE `referral_link_mktg`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `save_location_list`
@@ -54478,7 +55023,7 @@ ALTER TABLE `snapshot`
 -- AUTO_INCREMENT for table `staff_table`
 --
 ALTER TABLE `staff_table`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT for table `state`
@@ -54514,7 +55059,7 @@ ALTER TABLE `table_quote`
 -- AUTO_INCREMENT for table `table_quote_new`
 --
 ALTER TABLE `table_quote_new`
-  MODIFY `qt_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `qt_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `table_report`
@@ -54538,7 +55083,13 @@ ALTER TABLE `user_review`
 -- AUTO_INCREMENT for table `user_table`
 --
 ALTER TABLE `user_table`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+
+--
+-- AUTO_INCREMENT for table `z_table1`
+--
+ALTER TABLE `z_table1`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Constraints for dumped tables

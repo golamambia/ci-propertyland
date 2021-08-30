@@ -29,7 +29,9 @@ if(!$this->session->userdata('is_logged_in_stf')==1)
         {
             redirect('staff_panel', 'refresh');
         }
-      
+       if(checkStaff($this->session->userdata('logged_in_stf')['user_type'],'field')){
+      redirect('staff_panel', 'refresh');
+    }
         
     }
   
@@ -47,11 +49,14 @@ if(!$this->session->userdata('is_logged_in_stf')==1)
       }
       if($start_date !='' && $end_date !=''){
         $where.=' and propertypost_table.ppt_createdAt between "'.$start_date.'" and "'.$end_date.'"';
+        $data['ads_list']=$this->Adslist_model->show_data_id('propertypost_table',$where);
+      }else{
+        $data['ads_list']=array();
       }
 
 
     
-    $data['ads_list']=$this->Adslist_model->show_data_id('propertypost_table',$where);
+    
       // $data['subcatlist']=$this->General_model->show_data_id('subcategory',$sub_catid,'sid','get','');
        //$data['countrylist']=$this->General_model->show_data_id('country','','','get','');
 
@@ -66,9 +71,18 @@ if(!$this->session->userdata('is_logged_in_stf')==1)
   
   public function pending()
   {
+    $start_date=$this->input->get('start_date',true);
+         $end_date=$this->input->get('end_date',true);
 
-    $where="ppt_isDelete=0 and ppt_verification_status=0";
+    $where="ppt_isDelete=0 ";
+    if($start_date !='' && $end_date !=''){
+        $where.=' and propertypost_table.ppt_createdAt between "'.$start_date.'" and "'.$end_date.'" and ppt_verification_status=0 ';
+        $where.=' or propertypost_table.ppt_updatedAt between "'.$start_date.'" and "'.$end_date.'" and ppt_verification_status=0';
     $data['ads_list']=$this->Adslist_model->show_data_id('propertypost_table',$where);
+    //echo $this->db->last_query();
+  }else{
+    $data['ads_list']=array();
+  }
       // $data['subcatlist']=$this->General_model->show_data_id('subcategory',$sub_catid,'sid','get','');
        //$data['countrylist']=$this->General_model->show_data_id('country','','','get','');
 
@@ -85,8 +99,15 @@ if(!$this->session->userdata('is_logged_in_stf')==1)
    public function approved()
   {
 
+    $start_date=$this->input->get('start_date',true);
+         $end_date=$this->input->get('end_date',true);
     $where="ppt_isDelete=0 and ppt_verification_status=1";
+   if($start_date !='' && $end_date !=''){
+        $where.=' and propertypost_table.ppt_verified_date between "'.$start_date.'" and "'.$end_date.'"';
     $data['ads_list']=$this->Adslist_model->show_data_id('propertypost_table',$where);
+  }else{
+    $data['ads_list']=array();
+  }
       // $data['subcatlist']=$this->General_model->show_data_id('subcategory',$sub_catid,'sid','get','');
        //$data['countrylist']=$this->General_model->show_data_id('country','','','get','');
 
@@ -102,9 +123,16 @@ if(!$this->session->userdata('is_logged_in_stf')==1)
   public function approved_you()
   {
       $uid=$this->session->userdata('logged_in_stf')['staff_id'];
+      $start_date=$this->input->get('start_date',true);
+         $end_date=$this->input->get('end_date',true);
 
        $where="ppt_isDelete=0 and ppt_verification_status=1 and ppt_verifiedBy=".$uid."";
+    if($start_date !='' && $end_date !=''){
+        $where.=' and propertypost_table.ppt_verified_date between "'.$start_date.'" and "'.$end_date.'"';
     $data['ads_list']=$this->Adslist_model->show_data_id('propertypost_table',$where);
+  }else{
+    $data['ads_list']=array();
+  }
      
     $data['title']='Property Handshake';
     
@@ -116,10 +144,20 @@ if(!$this->session->userdata('is_logged_in_stf')==1)
   
   public function complaint_ads()
   {
+    $start_date=$this->input->get('start_date',true);
+         $end_date=$this->input->get('end_date',true);
       $uid=$this->session->userdata('logged_in_stf')['staff_id'];
 
     //$where="is_delete=0 and post_status=1 and approved_by=".$uid."";
-    $data['ads_list']=$this->Adslist_model->show_data_comads('propertypost_table');
+      if($start_date !='' && $end_date !=''){
+        $where=' and tm.cmp_entry_date between "'.$start_date.'" and "'.$end_date.'"';
+    $data['ads_list']=$this->db->query('SELECT ml.*,tm.cmp_id, GROUP_CONCAT(tm.cmp_id ) AS comp_id FROM `propertypost_table` ml
+      inner join table_complaint tm on tm.cmp_adsid=ml.ppt_id 
+       where ml.ppt_isDelete!=1 '.$where.' GROUP BY ml.ppt_id')->result();
+  }else{
+    $data['ads_list']=array();
+  }
+    //$this->Adslist_model->show_data_comads('propertypost_table');
       
        
      $data['title']='Property Handshake';
@@ -131,12 +169,18 @@ if(!$this->session->userdata('is_logged_in_stf')==1)
   }
   public function report_ads()
   {
+    $start_date=$this->input->get('start_date',true);
+         $end_date=$this->input->get('end_date',true);
       $uid=$this->session->userdata('logged_in_stf')['staff_id'];
 
-    //$where="is_delete=0 and post_status=1 and approved_by=".$uid."";
-     $data['ads_list']=$this->Adslist_model->show_data_repads('propertypost_table');
+    if($start_date !='' && $end_date !=''){
+        $where=' and tr.rpt_entry_date between "'.$start_date.'" and "'.$end_date.'"';
+     $data['ads_list']=$this->db->query('SELECT ml.*,tr.rpt_id, GROUP_CONCAT(tr.rpt_id ) AS comp_id FROM `propertypost_table` ml
+      inner join  table_report tr on tr.rpt_adsid=ml.ppt_id  where ml.ppt_isDelete!=1 '.$where.' GROUP BY ml.ppt_id')->result();
       
-       
+       }else{
+    $data['ads_list']=array();
+  }
      $data['title']='Property Handshake';
     
     $this->load->view('staff_panel/header',$data);
@@ -163,7 +207,7 @@ public function adsdata_view(){
 
 
          $data['notification']=$this->Notice_model->backend_notice_data_list($id);
-
+          $data['change_history']=$this->db->query('select * from property_change_history where ppt_id='.$id.' order by c_id desc')->result();
   
 $data['title']='Ads details';
     
@@ -181,24 +225,31 @@ public function adsdata_checked(){
   $id =$this->input->post('id');
   $post_st =$this->input->post('post_st');
    $RowCount= $this->General_model->RowCount('propertypost_table','ppt_id',$id);
+   $query_cnt=$this->General_model->show_data_id('propertypost_table',$id,'ppt_id','get','');
         if($RowCount<=0){
           $this->session->set_flashdata('error', 'Sorry something went wrong!');
       echo 1;
       }else{
-        $datalist = array( 
+        if($post_st>0){
+        $verify_cnt=$query_cnt[0]->ppt_verified_cnt+1;
+      }else{
+        $verify_cnt=$query_cnt[0]->ppt_verified_cnt;
+      }
+        $datalist = array(
                 'ppt_verifiedBy'   => $uid,
                 'ppt_verified_date' => $today,
-                'ppt_verification_status'   =>$post_st,
-                
-                //'status'        => $this->input->post('status'),
+                'ppt_verification_status'   =>$this->input->post('ppt_verification_status'),
+                'ppt_verified_cnt'   =>$verify_cnt,
+                'verified_comments'        => $this->input->post('verified_comments'),
             );
             $query= $this->General_model->show_data_id('propertypost_table',$id,'ppt_id','update',$datalist);
            if($query){
-               if($post_st>0){
-             $this->session->set_flashdata('message', 'Approved successfully done');
-               }else{
-                   $this->session->set_flashdata('message', 'Ads successfully inactive');
-               }
+            $this->session->set_flashdata('message', 'Data successfully updated');
+             //   if($query){
+             // $this->session->set_flashdata('message', 'Data successfully updated');
+             //   }else{
+             //       $this->session->set_flashdata('error', 'Something went wrong');
+             //   } 
         echo 2;
            }else{
        $this->session->set_flashdata('error', 'Sorry try again!');

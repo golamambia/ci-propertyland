@@ -35,7 +35,7 @@ class Dashboard extends CI_Controller {
 
         $where="is_delete=0 and user_id='".$user_id."'";
 
-        $data['ads_list']=$this->Adslist_model->show_data_id1('module_lbcontacts',$where);
+        $data['ads_list']=$this->Adslist_model->show_data_id1();
 
         $data['count']=$this->Adslist_model->get_add_by_user($user_id)->num_rows();
 

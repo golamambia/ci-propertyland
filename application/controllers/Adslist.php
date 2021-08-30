@@ -121,7 +121,8 @@ function propertytagged_list($offset=0){
 
       $user_id=$this->session->userdata('front_sess')['userid'];
       $where=" and e.agent_id = '" .$user_id."' and e.tag_active=1 ";
-      $data['ads_list']=$this->db->query("SELECT m.* FROM propertypost_table as m inner join ppt_agent_tag as e on e.ppt_id=m.ppt_id  WHERE m.ppt_createdBy='$user_id' AND m.ppt_isDelete=0 ".$where." ORDER BY m.ppt_id DESC LIMIT $limit OFFSET $offset")->result();
+      $data['ads_list']=$this->db->query("SELECT ppt.*, pat.* FROM `propertypost_table` as ppt, `ppt_agent_tag` as pat where pat.`ppt_id` = ppt.`ppt_id` and pat.`agent_id` <> ppt.`ppt_createdBy` and pat.`agent_id` =" .$user_id." ORDER BY ppt.ppt_id DESC LIMIT $limit OFFSET $offset")->result();
+     // $this->db->query("SELECT m.* FROM propertypost_table as m inner join ppt_agent_tag as e on e.ppt_id=m.ppt_id  WHERE e.agent_id <> m.ppt_createdAt and  m.ppt_isDelete=0 ".$where." ORDER BY m.ppt_id DESC LIMIT $limit OFFSET $offset")->result();
 
     //echo $this->db->last_query();
         $data['title']="Tagged property";
@@ -497,6 +498,7 @@ $this->session->set_flashdata('error', 'Please give proper address!');
         $_POST['ppt_longitude']=$longitude;
         $_POST['ppt_property_address']=$this->input->post('address');
         $_POST['ppt_landmark']=$this->input->post('landmark');
+        $_POST['ppt_verification_status']=0;
          if($this->input->post('ppt_broker_need')){
             $_POST['ppt_broker_need']=1;
           

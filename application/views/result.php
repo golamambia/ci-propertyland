@@ -723,11 +723,11 @@
                   <div class="col-md-12">
                     <?php
                     if($user_data[0]->search_validity>=date('Y-m-d')){
-
+$actual_link = base_url()."adsview/dataview?ads=".base64_encode($value->ppt_id)."&refferral_id=".base64_encode($refferral_id);
                     ?>
                     <ul class="shere_list_area">
                       <li>
-                        <input type="hidden" value="<?=base_url();?>?product=<?php //echo $value->product_id; ?>" id="p<?php //echo $i; ?>" name="">
+                        <input type="hidden" value="<?=$actual_link;?>" id="p<?php echo $i; ?>" name="">
                         <?php 
 $ip = $this->input->ip_address();
 
@@ -742,8 +742,9 @@ $ip = $this->input->ip_address();
 
 $count=0;
 
+ //echo urlencode($actual_link);
 ?>
-                      <li><a href="https://api.whatsapp.com/send?text=<?=base_url();?>?product=<?php echo $value->ppt_id; ?>" target="_blank" onclick="social_share_count('<?php //echo $value->product_id; ?>')"><i style="color:#424344;" class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
+                      <li><a href="https://api.whatsapp.com/send?text=<?php echo urlencode($actual_link); ?>" target="_blank" onclick="social_share_count('<?php //echo $value->product_id; ?>')"><i style="color:#424344;" class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
                       
                       
                       <!-- <li><a href="http://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode($value->seller_link); ?>&t=<?php echo $value->product; ?>" target="_blank"  ><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li> -->
@@ -751,9 +752,9 @@ $count=0;
                       <?php
 
 $count=0;
-
+$fullURL = base_url().'adsview/dataview?ads='.base64_encode($value->ppt_id).'&refferral_id='.base64_encode($refferral_id); 
 ?>
-                      <li><a href="http://www.facebook.com/sharer/sharer.php?u=<?=base_url();?>?product=<?php echo $value->ppt_id; ?>" target="_blank" onclick="social_share_count1('<?php //echo $value->product_id; ?>')" ><i style="color:#424344;" class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+                      <li><a href="http://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode($fullURL); ?>&t=<?=$value->ppt_title;?>" target="_blank" onclick="social_share_count1('<?php //echo $value->product_id; ?>')" ><i style="color:#424344;" class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
                      
                       
                       
@@ -1688,7 +1689,7 @@ function copyToClipboard(element,pid) {
 
 function social_share_count(pid){
 
-   alert(pid);
+   //alert(pid);
 
    $.post( "<?=base_url();?>share/shareCount",{pid:pid}, function( data ) {
   $( ".result" ).html( data );

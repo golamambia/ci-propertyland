@@ -41,6 +41,27 @@
 <?php }?>
         <div class="card-content collapse show">
           <div class="card-body card-dashboard">
+            <form id="user_search" method="get">
+            <div class="row">
+              
+                           
+<div class="col-md">
+<label>From date</label>
+<input type="date" value="<?=$this->input->get('start_date',true);?>" class="form-control" name="start_date" id="start_date">
+  </div>
+  <div class="col-md">
+    <label>End date</label>
+<input type="date" value="<?=$this->input->get('end_date',true);?>" class="form-control" name="end_date" id="end_date" >
+  </div>
+  
+  <div class="col-md">
+    <input type="submit" style="margin-top: 27px;color: #fff;" class="form-control btn btn-sm btn-primary" value="Search Now">
+  </div>
+
+
+
+</div>
+</form>
             <!-- <p class="card-text">&nbsp;</p> -->
             <table id="example" class="table table-striped table-bordered base-style ">
               <thead>
@@ -83,7 +104,7 @@
                   </td>
                   <td class="float-centre">
 
-                <a href="<?php echo base_url();?>staff_panel/adsdata/adsdata_view?view=<?=base64_encode($value->ppt_id);?>"><span class="badge bg-primary" title="Click here for view"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> View</span></a>
+                <a target="_blank" href="<?php echo base_url();?>staff_panel/adsdata/adsdata_view?view=<?=base64_encode($value->ppt_id);?>"><span class="badge bg-primary" title="Click here for view"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> View</span></a>
                 
             
 

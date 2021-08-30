@@ -20,13 +20,13 @@ class Adsview extends CI_Controller {
         $this->load->model('General_model');
         $this->load->model('Adslist_model');
         $this->load->model('Review_model');
-         $this->load->model('Message_model');
+        $this->load->model('Message_model');
         $this->load->library("PhpMailerLib");
         $this->load->library('session');
         $this->load->helper('url');
         if($this->session->userdata('log_check')!=1)
             {
-                redirect('register/login', 'refresh');
+                //redirect('register/login', 'refresh');
             }
       
     }
@@ -36,9 +36,20 @@ class Adsview extends CI_Controller {
 	    redirect('/');
 	}
  public function dataview(){
+  $user_ip =$_SERVER['REMOTE_ADDR']; 
+   $result_ip = json_decode(file_get_contents('http://ip-api.io/json/' . $user_ip));
+  // echo trim($result_ip->country_name);
+//echo"<pre>";
 
+  if($this->session->userdata('front_sess')['userid']){
+  $ref_user=$this->session->userdata('front_sess')['refferral_id'];
+  }else{
+    $ref_user=$this->session->userdata('logged_in_stf')['refferral_id'];
+  }
+ $data['refferral_id']=$ref_user;
+  $data['ads']=base64_decode($this->input->get('ads', TRUE));
       $id=base64_decode($this->input->get('ads', TRUE));
-
+$get_refferral_id=base64_decode($this->input->get('refferral_id', TRUE));
      //print_r($this->session->userdata('front_sess'));
      $user_id=$this->session->userdata('front_sess')['userid'];
      $check_by=$this->General_model->RowCount('propertypost_table','ppt_id',$id);
@@ -65,7 +76,9 @@ class Adsview extends CI_Controller {
    $data['post_charge_list']=$this->db->query('select a.* from price as a where payment_type_id=20 and price_active=1 ')->result();
    $data['tagged_agent_list']=$this->db->query('select a.*,b.name,b.agent_ppt_tag_cnt from ppt_agent_tag as a inner join user_table b on b.id=a.agent_id where ppt_id='.$id.' and tag_active=1 order by total_bid_amount desc')->result();
    $data['maxbid_amount']=$this->db->query("SELECT MAX(total_bid_amount) as 'max_bid',COUNT(tag_id) as 'total_agent' from ppt_agent_tag where ppt_id=".$id."")->result();
-		$this->load->view('adsview_page',$data);
+		// $geo = unserialize(file_get_contents("http://www.geoplugin.net/php.gp?ip=$ipAddress"));
+//print_r($geo);
+    $this->load->view('adsview_page',$data);
 		$this->load->view('footer');
 		$today = date("Y-m-d H:i:s");
 		$ipAddress = $_SERVER['REMOTE_ADDR'];
@@ -84,9 +97,30 @@ class Adsview extends CI_Controller {
               $_POST['vw_entry_date']=$today;
                
             $query=$this->General_model->show_data_id('adsview_master','','','insert',$this->input->post());
+            }
+//$data['country_get']=trim($geo["geoplugin_countryCode"]);
+//$data['state_get']=trim($geo["geoplugin_region"]);
+//$data['city_get']=trim($geo["geoplugin_city"]);
+            if($get_refferral_id!='' && $get_refferral_id!=$ref_user){
+             $this->session->set_userdata('refferedBy', $get_refferral_id);
+            $where_vw2=" vw_ppt_id='".$id."' and vw_ip='".$ipAddress."' and reference_id='".$get_refferral_id."' ";
+    $check_by2=$this->Adsview_model->RowCount('referral_link_mktg',$where_vw2);
+    if($check_by2<1){
+            $_POST['vw_ip_ppt_id']=$ipAddress.'_'.$id;
+             $_POST['vw_ip']=$ipAddress;
+             $_POST['reference_id']=$get_refferral_id;
+              $_POST['vw_date']=$today;
+              $_POST['vw_ppt_id']=$id;
+             $_POST['referral_link']= base_url()."adsview/dataview?ads=".base64_encode($data['ads'])."&refferral_id=".base64_encode($get_refferral_id);
+             $_POST['vw_country']=trim($result_ip->country_name);
+              $_POST['vw_state']=trim($result_ip->region_name);
+              $_POST['vw_city']=trim($result_ip->city);
+              $_POST['vw_pincode']=trim($result_ip->zip_code);
+            $query_ref=$this->General_model->show_data_id('referral_link_mktg','','','insert',$this->input->post());
+            }
+          }
             
-            
-        }
+       
 		
         }
         // else{

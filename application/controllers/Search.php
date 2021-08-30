@@ -43,7 +43,14 @@ class Search extends CI_Controller
 
     public function result($offset = 0)
     {
-    	
+         $user_ip =$_SERVER['REMOTE_ADDR']; 
+   $result_ip = json_decode(file_get_contents('http://ip-api.io/json/' . $user_ip));
+    	  if($this->session->userdata('front_sess')['userid']){
+  $ref_user=$this->session->userdata('front_sess')['refferral_id'];
+  }else{
+    $ref_user=$this->session->userdata('logged_in_stf')['refferral_id'];
+  }
+ $data['refferral_id']=$ref_user;
    
 
         //print_r($this->session->userdata('lat_long'));

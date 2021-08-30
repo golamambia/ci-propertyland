@@ -161,8 +161,8 @@
                                  <th>Photo</th>
                                  <th>Ads Details</th>
                                  <th>Verification Status</th>
-                                 <th>Rating</th>
-                                 <th>Option</th>
+                                 <th>Post Status</th>
+                                 <th>Action</th>
                               </tr>
                            </thead>
                            <tbody>
@@ -175,43 +175,53 @@
                               $i++;
                               ?>
 
-                              <tr>
+                               <tr>
                                  <td class="add-img-selector">
                                     <?=$i;?>
                                  </td>
                                  <td class="add-img-td">
-                                    <a href="#">
-                                    <img class="img-fluid" src="<?php echo base_url(); ?>module_file/<?=$result->upload_file;?>" alt="img">
+                                    <a href="<?=base_url();?>adsview/dataview?ads=<?=base64_encode($result->ppt_id);?>">
+                                    <img class="img-fluid" src="<?php echo base_url('uploads/'); ?>module_file/<?=$result->ppt_main_img;?>" alt="img">
                                     </a>
                                  </td>
                                  <td class="ads-details-td">
-                                    <h4><a href="<?=base_url();?>adsview/dataview?ads=<?=base64_encode($result->lbcontactId);?>"><?=$result->title;?></a></h4>
+                                    <h4><a href="<?=base_url();?>adsview/dataview?ads=<?=base64_encode($result->ppt_id);?>"><?=$result->ppt_title;?></a></h4>
                                     <p> <strong> Posted On </strong>:
-                                       <?=date('d-M-Y',strtotime($result->date_time));?>, <?php
-                                       $date = new DateTime($result->date_time);
-                                      echo $date->format('h:i:s a') ;
-                                     ?>
+                                       <?=date('d-M-Y',strtotime($result->ppt_createdAt));?>
                                     </p>
-                                    <p> <strong>Visitors </strong>: <?=visitorCount($result->lbcontactId);?> <br>
-                                    <strong>Category:</strong> <?=$result->name;?> </p>
+                                    <p> <strong>Visitors </strong>: <?=visitorCount($result->ppt_id);?> <br>
+                                      <!-- <strong>Rating </strong>: <?=reviewCount($result->ppt_id);?> <br> -->
+                                      <strong>Valid till </strong>: <?=$result->ppt_valid_till;?> <br>
+                                      <strong>Verified On</strong>: <?=$result->ppt_verified_date;?> <br>
+                                      <strong>Agents tagged </strong>: <?=taggedCount($result->ppt_id);?><br>
+                                     </p>
+
+
+
+
+
+
                                  </td>
                                  <td class="price-td">
-                                  <?php if($result->post_status==1){?>
+                                  <?php if($result->ppt_verification_status==1){?>
                                   <span class="adstatusactive">active</span>
                                 <?php }else{?>
                                   <span class="adstatusdactive">pending</span>
                                 <?php }?>
                                  </td>
                                  <td class="price-td">
-                                    <strong> <?=reviewCount($result->lbcontactId);?></strong>
+                                    <?php if($result->ppt_property_status=='active'){?>
+                                  <span  class="adstatusactive">Active</span>
+                                <?php }else{?>
+                                  <span  class="adstatusdactive">Pause</span>
+                                <?php }?>
                                  </td>
                                  <td class="action-td">
-                                    <p><a class="view_btn" href="<?php echo base_url(); ?>adslist/single_add?id=<?=base64_encode($result->lbcontactId);?>" title="view"> <i class="fa fa-eye" aria-hidden="true"></i></a></p>
-                                    <p><a class="edit_btn" href="<?php echo base_url(); ?>adslist/edit_ad?id=<?=base64_encode($result->lbcontactId);?>" title="Edit"> <i class="fa fa-pencil" aria-hidden="true"></i></a></p>
-                                    <p><a class="trash_btn" href="<?=base_url();?>adslist/ads_del/<?=$result->lbcontactId;?>" title="trash" onclick="return confirm('Are you sure to delete?')"> <i class="fa fa-trash" aria-hidden="true"></i></a></p>
+                                   <!--  <p><a class="view_btn" href="<?php echo base_url(); ?>adslist/single_add?id=<?=base64_encode($result->ppt_id);?>" title="view"> <i class="fa fa-eye" aria-hidden="true"></i></a></p> -->
+                                    <p><a class="edit_btn" href="<?php echo base_url(); ?>adslist/edit_ad?id=<?=base64_encode($result->ppt_id);?>" title="Edit"> <i class="fa fa-pencil" aria-hidden="true"></i></a></p>
+                                    <p><a class="trash_btn" href="<?=base_url();?>adslist/ads_del/<?=$result->ppt_id;?>" title="trash" onclick="return confirm('Are you sure to delete?')"> <i class="fa fa-trash" aria-hidden="true"></i></a></p>
                                  </td>
                               </tr>
-                              
                              <?php }?>
                               
                               

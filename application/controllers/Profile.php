@@ -204,6 +204,7 @@ $this->session->set_flashdata('error', 'Please give proper address!');
         $_POST['latitude']=$latitude;
         $_POST['longitude']=$longitude;
         $_POST['updated_date']=date('Y-m-d');
+         $_POST['verification_status']='pending';
         	$query= $this->General_model->show_data_id('user_table',$id,'id','update',$this->input->post());
     if($query){
 

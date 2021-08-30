@@ -103,9 +103,10 @@
                                        <?=date('d-M-Y',strtotime($result->ppt_createdAt));?>
                                     </p>
                                     <p> <strong>Visitors </strong>: <?=visitorCount($result->ppt_id);?> <br>
-                                      <strong>Rating </strong>: <?=reviewCount($result->ppt_id);?> <br>
-                                      <strong>Complain </strong>: <?=totalComplaint($result->ppt_id);?> <br>
-                                      <strong>Report </strong>: <?=totalReport($result->ppt_id);?> <br>
+                                      <!-- <strong>Rating </strong>: <?=reviewCount($result->ppt_id);?> <br> -->
+                                      <strong>Valid till </strong>: <?=$result->ppt_valid_till;?> <br>
+                                      <strong>Verified On</strong>: <?=$result->ppt_verified_date;?> <br>
+                                      <strong>Agents tagged </strong>: <?=taggedCount($result->ppt_id);?><br>
                                      </p>
 
 

@@ -75,28 +75,38 @@
 
                   
            -->
-             <li class="nav-item has-sub <?php if($this->router->fetch_class()=='staff'){echo "open";}?>"><a href="javascript:void(0)"><i class="ft-user"></i><span class="menu-title" data-i18n="">Staff</span><span class="badge badge badge-primary badge-pill float-right mr-2">1</span></a>
+           <?php  if(checkStaff($this->session->userdata('logged_in_stf')['user_type'],'manager')){?>
+             <li class="nav-item has-sub <?php if($this->router->fetch_class()=='staff'){echo "open";}?>"><a href="javascript:void(0)"><i class="ft-user"></i><span class="menu-title" data-i18n="">Staff</span><!-- <span class="badge badge badge-primary badge-pill float-right mr-2">1</span> --></a>
             <ul class="menu-content" style="">
+
               <li class="<?php if($this->router->fetch_method()=='index' && $this->router->fetch_class()=='staff'){echo "mn_act_cls";}?>"><a class="menu-item" href="<?php echo base_url();?>staff_panel/staff/">Staff list</a>
               </li>
             
             </ul>
           </li>
-
-          <li class="nav-item has-sub <?php if($this->router->fetch_class()=='users'){echo "open";}?>"><a href="javascript:void(0)"><i class="ft-user"></i><span class="menu-title" data-i18n="">Users</span><span class="badge badge badge-primary badge-pill float-right mr-2">1</span></a>
+        <?php }?>
+          <li class="nav-item has-sub <?php if($this->router->fetch_class()=='users'){echo "open";}?>"><a href="javascript:void(0)"><i class="ft-user"></i><span class="menu-title" data-i18n="">Users</span><!-- <span class="badge badge badge-primary badge-pill float-right mr-2">1</span> --></a>
             <ul class="menu-content" style="">
+               <?php  if(checkStaff($this->session->userdata('logged_in_stf')['user_type'],'field')){?>
               <li class="<?php if($this->router->fetch_method()=='profile'){echo "mn_act_cls";}?>"><a class="menu-item" href="<?php echo base_url();?>staff_panel/users/register_user">Register user</a>
               </li>
+              <?php } if(!checkStaff($this->session->userdata('logged_in_stf')['user_type'],'field')){?>
                <li class="<?php if($this->router->fetch_method()=='index' && $this->router->fetch_class()=='users'){echo "mn_act_cls";}?>"><a class="menu-item" href="<?php echo base_url();?>staff_panel/users/">User List</a>
               </li>
-               <li class="<?php if($this->router->fetch_method()=='payment' && $this->router->fetch_class()=='users'){echo "mn_act_cls";}?>"><a class="menu-item" href="<?php echo base_url();?>staff_panel/users/payment">User payments</a>
+            <?php }?>
+
+             <li class="<?php if($this->router->fetch_method()=='payment' && $this->router->fetch_class()=='users'){echo "mn_act_cls";}?>"><a class="menu-item" href="<?php echo base_url();?>staff_panel/users/payment">User payments</a>
               </li>
+            <?php if(!checkStaff($this->session->userdata('logged_in_stf')['user_type'],'support')){?>
+              
+            <?php }if(checkStaff($this->session->userdata('logged_in_stf')['user_type'],'support')){?>
               <li class="<?php if($this->router->fetch_method()=='verify' && $this->router->fetch_class()=='users'){echo "mn_act_cls";}?>"><a class="menu-item" href="<?php echo base_url();?>staff_panel/users/verify">Verify users</a>
               </li>
-            
+            <?php }?>
             </ul>
           </li>
-          <li class="nav-item has-sub <?php if($this->router->fetch_class()=='adsdata' || $this->router->fetch_class()=='complaint'){echo "open";}?>"><a href="javascript:void(0)"><i class="ft-file"></i><span class="menu-title" data-i18n="">Ads Section</span><span class="badge badge badge-primary badge-pill float-right mr-2">6</span></a>
+         <?php if(!checkStaff($this->session->userdata('logged_in_stf')['user_type'],'field')){?>
+          <li class="nav-item has-sub <?php if($this->router->fetch_class()=='adsdata' || $this->router->fetch_class()=='complaint'){echo "open";}?>"><a href="javascript:void(0)"><i class="ft-file"></i><span class="menu-title" data-i18n="">Ads Section</span><!-- <span class="badge badge badge-primary badge-pill float-right mr-2">6</span> --></a>
             <ul class="menu-content" style="">
               <li class="<?php if($this->router->fetch_method()=='index'){echo "mn_act_cls";}?>"><a class="menu-item" href="<?php echo base_url();?>staff_panel/adsdata/">Ads All list</a>
               </li>
@@ -116,8 +126,9 @@
               
             </ul>
           </li>
+        <?php }?>
 
-          <li class="nav-item has-sub <?php if($this->router->fetch_class()=='settings'){echo "open";}?>"><a href="javascript:void(0)"><i class="ft-settings"></i><span class="menu-title" data-i18n="">Settings</span><span class="badge badge badge-primary badge-pill float-right mr-2">2</span></a>
+          <li class="nav-item has-sub <?php if($this->router->fetch_class()=='settings'){echo "open";}?>"><a href="javascript:void(0)"><i class="ft-settings"></i><span class="menu-title" data-i18n="">Settings</span><!-- <span class="badge badge badge-primary badge-pill float-right mr-2">2</span> --></a>
             <ul class="menu-content" style="">
               <li class="<?php if($this->router->fetch_method()=='profile'){echo "mn_act_cls";}?>"><a class="menu-item" href="<?php echo base_url();?>staff_panel/settings/profile">Profile</a>
               </li>

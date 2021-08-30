@@ -84,7 +84,7 @@
                   </td>
                   <td class="float-centre">
 
-                <a href="<?php echo base_url();?>apanel/adsdata/adsdata_view?view=<?=base64_encode($value->ppt_id);?>"><span class="badge bg-primary" title="Click here for view"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> View</span></a>
+                <a target="_blank" href="<?php echo base_url();?>apanel/adsdata/adsdata_view?view=<?=base64_encode($value->ppt_id);?>"><span class="badge bg-primary" title="Click here for view"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> View</span></a>
                 
             
 

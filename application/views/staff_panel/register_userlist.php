@@ -45,8 +45,8 @@
           <div class="card-body card-dashboard">
             <form id="user_search" method="get">
             <div class="row">
-              <?php if($this->session->userdata('logged_in_stf')['user_type']=='manager_staff'){?>
-              <div class="col-md">
+              
+            <!--   <div class="col-md">
                 <label>Staff</label>
             <select  class="form-control" name="staff" >
   <option value=""  selected>--Select staff--</option>
@@ -54,26 +54,59 @@
    <option <?php if($this->input->get('staff',true)==$value->id){echo"selected";}?> value="<?=$value->id;?>"><?=$value->name;?></option>
  <?php } ?>
 </select>
-</div>
-<?php }?>
+</div> -->
+
                 <div class="col-md">
-                <label>User status</label>
-            <select  class="form-control" name="user_status" >
-  <option value=""  selected>--Select type--</option>
-  <option <?php if($this->input->get('user_status',true)=='all'){echo"selected";}?> value="all">All</option>
-  <option <?php if($this->input->get('user_status',true)=='pending'){echo"selected";}?> value="pending">Active</option>
+                <label>User type</label>
+            <select  class="form-control" name="user_type" >
+  <option value=""  selected>All</option>
+    <option <?php if($this->input->get('user_type',true)=='individual'){echo"selected";}?> value="individual">Indivdual</option>
   
-  <option <?php if($this->input->get('user_status',true)=='approved'){echo"selected";}?> value="approved">Blocked</option>
+  <option <?php if($this->input->get('user_type',true)=='agent'){echo"selected";}?> value="agent">Agent</option>
+  <option <?php if($this->input->get('user_type',true)=='builder'){echo"selected";}?> value="builder">Builder</option>
 </select>
 </div>
-<!-- <div class="col-md">
+ <div class="col-md">
+                <label>Reg type</label>
+            <select  class="form-control" name="registration_type" >
+  <option value=""  selected>All</option>
+  
+  <option <?php if($this->input->get('registration_type',true)=='direct'){echo"selected";}?> value="direct">Direct</option>
+  <option <?php if($this->input->get('registration_type',true)=='offline'){echo"selected";}?> value="offline">Offline</option>
+</select>
+</div>
+<div class="col-md">
 <label>From date</label>
 <input type="date" value="<?=$this->input->get('start_date',true);?>" class="form-control" name="start_date" id="start_date">
   </div>
   <div class="col-md">
     <label>End date</label>
 <input type="date" value="<?=$this->input->get('end_date',true);?>" class="form-control" name="end_date" id="end_date" >
-  </div> -->
+  </div>
+  <?php if($this->session->userdata('logged_in_stf')['user_type']=='manager_staff'){
+    if($this->input->get()){
+
+    ?>
+   <div class="col-md">
+                <label>Field staff</label>
+            <select  class="form-control" name="field_staff" >
+  <option value=""  selected>All</option>
+  <?php foreach ($field_staff as $key => $value) {?>
+    <option <?php if($this->input->get('field_staff',true)==$value->id){echo"selected";}?> value="<?=$value->id;?>"><?=$value->name;?></option>
+  <?php }?>
+  
+</select>
+</div>
+ <div class="col-md">
+                <label>Support staff</label>
+            <select  class="form-control" name="support_staff" >
+  <option value=""  selected>All</option>
+   <?php foreach ($support_staff as $key => $value) {?>
+    <option <?php if($this->input->get('support_staff',true)==$value->id){echo"selected";}?> value="<?=$value->id;?>"><?=$value->name;?></option>
+  <?php }?>
+</select>
+</div>
+<?php }}?>
   
   <div class="col-md">
     <input type="submit" style="margin-top: 27px;color: #fff;" class="form-control btn btn-sm btn-primary" value="Search Now">
@@ -120,15 +153,9 @@
                   <?php }?>
                   </td>
                   <td>
-                    <?php 
+                    <p style="margin-bottom: 2px;">Status : <?php echo ($value->verification_status!='verified')?'<span class="badge bg-warning">Pending</span>':'<span class="badge bg-success">Verified</span>'; ?> </p>
                     
-                    if($value->verification_status=='verified'){
-                    ?>
-                    <span class="badge bg-success"> Verified</span>
-
-                  <?php }else{?>
-                     <span class="badge bg-warning"> Pending</span>
-                  <?php }?>
+                  <p style="margin-bottom: 2px;">V By : <?=getStaff($value->verified_by);?></p>
                   </td>
                   <td><?php
                   if($value->verified_date!= '0000-00-00'){
@@ -138,8 +165,8 @@
                   ?></td>
                  <td class="float-centre">
 
-                <a href="<?php echo base_url();?>staff_panel/users/user_verify/<?=$value->id;?>"><span class="badge bg-primary" title="Click here for verify"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Verify</span></a>
-             <!--    <a href="<?php echo base_url();?>apanel/user/user_delete/<?=$value->id;?>" onclick="return confirm('Are you sure to delete?')"><span class="badge badge-danger" title="Click here for delete"><i class="fa fa-trash" aria-hidden="true"></i> Delete</span></a> -->
+                <a href="<?php echo base_url();?>staff_panel/users/user_verify/<?=$value->id;?>" target="_blank"><span class="badge bg-primary" title="Click here for verify / view"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Verify</span></a>
+             <!--    <a href="<?php echo base_url();?>apanel/user/user_delete/<?=$value->id;?>" onclick="return confirm('Are you sure to delete?')"><span class="viewbadge badge-danger" title="Click here for delete"><i class="fa fa-trash" aria-hidden="true"></i> Delete</span></a> -->
             
 
                    </td>

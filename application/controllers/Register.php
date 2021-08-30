@@ -244,7 +244,7 @@ $this->session->set_flashdata('error', 'Please give proper address!');
             //redirect('register'); 
         }else{
             $email=$this->input->post('email');
-             $reference_id=$this->input->post('referred_by');
+             $reference_id=$this->input->post('referred_byf');
              if($email){
               $RowCount= $this->General_model->RowCount('user_table','email',$email);
             }else{
@@ -350,6 +350,11 @@ $this->session->set_flashdata('error', 'Please give proper address!');
         $_POST['pincode']=$pincode;
         $_POST['latitude']=$latitude;
         $_POST['longitude']=$longitude;
+        if($this->session->userdata('refferedBy')){
+          $_POST['referred_by']=$this->session->userdata('refferedBy');
+        }else{
+         $_POST['referred_by']=$_POST['referred_byf']; 
+        }
     $query= $this->General_model->show_data_id('user_table','','','insert',$this->input->post());
     if($query>0){
         

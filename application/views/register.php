@@ -109,7 +109,7 @@
 
                                 <div class="form-group">
 
-                                    <input type="text" name="referred_by" id="referred_by" class="form-control" placeholder="Reference ID" autocomplete="off" value="<?php if(isset($_REQUEST['referred_by'])){ echo $_REQUEST['referred_by']; }?>">
+                                    <input type="text" name="referred_byf" id="referred_by" class="form-control" placeholder="Reference ID" autocomplete="off" value="<?php if(isset($_REQUEST['referred_by'])){ echo $_REQUEST['referred_byf']; }?>">
 
                                     <span id="ref_msg" style="color:#e53935; "></span>
 

@@ -179,19 +179,14 @@ echo '<iframe width="" height="" frameborder="0" style="border:0;" allowfullscre
 
 
 
-<div class="row">
-<?php foreach ($multiimage as $key => $row_rec) { ?>
-    <div class="col-lg-1"> 
-        <img src="<?=base_url();?>uploads/module_file/<?PHP echo $row_rec->multi_image;?>" height="60"/>
-    </div>
-<?php } ?>   
-</div>
-
-
-
-
-
-                                             
+                          <div class="row">
+                          <?php foreach ($multiimage as $key => $row_rec) { ?>
+                              <div class="col-lg-1"> 
+                                  <img src="<?=base_url();?>uploads/module_file/<?PHP echo $row_rec->multi_image;?>" height="60"/>
+                              </div>
+                          <?php } ?>   
+                          </div>
+             
                                             
 
                                         </div>
@@ -199,7 +194,46 @@ echo '<iframe width="" height="" frameborder="0" style="border:0;" allowfullscre
                                         
                                     
                                         
-                                    </div>        
+                                    </div>   
+
+                                    <br>
+                                     <div class="row">
+              <div class="col-md-8">
+                
+             
+               <div class="col-lg-12">
+                                        <div class="form-group">
+                                            <label>Verification status</label>
+                                  <select class="form-control" name="ppt_verification_status" id="ppt_verification_status" required="">
+
+                                    <option value="">Status</option>
+
+                                    <option <?php if($result[0]->ppt_verification_status==1){ echo "selected"; }?> value="1">Verified</option>
+
+                                    <option <?php if($result[0]->ppt_verification_status==0){ echo "selected"; }?> value="0">Pending</option>
+                                                                       
+
+                                  </select>
+
+                                  <div class="error_msg"><?php echo form_error('ppt_verification_status'); ?></div>
+
+                                </div>
+                            </div>
+                                       <div class="col-lg-12 " >
+                                        <div class="form-group">
+                                            <label>Verification Comment</label>
+                                  <textarea class="form-control" name="verified_comments" id="verified_comments" placeholder="Verification comment" required><?=$result[0]->verified_comments;?></textarea>
+
+                                    
+
+                                  <div class="error_msg"><?php echo form_error('verified_comments'); ?></div>
+
+                                </div>
+                            </div>
+                          
+                           
+                             </div>
+            </div>     
 
                                 
                             </div>
@@ -212,29 +246,253 @@ echo '<iframe width="" height="" frameborder="0" style="border:0;" allowfullscre
                                   if($result[0]->ppt_verification_status==1){
                                   $post_st=0;
                                   ?>
-                                <button type="button" class="btn btn-success " id="sub">
+                               <!--  <button type="button" class="btn btn-success " id="sub">
                                     <i class="fa fa-check-square-o"></i> Inactive Now
-                                </button>
+                                </button> -->
                                 <?php }else{
                                   $post_st=1;
 
                                   ?>
-                                <button type="button" class="btn btn-primary " id="sub">
+                             <!--    <button type="button" class="btn btn-primary " id="sub">
                                     <i class="fa fa-check-square-o"></i> Approve Now
-                                </button>
+                                </button> -->
 
 
                               <?php }?>
+                              <button type="button" class="btn btn-primary " id="sub">
+                                    <i class="fa fa-check-square-o"></i> Submit Now
+                                </button>
                             </div>
                         </form> 
+<?php if($notification){?>
+                        <br>
+
+<div class="listing_area table-responsive">
+                       <table class="table table-striped table-bordered">
+                           <thead>
+                              <tr>
+                                 <th data-type="numeric">#</th>
+                                 
+                                 <th>Notification Details</th>
+                                                                 
+                                 
+                              </tr>
+                           </thead>
+                           <tbody>
+
+<?php
+$i=0; 
+foreach ($notification as $value) {
+$i++; 
+?>
+
+                        <tr class="dview1">
+                        <td class="add-img-selector">
+                        <?=$i;?>                                 
+                        </td>
+
+                        <td class="ads-details-td">
+                        <h4><?=$value->notice_title;?></h4>
+                        <p> 
+                            <strong> Posted On </strong>:
+                                       <?=date('d-M-Y',strtotime($value->entry_date));?>
+                                     
+                        </p>
+
+
+                         <p>                                               
+                            
+                        <strong>Description:</strong> <?=$value->description;?> 
+                        </p>
+                        </td>
+
+
+                        </tr>
+                             
+
+<?php } ?>                            
+                            
+ 
+                             
+                              
+                              
+                                                           
+                              
+                           </tbody>
+                        </table>
+                    </div>
+
+                  <?php }?>
 
                     </div>
                 </div>
             </div>
         </div>
 
+<div class="col-md-4">
+            <div class="card">
 
-        <div class="col-md-4">
+                <div class="card-content collapse show">
+                    <div class="card-body">
+
+
+
+<div class="listing_area table-responsive">
+                       <table class="table table-striped table-bordered">
+                           <thead>
+                              <tr>
+                                 <th>Date</th>
+                                 
+                                 <th>Log</th>
+                                                                 
+                                 
+                              </tr>
+                           </thead>
+                           <tbody>
+
+<?php
+$i=0;
+$chk_d=0; 
+foreach ($change_history as $value) {
+$i++; 
+?>
+
+                        <tr class="dview1">
+                        <td class="add-img-selector">
+                      <?=date('d-M-Y',strtotime($value->c_date));?>                      
+                        </td>
+
+                        <td class="ads-details-td">
+                        
+                         <p>                                               
+                            
+                        <strong>Description:</strong> <?php
+                        
+                      //  $value->c_log;
+                        $str_arr = explode ("::", $value->c_log);
+                      
+                             for ($i=0;$i<count($str_arr);$i++) { 
+                                $str_arr1 = explode (" ", $str_arr[$i]);
+                                 for ($i2=0;$i2<count($str_arr1);$i2++) { 
+                                 if($i<=2){
+                            echo $str_arr1[$i2];
+                          } 
+                         
+                         
+                          if($i2>0){
+                          
+                            if($i<2){
+                              echo"<br>";
+                          } 
+                          }                            
+                           
+                          }
+                           //echo"<br>";
+                           if($i>2){
+                            $chk_d=1;
+                          }
+                        }
+                     
+//print_r($str_arr);
+
+                        ?> 
+                        </p>
+                        <?php
+                        if( $chk_d==1){?>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#historyModal<?=$value->c_id;?>">
+   View Details
+  </button>
+<?php }?>
+                          <!-- The Modal -->
+  <div class="modal" id="historyModal<?=$value->c_id;?>">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title"><?=$result[0]->ppt_title; ?></h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+           <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Date</th>
+       
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td><?=date('d-M-Y',strtotime($value->c_date));?></td>
+       
+        <td><?php
+
+                      //  $value->c_log;
+                        $str_arr = explode ("::", $value->c_log);
+                      
+                             for ($i=0;$i<count($str_arr);$i++) { 
+                                $str_arr1 = explode (" ", $str_arr[$i]);
+                                 for ($i2=0;$i2<count($str_arr1);$i2++) {  
+                          echo $str_arr1[$i2];
+                          if($i2>0){
+                            echo"<br>";
+                          }                            
+                           
+                          }
+                           //echo"<br>";
+                        }
+                      
+//print_r($str_arr);
+
+                        ?> </td>
+        
+      </tr>
+     
+    </tbody>
+  </table>
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+</div>
+                        </td>
+
+
+                        </tr>
+                             
+
+<?php $chk_d=0;} ?>                            
+                            
+ 
+                             
+                              
+                              
+                                                           
+                              
+                           </tbody>
+                        </table>
+                    </div>
+
+
+
+
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+       <!--  <div class="col-md-4">
             <div class="card">
 
                 <div class="card-content collapse show">
@@ -383,7 +641,7 @@ $i++;
                 </div>
             </div>
         </div>
-
+ -->
 
 
     </div>
@@ -397,16 +655,18 @@ $i++;
     $('#sub').click(function(){
       var val='<?=$result[0]->ppt_id;?>';
       var val2='<?=$post_st;?>';
+      var verified_comments=$('#verified_comments').val();
+      var ppt_verification_status=$('#ppt_verification_status').val();
       //alert(val2);
       $.ajax({
         method:'POST',
         url:'<?=base_url();?>staff_panel/adsdata/adsdata_checked',
         cache:false,
-        data:{id:val,post_st:val2},
+        data:{id:val,post_st:val2,verified_comments:verified_comments,ppt_verification_status:ppt_verification_status},
         Type:'text',
         success:function(response){
           //alert(response);
-          console.log(response);
+         // console.log(response);
           var html=response.trim();
           if(html>0){
             location.reload(true);
