@@ -259,9 +259,17 @@ echo '<iframe width="" height="" frameborder="0" style="border:0;" allowfullscre
 
 
                               <?php }?>
+                              
+                                  <?php if($result[0]->ppt_verification_status==1 && $this->session->userdata('logged_in_stf')['user_type']=='manager_staff'){?>
+                                <button type="button" class="btn btn-primary " id="sub">
+                                    <i class="fa fa-check-square-o"></i> Submit Now
+                                </button>
+                            <?php }else if($result[0]->ppt_verification_status==0 && $this->session->userdata('logged_in_stf')['user_type']=='support_staff'){?>
+
                               <button type="button" class="btn btn-primary " id="sub">
                                     <i class="fa fa-check-square-o"></i> Submit Now
                                 </button>
+                            <?php }?>
                             </div>
                         </form> 
 <?php if($notification){?>
@@ -343,7 +351,7 @@ $i++;
                               <tr>
                                  <th>Date</th>
                                  
-                                 <th>Log</th>
+                                 <th>Change Log</th>
                                                                  
                                  
                               </tr>
@@ -421,7 +429,7 @@ $i++;
       <tr>
         <th>Date</th>
        
-        <th>Description</th>
+        <th>Change Description</th>
       </tr>
     </thead>
     <tbody>

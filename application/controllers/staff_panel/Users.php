@@ -149,6 +149,7 @@ if($start_date !='' && $end_date !=''){
       $userid=$this->session->userdata('logged_in_stf')['staff_id'];
        $data['user']=$this->db->query("SELECT a.* FROM user_table as a WHERE a.isDelete=0 and a.id=".$id."")->result();
          $data['notification']=$this->db->query("SELECT * FROM notification WHERE user_id=".$id." and ads_id=0 and is_delete=0 ORDER BY nid")->result();
+          $data['change_history']=$this->db->query('select * from user_change_history where u_id='.$id.' order by c_id desc')->result();
         
         $data['title']="User || verification";
         $this->load->view('staff_panel/header',$data);

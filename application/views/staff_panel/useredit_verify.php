@@ -368,13 +368,78 @@
                                 <a href="<?php echo base_url();?>staff_panel/users/verify" class="btn btn-warning mr-1">
                                     <i class="ft-x"></i> Close
                                 </a>
-                                <?php if($user[0]->status=="Active" && $this->session->userdata('logged_in_stf')['user_type']=='support_staff'){?>
+                                <?php if($user[0]->status=="Active" && $this->session->userdata('logged_in_stf')['user_type']=='manager_staff'){?>
                                 <button type="submit" class="btn btn-primary">
                                     <i class="fa fa-check-square-o"></i> Update Now
                                 </button>
+                            <?php }else if($user[0]->status!="Active" && $this->session->userdata('logged_in_stf')['user_type']=='support_staff'){?>
+                                 <button type="submit" class="btn btn-primary">
+                                    <i class="fa fa-check-square-o"></i> Update Now
+                                </button>
+
                             <?php }?>
                             </div>
                         </form> 
+
+                        <?php if($notification){?>
+                        <br>
+
+<div class="listing_area table-responsive">
+                       <table class="table table-striped table-bordered">
+                           <thead>
+                              <tr>
+                                 <th data-type="numeric">#</th>
+                                 
+                                 <th>Notification Details</th>
+                                                                 
+                                 
+                              </tr>
+                           </thead>
+                           <tbody>
+
+<?php
+$i=0; 
+foreach ($notification as $value) {
+$i++; 
+?>
+
+                        <tr class="dview1">
+                        <td class="add-img-selector">
+                        <?=$i;?>                                 
+                        </td>
+
+                        <td class="ads-details-td">
+                        <h4><?=$value->notice_title;?></h4>
+                        <p> 
+                            <strong> Posted On </strong>:
+                                       <?=date('d-M-Y',strtotime($value->entry_date));?>
+                                     
+                        </p>
+
+
+                         <p>                                               
+                            
+                        <strong>Description:</strong> <?=$value->description;?> 
+                        </p>
+                        </td>
+
+
+                        </tr>
+                             
+
+<?php } ?>                            
+                            
+ 
+                             
+                              
+                              
+                                                           
+                              
+                           </tbody>
+                        </table>
+                    </div>
+
+                  <?php }?>
 
                     </div>
                 </div>
@@ -422,7 +487,7 @@
 
                         <br> -->
 
-
+<!-- 
                         <form class="form"  method="post"  action="<?php echo base_url();?>staff_panel/users/post_notification">
  
                            
@@ -456,12 +521,12 @@
 
                             </div>
 
-                        </form>
+                        </form> -->
 
 
-
-<br>
-
+<!-- 
+<br> -->
+<!-- 
 
 
 <div class="listing_area table-responsive">
@@ -517,10 +582,156 @@ $i++;
                               
                            </tbody>
                         </table>
+                    </div> -->
+
+
+
+<div class="listing_area table-responsive">
+                       <table class="table table-striped table-bordered">
+                           <thead>
+                              <tr>
+                                 <th>Date</th>
+                                 
+                                 <th>Change Log</th>
+                                                                 
+                                 
+                              </tr>
+                           </thead>
+                           <tbody>
+
+<?php
+$i=0;
+$chk_d=0; 
+foreach ($change_history as $value) {
+$i++; 
+?>
+
+                        <tr class="dview1">
+                        <td class="add-img-selector">
+                      <?=date('d-M-Y',strtotime($value->c_date));?>                      
+                        </td>
+
+                        <td class="ads-details-td">
+                        
+                         <p>                                               
+                            
+                        <strong>Description:</strong> <?php
+                        
+                      //  $value->c_log;
+                        $str_arr = explode ("::", $value->c_log);
+                      
+                             for ($i=0;$i<count($str_arr);$i++) { 
+                                $str_arr1 = explode (" ", $str_arr[$i]);
+                                 for ($i2=0;$i2<count($str_arr1);$i2++) { 
+                                 if($i<=2){
+                            echo $str_arr1[$i2];
+                          } 
+                         
+                         
+                          if($i2>0){
+                          
+                            if($i<2){
+                              echo"<br>";
+                          } 
+                          }                            
+                           
+                          }
+                           //echo"<br>";
+                           if($i>2){
+                            $chk_d=1;
+                          }
+                        }
+                     
+//print_r($str_arr);
+
+                        ?> 
+                        </p>
+                        <?php
+                        if( $chk_d==1){?>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#historyModal<?=$value->c_id;?>">
+   View Details
+  </button>
+<?php }?>
+                          <!-- The Modal -->
+  <div class="modal" id="historyModal<?=$value->c_id;?>">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title"><?=$user[0]->name;?></h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+           <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Date</th>
+       
+        <th>Change Description</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td><?=date('d-M-Y',strtotime($value->c_date));?></td>
+       
+        <td><?php
+
+                      //  $value->c_log;
+                        $str_arr = explode ("::", $value->c_log);
+                      
+                             for ($i=0;$i<count($str_arr);$i++) { 
+                                $str_arr1 = explode (" ", $str_arr[$i]);
+                                 for ($i2=0;$i2<count($str_arr1);$i2++) {  
+                          echo $str_arr1[$i2];
+                          if($i2>0){
+                            echo"<br>";
+                          }                            
+                           
+                          }
+                           //echo"<br>";
+                        }
+                      
+//print_r($str_arr);
+
+                        ?> </td>
+        
+      </tr>
+     
+    </tbody>
+  </table>
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+</div>
+                        </td>
+
+
+                        </tr>
+                             
+
+<?php $chk_d=0;} ?>                            
+                            
+ 
+                             
+                              
+                              
+                                                           
+                              
+                           </tbody>
+                        </table>
                     </div>
-
-
-
 
 
 
